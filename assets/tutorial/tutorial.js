@@ -61,6 +61,9 @@ function info() {
 const CONTROLLER_TOUCH = 'touch';
 const CONTROLLER_VIVE = 'vive';
 
+
+var ALL_CONTROLLER_NAMES = [CONTROLLER_TOUCH, CONTROLLER_VIVE];
+
 var NEAR_BOX_SPAWN_NAME = "tutorial/nearGrab/box_spawn";
 var FAR_BOX_SPAWN_NAME = "tutorial/farGrab/box_spawn";
 var GUN_SPAWN_NAME = "tutorial/gun_spawn";
@@ -118,7 +121,7 @@ function findEntitiesWithTag(tag) {
 }
 
 /**
- * A controller is made up of parts, and each part can have multiple "layers,"
+ * A controller in made up of parts, and each part can have multiple "layers,"
  * which are really just different texures. For example, the "trigger" part
  * has "normal" and "highlight" layers.
  */
@@ -284,6 +287,14 @@ function showEntitiesWithTag(tag) {
 function hideEntitiesWithTags(tags) {
     for (var i = 0; i < tags.length; ++i) {
         hideEntitiesWithTag(tags[i]);
+    }
+}
+
+function hideControllerSpecificEntitiesWithTags(tags) {
+    for (var i = 0; i < tags.length; ++i) {
+        for (var j = 0; j < ALL_CONTROLLER_NAMES.length; j++) {
+            hideEntitiesWithTag(tags[i] + "-" + ALL_CONTROLLER_NAMES[j]);
+        }
     }
 }
 
@@ -512,6 +523,7 @@ stepOrient.prototype = {
         }
         //editEntitiesWithTag(this.tag, { visible: false, collisionless: 1 });
         hideEntitiesWithTags(this.tags);
+        hideControllerSpecificEntitiesWithTags(this.tags);
     }
 };
 
@@ -589,6 +601,7 @@ stepNearGrab.prototype = {
         setControllerPartLayer('trigger', 'normal');
         setControllerPartLayer('grip', 'normal');
         hideEntitiesWithTags(this.tags);
+        hideControllerSpecificEntitiesWithTags(this.tags);
         deleteEntitiesWithTag(this.tempTag);
         if (this.positionWatcher) {
             this.positionWatcher.destroy();
@@ -843,8 +856,11 @@ stepEquip.prototype = {
         }
 
         hideEntitiesWithTags(this.tagsPart1);
+        hideControllerSpecificEntitiesWithTags(this.tagsPart1);
         hideEntitiesWithTags(this.tagsPart2);
+        hideControllerSpecificEntitiesWithTags(this.tagsPart2);
         hideEntitiesWithTags(this.tags);
+        hideControllerSpecificEntitiesWithTags(this.tags);
         deleteEntitiesWithTag(this.tempTag);
     }
 };
@@ -935,6 +951,7 @@ stepTurnAround.prototype = {
             Script.clearInterval(this.interval);
         }
         hideEntitiesWithTags(this.tags);
+        hideControllerSpecificEntitiesWithTags(this.tags);
         deleteEntitiesWithTag(this.tempTag);
     }
 };
@@ -998,6 +1015,7 @@ stepTeleport.prototype = {
             Script.clearInterval(this.checkCollidesTimer);
         }
         hideEntitiesWithTags(this.tags);
+        hideControllerSpecificEntitiesWithTags(this.tags);
         deleteEntitiesWithTag(this.tempTag);
     }
 };
