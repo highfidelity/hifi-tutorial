@@ -1,0 +1,99 @@
+{
+    "descriptors": {
+        "description": null,
+        "hosts": null,
+        "maturity": null,
+        "tags": null,
+        "utc_offset": -7,
+        "weekday_hours": [
+            {
+                "close": "23:59",
+                "open": "00:00"
+            }
+        ],
+        "weekend_hours": [
+            {
+                "close": "23:59",
+                "open": "00:00"
+            }
+        ]
+    },
+    "metaverse": {
+        "automatic_networking": "full"
+    },
+    "paths": {
+        "/": {
+            "viewpoint": "/0.294317,-200.505,-5.06592/0,0.999422,0,0.0339854"
+        },
+        "/garden": {
+            "viewpoint": "/28.676,0.453707,-0.722701/0,0.68873,0,0.725018"
+        },
+        "/tutorial": {
+            "viewpoint": "/0.0148298,0.544884,-0.0988989/0,-0.714636,0,0.699496"
+        },
+        "/tutorial_begin": {
+            "viewpoint": "/-13.3688,0.452729,0.501879/0,-0.711902,0,0.702279"
+        }
+    },
+    "scripts": {
+        "persistent_scripts": [
+            {
+                "num_instances": "1",
+                "pool": "",
+                "url": "atp:/ACAudioSearchAndInject_tutorial.js"
+            }
+        ]
+    },
+    "security": {
+        "group_forbiddens": [
+        ],
+        "group_permissions": [
+        ],
+        "ip_permissions": [
+        ],
+        "permissions": [
+        ],
+        "standard_permissions": [
+            {
+                "id_can_adjust_locks": false,
+                "id_can_connect": true,
+                "id_can_connect_past_max_capacity": false,
+                "id_can_kick": false,
+                "id_can_rez": false,
+                "id_can_rez_tmp": false,
+                "id_can_write_to_asset_server": false,
+                "permissions_id": "anonymous"
+            },
+            {
+                "id_can_adjust_locks": false,
+                "id_can_connect": true,
+                "id_can_connect_past_max_capacity": false,
+                "id_can_kick": false,
+                "id_can_rez": false,
+                "id_can_rez_tmp": false,
+                "id_can_write_to_asset_server": false,
+                "permissions_id": "friends"
+            },
+            {
+                "id_can_adjust_locks": true,
+                "id_can_connect": true,
+                "id_can_connect_past_max_capacity": true,
+                "id_can_kick": true,
+                "id_can_rez": true,
+                "id_can_rez_tmp": true,
+                "id_can_write_to_asset_server": true,
+                "permissions_id": "localhost"
+            },
+            {
+                "id_can_adjust_locks": false,
+                "id_can_connect": true,
+                "id_can_connect_past_max_capacity": false,
+                "id_can_kick": false,
+                "id_can_rez": false,
+                "id_can_rez_tmp": false,
+                "id_can_write_to_asset_server": false,
+                "permissions_id": "logged-in"
+            }
+        ]
+    }
+}
