@@ -91,7 +91,7 @@ def generate_build(source_dir, output_dir, version=None):
                 filehash = hashlib.sha256(f.read()).hexdigest()
             assets_files.append((abs_filepath, rel_filepath, filehash))
             output_filepath = os.path.join(output_assets_files_dir, filehash)
-            print("\t\t\tCopying {} to {}".format(abs_filepath, output_filepath))
+            #print("\t\t\tCopying {} to {}".format(abs_filepath, output_filepath))
             shutil.copy(abs_filepath, output_filepath)
             #print(prefix + '  ' + rel_path)
     print("\t\tCopied {} assets".format(len(assets_files)))
@@ -136,12 +136,13 @@ def generate_build(source_dir, output_dir, version=None):
 
 
 RELEASE_PATHS = (
-        #'assignment-client/assets/files',
+        'assignment-client/assets/files',
         'assignment-client/assets/map.json',
         'assignment-client/entities/models.json.gz',
+        'assignment-client/content-version.txt',
         'domain-server/config.json',
         )
-def generate_release(source_dir, output_filepath):
+def generate_release(input_dir, output_filepath):
     print("# Generating release")
 
     if not output_filepath.endswith('.tar.gz'):
@@ -150,13 +151,14 @@ def generate_release(source_dir, output_filepath):
         def tarfilter(tarinfo):
             tarinfo.uid = tarinfo.gid = 0
             tarinfo.uname = tarinfo.gname = 'hifi'
+            return tarinfo
 
         print("\tWriting archive to {}".format(output_filepath))
         with tarfile.open(output_filepath, 'w:gz') as f:
             for path in RELEASE_PATHS:
-                full_path = os.path.join(source_dir, path)
+                full_path = os.path.join(input_dir, path)
                 print("\t\tAdding to archive: {}".format(full_path))
-                f.add(full_path, filter=tarfilter)
+                f.add(full_path, path, filter=tarfilter)
 
     print("\tComplete")
 
