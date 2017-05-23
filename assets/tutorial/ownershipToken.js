@@ -81,6 +81,7 @@ var TOKEN_STATE_OWNED = 2;
 
 OwnershipToken = function(name, parentEntityID, options) {
     this.name = MyAvatar.sessionUUID + "-" + Math.floor(Math.random() * 10000000);
+    //this.name = Math.floor(Math.random() * 10000000);
     this.parentEntityID = parentEntityID;
 
     // How often to check whether the token is available if we don't currently own it
