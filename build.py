@@ -207,12 +207,16 @@ def handle_generate_build(args):
 
 
 def handle_generate_package(args):
-    archive_path = os.path.join(root_dir, 'home-content-{}.tar.gz'.format(35))
-    generate_package(output_dir, archive_path)
+    archive_path = os.path.join(os.getcwd(), args.output_filename)
+    generate_package(args.input_directory, archive_path)
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Content set generator and packager.')
+    parser = argparse.ArgumentParser(description=\
+    """
+    Content set generator and packager.
+    """.format(cmd=sys.argv[0]))
+
     subparsers = parser.add_subparsers()
 
     parser_gen_build = subparsers.add_parser('gen_build', help='generate build')
@@ -221,6 +225,7 @@ if __name__ == '__main__':
 
     parser_package = subparsers.add_parser('package', help='generate release package')
     parser_package.set_defaults(func=handle_generate_package)
+    parser_package.add_argument('input_directory')
     parser_package.add_argument('output_filename')
 
     args = parser.parse_args(sys.argv[1:])
