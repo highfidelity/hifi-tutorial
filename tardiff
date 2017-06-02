@@ -1,0 +1,134 @@
+#!/usr/bin/env python
+
+import hashlib
+import tarfile
+import sys
+import difflib
+import json
+import gzip
+
+
+def is_ascii(bytes):
+    for byte in bytes:
+        if (byte < 32 or byte > 126) and byte not in (9, 10, 12, 13):
+            #print("Not ascii:", byte)
+            return False
+    return True
+
+
+def tarsum(tar):
+    result = {}
+    chunk_size = 1024
+    for obj in tar:
+        if not obj.isfile():
+            continue
+        f = tar.extractfile(obj)
+        h = hashlib.new('md5')
+        data = f.read(chunk_size)
+        while data:
+            h.update(data)
+            data = f.read(chunk_size)
+        result[obj.name] = h.hexdigest()
+    return result
+
+
+def compare(old, new):
+    added = []
+    removed = []
+    changed = []
+    for name, hash in old.items():
+        if name in new:
+            if hash != new[name]:
+                changed.append(name)
+        else:
+            removed.append(name)
+
+    for name, hash in new.items():
+        if name not in old:
+            added.append(name)
+
+    return added, removed, changed
+
+
+
+def cli_fmt(code, string):
+    return '\033[{}m{}\033[0m'.format(code, string)
+
+
+def diff(old_name, old_data, new_name, new_data):
+    for line in difflib.unified_diff(old_data.splitlines(False),
+                                     new_data.splitlines(False),
+                                     old_name,
+                                     new_name,
+                                     lineterm=''):
+
+        if line.startswith('+++') or line.startswith('---'):
+            line = cli_fmt(37, line)
+        elif line[0] == '+':
+            line = cli_fmt(32, line)
+        elif line[0] == '-':
+            line = cli_fmt(31, line)
+        sys.stdout.write(line + "\n")
+
+
+if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        print("Usage:", sys.argv[0], "OLD.tar.gz NEW.tar.gz")
+    else:
+        old = sys.argv[1]
+        new = sys.argv[2]
+
+        print("Comparing {} to {}\n".format(old, new))
+
+        old_tar = tarfile.open(old)
+        new_tar = tarfile.open(new)
+        old_sum = tarsum(old_tar)
+        new_sum = tarsum(new_tar)
+
+        added, removed, changed = compare(old_sum, new_sum)
+
+        for name in added:
+            print(" + {}".format(name))
+        for name in removed:
+            print(" - {}".format(name))
+        for name in changed:
+            print(" * {}".format(name))
+
+        def diff_files(old_name, new_name=None):
+            if new_name is None:
+                new_name = old_name
+
+            old = old_tar.extractfile(old_name)
+            new = new_tar.extractfile(new_name)
+            old_data = old.read()
+            new_data = new.read()
+
+            if is_ascii(old_data) and is_ascii(new_data):
+                print('')
+                diff(old_name, old_data.decode('ascii'), new_name, new_data.decode('ascii'))
+            #else:
+                #print("---{}\n+++{}\n//binary//".format(old_name, new_name))
+
+            return old_data, new_data
+
+        for name in changed:
+            old_data, new_data = diff_files(name)
+            print(name)
+
+            if name == 'assignment-client/assets/map.json':
+                old_json = json.loads(old_data)
+                new_json = json.loads(new_data)
+                atp_added, atp_removed, atp_changed = compare(old_json, new_json)
+                for name in atp_added:
+                    print(" + " + name)
+                for name in atp_removed:
+                    print(" - " + name)
+                for name in atp_changed:
+                    print(" * " + name)
+                    old_path = 'assignment-client/assets/files/' + old_json[name]
+                    new_path = 'assignment-client/assets/files/' + new_json[name]
+                    diff_files(old_path, new_path)
+            elif name == 'assignment-client/entities/models.json.gz':
+                old_json = gzip.decompress(old_data).decode('utf8')
+                new_json = gzip.decompress(new_data).decode('utf8')
+                diff(name, old_json, name, new_json)
