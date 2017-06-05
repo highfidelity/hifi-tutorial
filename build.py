@@ -199,7 +199,8 @@ def generate_package(input_dir, output_filepath):
 
 def handle_generate_build(args):
     output_dir = args.output_directory
-    source_dir = os.getcwd()
+    #source_dir = os.getcwd()
+    source_dir = args.input_directory
 
     print("Generating build in `{}` from `{}`".format(output_dir, source_dir))
 
@@ -219,8 +220,9 @@ if __name__ == '__main__':
 
     subparsers = parser.add_subparsers()
 
-    parser_gen_build = subparsers.add_parser('gen_build', help='generate build')
+    parser_gen_build = subparsers.add_parser('build', help='generate build')
     parser_gen_build.set_defaults(func=handle_generate_build)
+    parser_gen_build.add_argument('input_directory')
     parser_gen_build.add_argument('output_directory', default='build', nargs='?')
 
     parser_package = subparsers.add_parser('package', help='generate release package')
