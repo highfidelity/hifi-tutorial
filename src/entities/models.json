@@ -8654,18 +8654,18 @@
             "userData": "{}"
         },
         {
-            "age": 2034.6190185546875,
-            "ageAsText": "0 hours 33 minutes 54 seconds",
+            "age": 145.95782470703125,
+            "ageAsText": "0 hours 2 minutes 25 seconds",
             "clientOnly": 0,
-            "created": "2017-05-01T21:13:01Z",
+            "created": "2017-06-05T21:01:27Z",
             "dimensions": {
                 "x": 100,
                 "y": 100,
                 "z": 100
             },
-            "id": "{3eb083b9-62b8-4ea2-aef2-ee3277da6267}",
-            "lastEdited": 1493674605132671,
-            "lastEditedBy": "{8da849ed-7722-4f62-a1af-e1b3de44d659}",
+            "id": "{9d81ddf6-4849-4520-841c-f40a17d82b6d}",
+            "lastEdited": 1496696550822556,
+            "lastEditedBy": "{f2c8830b-a520-4cd6-aadb-0f8ff8063439}",
             "lifetime": 6000,
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
             "queryAACube": {
@@ -8678,162 +8678,18 @@
             "type": "PolyLine"
         },
         {
-            "age": 2034.619140625,
-            "ageAsText": "0 hours 33 minutes 54 seconds",
+            "age": 145.95573425292969,
+            "ageAsText": "0 hours 2 minutes 25 seconds",
             "clientOnly": 0,
-            "created": "2017-05-01T21:13:01Z",
+            "created": "2017-06-05T21:01:27Z",
             "dimensions": {
                 "x": 100,
                 "y": 100,
                 "z": 100
             },
-            "id": "{9bf85f7d-38f8-41fa-abd8-a93cdbb03aa3}",
-            "lastEdited": 1493674605132804,
-            "lastEditedBy": "{8da849ed-7722-4f62-a1af-e1b3de44d659}",
-            "lifetime": 6000,
-            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
-            "queryAACube": {
-                "scale": 173.205078125,
-                "x": -86.6025390625,
-                "y": -86.6025390625,
-                "z": -86.6025390625
-            },
-            "textures": "http://hifi-content.s3.amazonaws.com/caitlyn/production/raveStick/trailsNew_green.png",
-            "type": "PolyLine"
-        },
-        {
-            "age": 2034.619140625,
-            "ageAsText": "0 hours 33 minutes 54 seconds",
-            "clientOnly": 0,
-            "created": "2017-05-01T21:13:01Z",
-            "dimensions": {
-                "x": 100,
-                "y": 100,
-                "z": 100
-            },
-            "id": "{8dcbe8b9-b8cc-4ec7-b8f7-19d4a104ece3}",
-            "lastEdited": 1493674605136947,
-            "lastEditedBy": "{f5f2ebfd-36c0-4430-92c8-4e556450fc0c}",
-            "lifetime": 6000,
-            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
-            "queryAACube": {
-                "scale": 173.205078125,
-                "x": -86.6025390625,
-                "y": -86.6025390625,
-                "z": -86.6025390625
-            },
-            "textures": "http://hifi-content.s3.amazonaws.com/caitlyn/production/raveStick/trailsNew_green.png",
-            "type": "PolyLine"
-        },
-        {
-            "age": 2034.6192626953125,
-            "ageAsText": "0 hours 33 minutes 54 seconds",
-            "clientOnly": 0,
-            "created": "2017-05-01T21:13:01Z",
-            "dimensions": {
-                "x": 100,
-                "y": 100,
-                "z": 100
-            },
-            "id": "{71774a0b-8067-4897-8da3-73773cd0399f}",
-            "lastEdited": 1493674605143181,
-            "lastEditedBy": "{f5f2ebfd-36c0-4430-92c8-4e556450fc0c}",
-            "lifetime": 6000,
-            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
-            "queryAACube": {
-                "scale": 173.205078125,
-                "x": -86.6025390625,
-                "y": -86.6025390625,
-                "z": -86.6025390625
-            },
-            "textures": "http://hifi-content.s3.amazonaws.com/caitlyn/production/raveStick/trailsNew_green.png",
-            "type": "PolyLine"
-        },
-        {
-            "age": 1379.619140625,
-            "ageAsText": "0 hours 22 minutes 59 seconds",
-            "clientOnly": 0,
-            "created": "2017-05-01T21:23:56Z",
-            "dimensions": {
-                "x": 100,
-                "y": 100,
-                "z": 100
-            },
-            "id": "{3cb6c320-2ab4-4334-b31d-345273d9bcd1}",
-            "lastEdited": 1493674605143316,
-            "lastEditedBy": "{d399d84e-e952-45db-8795-79d42a990dd2}",
-            "lifetime": 6000,
-            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
-            "queryAACube": {
-                "scale": 173.205078125,
-                "x": -86.6025390625,
-                "y": -86.6025390625,
-                "z": -86.6025390625
-            },
-            "textures": "http://hifi-content.s3.amazonaws.com/caitlyn/production/raveStick/trailsNew_green.png",
-            "type": "PolyLine"
-        },
-        {
-            "age": 1379.619384765625,
-            "ageAsText": "0 hours 22 minutes 59 seconds",
-            "clientOnly": 0,
-            "created": "2017-05-01T21:23:56Z",
-            "dimensions": {
-                "x": 100,
-                "y": 100,
-                "z": 100
-            },
-            "id": "{4c0343c0-b392-4ad3-9bb0-d57f3529d7fd}",
-            "lastEdited": 1493674605143458,
-            "lastEditedBy": "{d399d84e-e952-45db-8795-79d42a990dd2}",
-            "lifetime": 6000,
-            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
-            "queryAACube": {
-                "scale": 173.205078125,
-                "x": -86.6025390625,
-                "y": -86.6025390625,
-                "z": -86.6025390625
-            },
-            "textures": "http://hifi-content.s3.amazonaws.com/caitlyn/production/raveStick/trailsNew_green.png",
-            "type": "PolyLine"
-        },
-        {
-            "age": 610.01763916015625,
-            "ageAsText": "0 hours 10 minutes 10 seconds",
-            "clientOnly": 0,
-            "created": "2017-05-01T21:37:02Z",
-            "dimensions": {
-                "x": 100,
-                "y": 100,
-                "z": 100
-            },
-            "id": "{5b82cd82-6965-43c6-93de-d31ebf2790bc}",
-            "lastEdited": 1493674605601643,
-            "lastEditedBy": "{63654088-0eb8-4bc4-8199-d64da78b572e}",
-            "lifetime": 6000,
-            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
-            "queryAACube": {
-                "scale": 173.205078125,
-                "x": -86.6025390625,
-                "y": -86.6025390625,
-                "z": -86.6025390625
-            },
-            "textures": "http://hifi-content.s3.amazonaws.com/caitlyn/production/raveStick/trailsNew_green.png",
-            "type": "PolyLine"
-        },
-        {
-            "age": 610.01263427734375,
-            "ageAsText": "0 hours 10 minutes 10 seconds",
-            "clientOnly": 0,
-            "created": "2017-05-01T21:37:02Z",
-            "dimensions": {
-                "x": 100,
-                "y": 100,
-                "z": 100
-            },
-            "id": "{fb7dab70-c6b3-4676-ba4a-63587291d6e0}",
-            "lastEdited": 1493674605606779,
-            "lastEditedBy": "{63654088-0eb8-4bc4-8199-d64da78b572e}",
+            "id": "{618e3a29-977e-4b99-b419-956375418797}",
+            "lastEdited": 1496696550824714,
+            "lastEditedBy": "{f2c8830b-a520-4cd6-aadb-0f8ff8063439}",
             "lifetime": 6000,
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
             "queryAACube": {
