@@ -5414,7 +5414,7 @@
             },
             "shapeType": "box",
             "skybox": {
-                "url": "http://hifi-content.s3.amazonaws.com/alan/dev/Skybox-Sun-high.png"
+                "url": "atp:/skyboxes/Skybox-Sun-high.png"
             },
             "type": "Zone"
         },
