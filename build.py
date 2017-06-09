@@ -231,6 +231,8 @@ def generate_build(source_dir, output_dir, bake=False, version=None):
     print("\t\tCopying assets to output directory")
     assets_files = []
 
+    skyboxes_to_update = []
+
     for dirpath, _dirs, files in os.walk(os.path.join(src_assets_dir)):
     #for dirpath, _dirs, files in os.walk(os.path.join(src_assets_dir, 'firepit')):
         #prefix = '  ' * len(split(os.path.relpath(dirpath, src_assets_dir)))
@@ -245,44 +247,54 @@ def generate_build(source_dir, output_dir, bake=False, version=None):
 
             asset_files_to_copy = []
 
+            needs_copy = True
             if bake:
-                baked_files = bake_file(abs_filepath, temp_dir, asset_path in skybox_asset_files)
-                if baked_files is not None:
-                    for baked_file_info in baked_files:
-                        #print(baked_file_info)
-                        rel_path = baked_file_info['relative_path']
-                        abs_path = baked_file_info['absolute_path']
-                        #print('got baked file: ', rel_path, abs_path)
-                        #filename = os.path.basename(abs_path)
+                is_texture = extension in ('jpg', 'png', 'tga')
+                is_skybox_texture = (is_texture and asset_path in skybox_asset_files)
+                if extension == 'fbx' or is_skybox_texture:
+                    baked_files = bake_file(abs_filepath, temp_dir, asset_path in skybox_asset_files)
+                    if baked_files is not None:
+                        for baked_file_info in baked_files:
+                            needs_copy = False
+                            #print(baked_file_info)
+                            rel_path = baked_file_info['relative_path']
+                            abs_path = baked_file_info['absolute_path']
+                            #print('got baked file: ', rel_path, abs_path)
+                            #filename = os.path.basename(abs_path)
 
-                        pos = rel_path.rfind('.baked.')
-                        if pos > -1:
-                            asset_path = rel_path[:pos] + rel_path[pos + len('.baked'):]
+                            pos = rel_path.rfind('.baked.')
+                            if pos > -1:
+                                asset_path = rel_path[:pos] + rel_path[pos + len('.baked'):]
+                            else:
+                                asset_path = rel_path #os.path.join(asset_dir, filename)
+
+                            with open(abs_path, 'rb') as f:
+                                sha256 = hashlib.sha256()
+                                for chunk in iter(lambda: f.read(4096), b''):
+                                    sha256.update(chunk)
+                                filehash = sha256.hexdigest()
+
+                            asset_path = os.path.normpath(os.path.join(asset_dir, asset_path))
+
+                            asset_files_to_copy.append( (filehash, abs_path, asset_path) )
+
+                            #if is_skybox_texture:
+                                #skyboxes_to_update.append(('atp:' + ))
+
                         else:
-                            asset_path = rel_path #os.path.join(asset_dir, filename)
+                            print("ERROR baking:", abs_filepath)
 
-                        with open(abs_path, 'rb') as f:
-                            sha256 = hashlib.sha256()
-                            for chunk in iter(lambda: f.read(4096), b''):
-                                sha256.update(chunk)
-                            filehash = sha256.hexdigest()
-
-                        asset_path = os.path.normpath(os.path.join(asset_dir, asset_path))
-
-                        asset_files_to_copy.append( (filehash, abs_path, asset_path) )
-
-                else:
-                    asset_path = os.path.normpath(os.path.join(asset_dir, filename))
-                    print("Not baked: ", filename, abs_filepath, asset_path, asset_dir, filename)
-                    with open(abs_filepath, 'rb') as f:
-                        filehash = hashlib.sha256(f.read()).hexdigest()
-                    asset_files_to_copy.append( (filehash, abs_filepath, asset_path) )
-
+            if needs_copy:
+                asset_path = os.path.normpath(os.path.join(asset_dir, filename))
+                #print("Not baked: ", filename, abs_filepath, asset_path, asset_dir, filename)
+                with open(abs_filepath, 'rb') as f:
+                    filehash = hashlib.sha256(f.read()).hexdigest()
+                asset_files_to_copy.append( (filehash, abs_filepath, asset_path) )
 
             for filehash, source_filepath, asset_path in asset_files_to_copy:
                 assets_files.append((source_filepath, asset_path, filehash))
                 output_filepath = os.path.join(output_assets_files_dir, filehash)
-                print("\t\t\tCopying {} to {}".format(source_filepath, output_filepath))
+                #print("\t\t\tCopying {} to {}".format(source_filepath, output_filepath))
                 shutil.copy(source_filepath, output_filepath)
 
     print("\t\tCopied {} assets".format(len(assets_files)))
