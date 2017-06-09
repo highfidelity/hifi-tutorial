@@ -1,13 +1,6 @@
 (function(){
-    var teleport;
-
-    function playSound() {
-        Audio.playSound(teleport, { volume: 0.40, localOnly: true });
-    };
-
     this.preload = function(entityID) {
         print("entryPortal.js | Preload");
-        teleport = SoundCache.getSound("atp:/sounds/teleport.raw");
     }
 
     this.enterEntity = function(entityID) {
@@ -22,7 +15,5 @@
 
     this.leaveEntity = function(entityID) {
         print("portal.js | leaveEntity");
-
-        playSound();
     };
 })
