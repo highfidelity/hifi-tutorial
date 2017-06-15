@@ -2282,58 +2282,6 @@
             "visible": 0
         },
         {
-            "backgroundMode": "skybox",
-            "clientOnly": 0,
-            "created": "2016-09-08T18:42:46Z",
-            "dimensions": {
-                "x": 47.280704498291016,
-                "y": 12.050784111022949,
-                "z": 66.017425537109375
-            },
-            "id": "{ec5419b1-37e7-42fb-9e9d-ea758d8f5e58}",
-            "keyLight": {
-                "ambientIntensity": 0.30000001192092896,
-                "color": {
-                    "blue": 207,
-                    "green": 245,
-                    "red": 255
-                },
-                "direction": {
-                    "x": -0.28016656637191772,
-                    "y": -0.57357645034790039,
-                    "z": -0.76975113153457642
-                },
-                "intensity": 0.10000000149011612
-            },
-            "lastEdited": 1493674604872351,
-            "locked": 1,
-            "name": "Bamboo-Photosphere",
-            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
-            "position": {
-                "x": -2.9139065742492676,
-                "y": 2.1569178104400635,
-                "z": 11.903537750244141
-            },
-            "queryAACube": {
-                "scale": 82.091331481933594,
-                "x": -43.959571838378906,
-                "y": -38.888748168945312,
-                "z": -29.142127990722656
-            },
-            "rotation": {
-                "w": -4.57763671875e-05,
-                "x": 1.52587890625e-05,
-                "y": -1,
-                "z": -1.52587890625e-05
-            },
-            "shapeType": "box",
-            "skybox": {
-                "url": "atp:/SKY-test-PANO_20150107_125314.jpg"
-            },
-            "type": "Zone",
-            "visible": 0
-        },
-        {
             "alpha": 0.0099999997764825821,
             "alphaFinish": 0,
             "alphaStart": 0.34000000357627869,
@@ -5466,7 +5414,7 @@
             },
             "shapeType": "box",
             "skybox": {
-                "url": "http://hifi-content.s3.amazonaws.com/alan/dev/Skybox-Sun-high.png"
+                "url": "atp:/skyboxes/Skybox-Sun-high.png"
             },
             "type": "Zone"
         },
