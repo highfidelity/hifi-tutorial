@@ -44,14 +44,17 @@ Example usage:
 """
 
 import argparse
+import datetime
 import gzip
 import hashlib
 import json
 import os
 import shutil
+import subprocess
 import sys
 import tarfile
-import subprocess
+import tempfile
+import time
 
 
 def create_assets_map(file_path_pairs):
@@ -97,6 +100,12 @@ def makedirs(path):
         return False
 
 def basename_without_extension(filepath):
+    """
+    Given a filepath, return the basename without the extension.
+
+    Exampe: /home/ryan/file.json.gz => file
+    """
+
     basename = os.path.basename(filepath)
     dotpos = basename.find('.')
     if dotpos > -1:
@@ -104,13 +113,22 @@ def basename_without_extension(filepath):
     return basename
 
 
-def bake_file(input_filepath, output_directory, bake_texture):
+def get_extension(filepath):
+    dotpos = filepath.rfind('.')
+    if dotpos == -1:
+        extension = ''
+    else:
+        extension = filepath[dotpos + 1:]
+    return extension
+
+
+def bake_file(input_filepath, output_directory):
     """
     Bake a file and return a list of info about each generated files. If the input file
     can't be baked or the bake fails, None will be returned.
 
     The file info dict will contain:
-      
+
       relative_path - relative path to the file. This will generally have a depth
                       of 0 (example: 'sphere.fbx')
       absolute_path - absolute path to the file
@@ -121,10 +139,12 @@ def bake_file(input_filepath, output_directory, bake_texture):
         extension = None
     else:
         extension = input_filepath[dotpos + 1:]
+    extension = get_extension(input_filepath)
 
     print("Extension", extension)
     is_texture = extension in ('jpg', 'png', 'tga')
-    if extension == 'fbx' or (bake_texture and is_texture):
+
+    if extension == 'fbx' or is_texture:
         print("Baking ", input_filepath, output_directory, flush=True)
         FNULL = open(os.devnull, 'w')
         if is_texture:
@@ -147,7 +167,10 @@ def bake_file(input_filepath, output_directory, bake_texture):
 
             # If input_filepath is something.fbx, output folder will be
             #   output_filepath/something/baked/
-            baked_directory = os.path.join(output_directory, input_filename_no_ext, 'baked')
+            if is_texture:
+                baked_directory = output_directory
+            else:
+                baked_directory = os.path.join(output_directory, input_filename_no_ext, 'baked')
             #print("Baked directory", baked_directory, flush=True)
             for dirpath, _dirs, baked_files in os.walk(baked_directory):
                 relpath = os.path.relpath(dirpath, baked_directory)
@@ -163,7 +186,17 @@ def bake_file(input_filepath, output_directory, bake_texture):
     return None
 
 
-def generate_build(source_dir, output_dir, bake=False, version=None):
+def ask_yes_no(prompt):
+    while True:
+        resp = input(prompt + " (y/N) ")
+        if resp == 'y' or resp == 'Y':
+            return True
+        elif resp == '' or resp == 'n' or resp == 'N':
+            return False
+
+
+def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
+                   version=None):
     """
     Generate a build by processing the directories and files in source_dir
     and outputting the build to build_dir. if a version is specified, it will
@@ -179,9 +212,19 @@ def generate_build(source_dir, output_dir, bake=False, version=None):
     output_entities_dir = os.path.join(output_ac_dir, 'entities')
     output_ds_dir = os.path.join(output_dir, 'domain-server')
 
-    temp_dir = os.path.join(os.getcwd(), '___temp___')
-    temp_dir = '___temp___'
-    makedirs(temp_dir)
+    timestr = datetime.datetime.fromtimestamp(time.time())\
+                               .strftime('%Y-%m-%d-%H_%M_%S')
+    base_temp_dir = tempfile.gettempdir()
+    temp_dir = os.path.join(base_temp_dir, 'tut-' + timestr)
+
+    print("Temp path for baked files is ", temp_dir)
+    #if os.path.exists(temp_dir)
+        #response = ask_yes_no("The temp directory ({}) already exists, delete?")
+        #if response:
+            #shutil.rmtree(temp_dir)
+
+    if bake:
+        makedirs(temp_dir)
 
     makedirs(output_assets_dir)
     makedirs(output_assets_files_dir)
@@ -195,8 +238,8 @@ def generate_build(source_dir, output_dir, bake=False, version=None):
     if os.path.exists(output_models_filepath):
         print("\t\tmodels.json.gz in build directory already exists, "
               + "not overwriting")
-        response = input("\t\tDo you want to copy the build models.json.gz to your source models.json? [Y/n] ")
-        if response == 'Y':
+        response = ask_yes_no("\t\tDo you want to copy the build models.json.gz to your source models.json?")
+        if response:
             print("\t\tCopying build models.json.gz to src models.json")
             with open(models_filepath, 'wb') as orig_file, \
                     gzip.open(output_models_filepath, 'rb') as gz_file:
@@ -234,25 +277,21 @@ def generate_build(source_dir, output_dir, bake=False, version=None):
     skyboxes_to_update = []
 
     for dirpath, _dirs, files in os.walk(os.path.join(src_assets_dir)):
-    #for dirpath, _dirs, files in os.walk(os.path.join(src_assets_dir, 'firepit')):
-        #prefix = '  ' * len(split(os.path.relpath(dirpath, src_assets_dir)))
-        #print(prefix + os.path.relpath(dirpath, src_assets_dir) + '\\')
         for filename in files:
             abs_filepath = os.path.abspath(os.path.join(dirpath, filename))
             asset_dir = os.path.relpath(os.path.abspath(dirpath), src_assets_dir)
             asset_dir = os.path.relpath(os.path.abspath(dirpath), src_assets_dir)
             asset_path = os.path.normpath(os.path.join(asset_dir, filename)).replace('\\', '/')
-            #print('asset path', asset_path)
-            #print("Asset dir", asset_dir)
 
             asset_files_to_copy = []
 
             needs_copy = True
             if bake:
+                extension = get_extension(filename)
                 is_texture = extension in ('jpg', 'png', 'tga')
                 is_skybox_texture = (is_texture and asset_path in skybox_asset_files)
-                if extension == 'fbx' or is_skybox_texture:
-                    baked_files = bake_file(abs_filepath, temp_dir, asset_path in skybox_asset_files)
+                if extension == 'fbx' or (not skip_textures and is_skybox_texture):
+                    baked_files = bake_file(abs_filepath, temp_dir)
                     if baked_files is not None:
                         for baked_file_info in baked_files:
                             needs_copy = False
@@ -278,11 +317,16 @@ def generate_build(source_dir, output_dir, bake=False, version=None):
 
                             asset_files_to_copy.append( (filehash, abs_path, asset_path) )
 
-                            #if is_skybox_texture:
-                                #skyboxes_to_update.append(('atp:' + ))
+                            if is_skybox_texture:
+                                print('here')
+                                pos = rel_path.rfind('.baked.')
+                                original_path = 'atp:/' + rel_path
+                                baked_path = 'atp:/' + rel_path[:pos] + '.ktx'
+                                print("Mapping {} to {}".format(original_path, baked_path))
+                                skyboxes_to_update.append((original_path, baked_path))
 
-                        else:
-                            print("ERROR baking:", abs_filepath)
+                    else:
+                        print("ERROR baking:", abs_filepath)
 
             if needs_copy:
                 asset_path = os.path.normpath(os.path.join(asset_dir, filename))
@@ -361,7 +405,7 @@ def handle_generate_build(args):
 
     print("Generating build in `{}` from `{}`".format(output_dir, source_dir))
 
-    generate_build(source_dir, output_dir, args.bake, 35)
+    generate_build(source_dir, output_dir, args.bake, args.skip_textures, 35)
 
 
 def handle_generate_package(args):
@@ -384,6 +428,7 @@ if __name__ == '__main__':
         help='Directory to pull data from')
     parser_gen_build.add_argument('-o', '--output_directory', default='build')
     parser_gen_build.add_argument('--bake', action='store_true')
+    parser_gen_build.add_argument('--skip_textures', action='store_true')
 
     parser_package = subparsers.add_parser('package', help='Generate release package')
     parser_package.set_defaults(func=handle_generate_package)
