@@ -38,8 +38,15 @@ extracted by the Sandbox.
 
 Example usage:
 
-    Generate build into default ac/ds directory. This is useful when
+    Generate build into default ac/ds directory. This is useful when working with the Sandbox.
     ./build.py sync -o ~/AppData/Roaming/High\ Fidelity
+
+Create a release:
+    # Assuming build does not exist
+    ./build.py sync -o ./build
+    ./build.py package build
+
+
 
 """
 
