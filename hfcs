@@ -4,20 +4,23 @@ This tool provides functionality to:
 
  * Generate a content set directory that the High Fidelity domain server
    and assignment clients can process.
+ * Copy the models.json.gz that your entity server is using back into the src
+   directory.
  * Package the generated content set into a releasable archive that the High
    Fidelity Sandbox can download and use.
 
-The tool expects the following directory structure:
+The tool expects the following directory structure in the input/src directory:
 
-  assets/           # ATP server assets
-      ...
-  entities/         # Entity server assets, models.json in unzipped form
-      models.json
-  domain-server/    # Domain server assets
-      config.json
+  src/
+      assets/           # ATP server assets
+          ...
+      entities/         # Entity server assets, models.json in unzipped form
+          models.json
+          domain-server/    # Domain server assets
+          config.json
 
 Building the content set will process the above directory structure and produce
-a directory with a High Fidelity server compatible structures, which includes a
+a directory with a High Fidelity server compatible structure, which includes a
 gzipped models file and a map.json for the assets server.
 
 Build directory structure:
@@ -39,16 +42,23 @@ extracted by the Sandbox.
 Example usage:
 
     Generate build into default ac/ds directory. This is useful when working with the Sandbox.
-    ./build.py sync -o ~/AppData/Roaming/High\ Fidelity
 
-Create a release:
-    # Assuming build does not exist
-    ./build.py sync -o ./build
-    ./build.py package build
+        ./hfcs build -o ~/AppData/Roaming/High\ Fidelity
 
+    After making modifications to entities on your local sandbox in interface,
+    copy the models file back:
+
+        ./hfcs pull -o ~/AppData/Roaming/High\ Fidelity
+
+    Create a release:
+
+        # Assuming build does not exist
+        ./hfcs build --bake -o ./build
+        ./hfcs package ./build
 
 
 """
+from __future__ import print_function
 
 import argparse
 import datetime
@@ -64,8 +74,21 @@ import tempfile
 import time
 
 
+TEXTURE_EXTENSIONS = ('jpg', 'jpeg', 'png', 'tga')
+
+verbose_enabled = False
+
+
+def print_verbose(*args, **kwargs):
+    if verbose_enabled:
+        print(*args, **kwargs)
+
+
+def is_texture_extension(extension):
+    return extension in TEXTURE_EXTENSIONS
+
+
 def create_assets_map(file_path_pairs):
-    print("{} file path pairs".format(len(file_path_pairs)))
     assets_map = {}
     for filename, path, filehash in file_path_pairs:
         path_parts = split(path)
@@ -106,6 +129,7 @@ def makedirs(path):
     except FileExistsError:
         return False
 
+
 def basename_without_extension(filepath):
     """
     Given a filepath, return the basename without the extension.
@@ -136,33 +160,33 @@ def bake_file(input_filepath, output_directory):
 
     The file info dict will contain:
 
-      relative_path - relative path to the file. This will generally have a depth
-                      of 0 (example: 'sphere.fbx')
+      relative_path - path to the file, relative to the baked folder for this
+                      asset. This will generally have a depth of 0 (example:
+                      'sphere.fbx')
       absolute_path - absolute path to the file
 
+    For an fbx, the returned list will usually contain a set of relative paths
+    like:
+
+        chair.fbx
+        textures/wood_diffuse.ktx
+        textures/wood_normal.ktx
+
     """
-    dotpos = input_filepath.rfind('.')
-    if dotpos == -1:
-        extension = None
-    else:
-        extension = input_filepath[dotpos + 1:]
     extension = get_extension(input_filepath)
 
-    print("Extension", extension)
-    is_texture = extension in ('jpg', 'png', 'tga')
+    is_texture = is_texture_extension(extension)
 
     if extension == 'fbx' or is_texture:
-        print("Baking ", input_filepath, output_directory, flush=True)
         FNULL = open(os.devnull, 'w')
         if is_texture:
             output_directory = os.path.join(output_directory, basename_without_extension(input_filepath))
             makedirs(output_directory)
-        print('output', output_directory)
         res = subprocess.call(
-                ['../hifi/build12/tools/oven/RelWithDebInfo/oven.exe',
-                 '-i', input_filepath, '-o', output_directory])#, #stdout=FNULL, stderr=subprocess.STDOUT)
+                ['oven', '-i', input_filepath, '-o', output_directory],
+                stdout=FNULL,
+                stderr=subprocess.STDOUT)
         if res == 0:
-            print("Successfully baked", input_filepath, flush=True)
             input_filename = os.path.basename(input_filepath)
             pos = input_filename.rfind('.')
             if pos > -1:
@@ -172,13 +196,18 @@ def bake_file(input_filepath, output_directory):
 
             baked_file_info = []
 
-            # If input_filepath is something.fbx, output folder will be
+            # For models, if input_filepath is something.fbx, output folder
+            # will be:
+            #
             #   output_filepath/something/baked/
+            #
+            # For textures, the directory is just the output_directory
+            #
             if is_texture:
                 baked_directory = output_directory
             else:
                 baked_directory = os.path.join(output_directory, input_filename_no_ext, 'baked')
-            #print("Baked directory", baked_directory, flush=True)
+
             for dirpath, _dirs, baked_files in os.walk(baked_directory):
                 relpath = os.path.relpath(dirpath, baked_directory)
                 for baked_file in baked_files:
@@ -224,12 +253,7 @@ def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
     base_temp_dir = tempfile.gettempdir()
     temp_dir = os.path.join(base_temp_dir, 'tut-' + timestr)
 
-    print("Temp path for baked files is ", temp_dir)
-    #if os.path.exists(temp_dir)
-        #response = ask_yes_no("The temp directory ({}) already exists, delete?")
-        #if response:
-            #shutil.rmtree(temp_dir)
-
+    print_verbose("Temp path for baked files is ", temp_dir)
     if bake:
         makedirs(temp_dir)
 
@@ -239,23 +263,18 @@ def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
     makedirs(output_ds_dir)
 
     # Generate models.json.gz if it doesn't exist
-    print("\tWriting entities")
+    print("  Writing entities")
     models_filepath = os.path.join(src_entities_dir, 'models.json')
     output_models_filepath = os.path.join(output_entities_dir, 'models.json.gz')
+
+
+    should_copy_entities_to_build = False
     if os.path.exists(output_models_filepath):
-        print("\t\tmodels.json.gz in build directory already exists, "
-              + "not overwriting")
-        response = ask_yes_no("\t\tDo you want to copy the build models.json.gz to your source models.json?")
-        if response:
-            print("\t\tCopying build models.json.gz to src models.json")
-            with open(models_filepath, 'wb') as orig_file, \
-                    gzip.open(output_models_filepath, 'rb') as gz_file:
-                shutil.copyfileobj(gz_file, orig_file)
+        print("    models.json.gz in build directory already exists.")
+        should_copy_entities_to_build = ask_yes_no("    Do you want to replace it?")
     else:
-        print("\t\tCreating models.json.gz")
-        with open(models_filepath, 'rb') as orig_file, \
-                gzip.open(output_models_filepath, 'wb') as gz_file:
-            shutil.copyfileobj(orig_file, gz_file)
+        should_copy_entities_to_build = True;
+
 
     # Find zone entities to determine which files are used as a skybox
     skybox_asset_files = []
@@ -272,21 +291,19 @@ def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
             raise
             sys.exit(1)
 
-    print("Found skyboxes: ", ', '.join(skybox_asset_files))
-
+    print_verbose("Found skyboxes: ", ', '.join(skybox_asset_files))
 
     # Build asset server files
-    print("\tWriting assets", flush=True)
-    print("\t\tSource assets directory is: " + src_assets_dir)
-    print("\t\tCopying assets to output directory")
+    print("  Writing assets", flush=True)
+    print("    Source assets directory is: " + src_assets_dir)
+    print("    Copying assets to output directory")
     assets_files = []
 
-    skyboxes_to_update = []
+    skyboxes_to_update = {}
 
     for dirpath, _dirs, files in os.walk(os.path.join(src_assets_dir)):
         for filename in files:
             abs_filepath = os.path.abspath(os.path.join(dirpath, filename))
-            asset_dir = os.path.relpath(os.path.abspath(dirpath), src_assets_dir)
             asset_dir = os.path.relpath(os.path.abspath(dirpath), src_assets_dir)
             asset_path = os.path.normpath(os.path.join(asset_dir, filename)).replace('\\', '/')
 
@@ -295,24 +312,25 @@ def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
             needs_copy = True
             if bake:
                 extension = get_extension(filename)
-                is_texture = extension in ('jpg', 'png', 'tga')
+                is_texture = is_texture_extension(extension)
                 is_skybox_texture = (is_texture and asset_path in skybox_asset_files)
                 if extension == 'fbx' or (not skip_textures and is_skybox_texture):
+                    print("      Baking ", abs_filepath, flush=True)
                     baked_files = bake_file(abs_filepath, temp_dir)
-                    if baked_files is not None:
+                    if baked_files is None:
+                        print("        Failed to bake:", abs_filepath, flush=True)
+                    else:
                         for baked_file_info in baked_files:
                             needs_copy = False
-                            #print(baked_file_info)
                             rel_path = baked_file_info['relative_path']
                             abs_path = baked_file_info['absolute_path']
-                            #print('got baked file: ', rel_path, abs_path)
-                            #filename = os.path.basename(abs_path)
+                            print_verbose('Got baked file: ', rel_path, abs_path)
 
                             pos = rel_path.rfind('.baked.')
                             if pos > -1:
                                 asset_path = rel_path[:pos] + rel_path[pos + len('.baked'):]
                             else:
-                                asset_path = rel_path #os.path.join(asset_dir, filename)
+                                asset_path = rel_path
 
                             with open(abs_path, 'rb') as f:
                                 sha256 = hashlib.sha256()
@@ -325,19 +343,16 @@ def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
                             asset_files_to_copy.append( (filehash, abs_path, asset_path) )
 
                             if is_skybox_texture:
-                                print('here')
-                                pos = rel_path.rfind('.baked.')
-                                original_path = 'atp:/' + rel_path
-                                baked_path = 'atp:/' + rel_path[:pos] + '.ktx'
+                                rel_asset_path = asset_dir.replace('\\', '/')
+                                pos = rel_path.rfind('.')
+                                original_path = 'atp:/' + '/'.join((rel_asset_path, filename))
+                                baked_path = 'atp:/' + '/'.join((rel_asset_path, rel_path[:pos] + '.ktx'))
                                 print("Mapping {} to {}".format(original_path, baked_path))
-                                skyboxes_to_update.append((original_path, baked_path))
+                                skyboxes_to_update[original_path] = baked_path
 
-                    else:
-                        print("ERROR baking:", abs_filepath)
 
             if needs_copy:
                 asset_path = os.path.normpath(os.path.join(asset_dir, filename))
-                #print("Not baked: ", filename, abs_filepath, asset_path, asset_dir, filename)
                 with open(abs_filepath, 'rb') as f:
                     filehash = hashlib.sha256(f.read()).hexdigest()
                 asset_files_to_copy.append( (filehash, abs_filepath, asset_path) )
@@ -345,10 +360,10 @@ def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
             for filehash, source_filepath, asset_path in asset_files_to_copy:
                 assets_files.append((source_filepath, asset_path, filehash))
                 output_filepath = os.path.join(output_assets_files_dir, filehash)
-                #print("\t\t\tCopying {} to {}".format(source_filepath, output_filepath))
+                print_verbose("      Copying {} to {}".format(source_filepath, output_filepath))
                 shutil.copy(source_filepath, output_filepath)
 
-    print("\t\tCopied {} assets".format(len(assets_files)))
+    print("    Copied {} assets".format(len(assets_files)))
 
     assets_map = create_assets_map(assets_files)
 
@@ -356,26 +371,54 @@ def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
     with open(output_assets_map_file, 'w') as map_file:
         json.dump(assets_map, map_file, indent=4)
 
+
+    def replace_with_baked_skybox(models_data, mapping):
+        for entity in models_data['Entities']:
+            if entity['type'] == 'Zone':
+                url = entity.get('skybox', {}).get('url', None)
+
+                if url is not None and url in skyboxes_to_update:
+                    entity['skybox']['url'] = skyboxes_to_update[url]
+
+    if should_copy_entities_to_build:
+        print("    Creating models.json.gz")
+        print(json.dumps(skyboxes_to_update, indent=2))
+        with open(models_filepath, 'r') as orig_file, \
+                gzip.open(output_models_filepath, 'w') as gz_file:
+
+            models_data = json.load(orig_file)
+            for entity in models_data['Entities']:
+                if entity['type'] == 'Zone':
+                    url = entity.get('skybox', {}).get('url', None)
+                    print("Checking zone", url)
+                    if url is not None and url in skyboxes_to_update:
+                        print('Updating models file', url, 'to', skyboxes_to_update[url])
+                        entity['skybox']['url'] = skyboxes_to_update[url]
+            data = json.dumps(models_data)
+            gz_file.write(bytes(data, 'utf8'))
+
     # Copy domain-server config
-    print("\tWriting domain-server config")
+    print("  Writing domain-server config")
     src_ds_config_filepath= os.path.join(src_ds_dir, 'config.json')
     output_ds_config_filepath= os.path.join(output_ds_dir, 'config.json')
 
     shutil.copy(src_ds_config_filepath, output_ds_config_filepath)
 
     # Write content version
-    print("\tWriting content version")
+    print("  Writing content version")
     if version is None:
-        print("\t\tSkipping, version not specified")
+        print("    Skipping, version not specified")
     else:
-        print("\t\tWriting version {}".format(version))
+        print("    Writing version {}".format(version))
         output_version_filepath = os.path.join(output_ac_dir, 'content-version.txt')
         with open(output_version_filepath, 'w') as f:
             f.write(str(version))
 
-    print("\tComplete")
+    print("  Complete")
 
 
+# These are the paths in an output/build directory to include in a content set
+# package (.tar.gz).
 PATHS_TO_INCLUDE_IN_ARCHIVE = (
         'assignment-client/assets/files',
         'assignment-client/assets/map.json',
@@ -386,24 +429,24 @@ PATHS_TO_INCLUDE_IN_ARCHIVE = (
 
 
 def generate_package(input_dir, output_filepath):
-    print("# Generating release")
+    print("Generating release")
 
     if not output_filepath.endswith('.tar.gz'):
-        print('\tSkipping, output must end in "tar.gz": {}'.format(output_filepath))
+        print('  Skipping, output must end in "tar.gz": {}'.format(output_filepath))
     else:
         def tarfilter(tarinfo):
             tarinfo.uid = tarinfo.gid = 0
             tarinfo.uname = tarinfo.gname = 'hifi'
             return tarinfo
 
-        print("\tWriting archive to {}".format(output_filepath))
+        print("  Writing archive to {}".format(output_filepath))
         with tarfile.open(output_filepath, 'w:gz') as f:
             for path in PATHS_TO_INCLUDE_IN_ARCHIVE:
                 full_path = os.path.join(input_dir, path)
-                print("\t\tAdding to archive: {}".format(full_path))
+                print("    Adding to archive: {}".format(full_path))
                 f.add(full_path, path, filter=tarfilter)
 
-    print("\tComplete")
+    print("  Complete")
 
 
 def handle_generate_build(args):
@@ -420,30 +463,67 @@ def handle_generate_package(args):
     generate_package(args.input_directory, archive_path)
 
 
+def handle_pull_entities(args):
+    input_dir = args.input_directory
+    output_dir = args.output_directory
+
+    input_models_filepath = os.path.join(
+            input_dir,
+            'entities',
+            'models.json')
+    output_models_filepath = os.path.join(
+            output_dir,
+            'assignment-client',
+            'entities',
+            'models.json.gz')
+
+    if os.path.exists(output_models_filepath):
+        print("Copying {} to {}".format(output_models_filepath, input_models_filepath))
+        with open(input_models_filepath, 'wb') as orig_file, \
+                gzip.open(output_models_filepath, 'rb') as gz_file:
+            shutil.copyfileobj(gz_file, orig_file)
+    else:
+        print("Error: A models file could not be found at {}".format(output_models_filepath))
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=\
-    """
-    Content set generator and packager.
-    """.format(cmd=sys.argv[0]))
+        "High Fidelity Content Set generator and packager.")
+
+    DEFAULT_OUTPUT_DIRECTORY = 'build'
+
+    parser.add_argument('--verbose', action='store_true')
 
     subparsers = parser.add_subparsers()
 
-    parser_gen_build = subparsers.add_parser('sync', help='Synchronize src\
-            directory with build directory')
+    parser_gen_build = subparsers.add_parser('build',
+        help='Build input directory into output directory')
     parser_gen_build.set_defaults(func=handle_generate_build)
     parser_gen_build.add_argument('-i', '--input_directory', default='src',
         help='Directory to pull data from')
-    parser_gen_build.add_argument('-o', '--output_directory', default='build')
+    parser_gen_build.add_argument('-o', '--output_directory',
+            default=DEFAULT_OUTPUT_DIRECTORY)
     parser_gen_build.add_argument('--bake', action='store_true')
-    parser_gen_build.add_argument('--skip_textures', action='store_true')
+    parser_gen_build.add_argument('--skip-textures', action='store_true')
 
-    parser_package = subparsers.add_parser('package', help='Generate release package')
+    parser_pull_entities = subparsers.add_parser('pull',
+        help='Pull the models.json.gz file from an output directory back into '\
+             + 'an input directory')
+    parser_pull_entities.set_defaults(func=handle_pull_entities)
+    parser_pull_entities.add_argument('-i', '--input_directory', default='src',
+        help='Directory to pull data from')
+    parser_pull_entities.add_argument('-o', '--output_directory',
+            default=DEFAULT_OUTPUT_DIRECTORY)
+
+    parser_package = subparsers.add_parser('package', help='Generate a release\
+            from a build generated using the `build` command')
     parser_package.set_defaults(func=handle_generate_package)
     parser_package.add_argument('input_directory')
     parser_package.add_argument('output_filename')
 
     args = parser.parse_args(sys.argv[1:])
+    verbose_enabled = args.verbose
     if 'func' in args:
-        args.func(args) 
+        args.func(args)
     else:
         parser.print_help()
