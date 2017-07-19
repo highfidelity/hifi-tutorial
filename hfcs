@@ -231,7 +231,7 @@ def ask_yes_no(prompt):
             return False
 
 
-def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
+def generate_build(source_dir, output_dir, bake=False, skip_baking_skyboxes=False,
                    version=None):
     """
     Generate a build by processing the directories and files in source_dir
@@ -314,7 +314,7 @@ def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
                 extension = get_extension(filename)
                 is_texture = is_texture_extension(extension)
                 is_skybox_texture = (is_texture and asset_path in skybox_asset_files)
-                if extension == 'fbx' or (not skip_textures and is_skybox_texture):
+                if extension == 'fbx' or (not skip_baking_skyboxes and is_skybox_texture):
                     print("      Baking ", abs_filepath, flush=True)
                     baked_files = bake_file(abs_filepath, temp_dir)
                     if baked_files is None:
@@ -382,7 +382,6 @@ def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
 
     if should_copy_entities_to_build:
         print("    Creating models.json.gz")
-        print(json.dumps(skyboxes_to_update, indent=2))
         with open(models_filepath, 'r') as orig_file, \
                 gzip.open(output_models_filepath, 'w') as gz_file:
 
@@ -390,7 +389,6 @@ def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
             for entity in models_data['Entities']:
                 if entity['type'] == 'Zone':
                     url = entity.get('skybox', {}).get('url', None)
-                    print("Checking zone", url)
                     if url is not None and url in skyboxes_to_update:
                         print('Updating models file', url, 'to', skyboxes_to_update[url])
                         entity['skybox']['url'] = skyboxes_to_update[url]
@@ -405,16 +403,12 @@ def generate_build(source_dir, output_dir, bake=False, skip_textures=False,
     shutil.copy(src_ds_config_filepath, output_ds_config_filepath)
 
     # Write content version
-    print("  Writing content version")
-    if version is None:
-        print("    Skipping, version not specified")
-    else:
-        print("    Writing version {}".format(version))
-        output_version_filepath = os.path.join(output_ac_dir, 'content-version.txt')
-        with open(output_version_filepath, 'w') as f:
-            f.write(str(version))
+    print("  Copying content version")
+    src_content_version_filepath = os.path.join(source_dir, 'content-version.txt')
+    output_content_version_filepath= os.path.join(output_ac_dir, 'content-version.txt')
+    shutil.copy(src_content_version_filepath, output_content_version_filepath)
 
-    print("  Complete")
+    print("Complete")
 
 
 # These are the paths in an output/build directory to include in a content set
@@ -455,7 +449,7 @@ def handle_generate_build(args):
 
     print("Generating build in `{}` from `{}`".format(output_dir, source_dir))
 
-    generate_build(source_dir, output_dir, args.bake, args.skip_textures, 35)
+    generate_build(source_dir, output_dir, args.bake, args.skip_baking_skyboxes, 35)
 
 
 def handle_generate_package(args):
@@ -503,8 +497,10 @@ if __name__ == '__main__':
         help='Directory to pull data from')
     parser_gen_build.add_argument('-o', '--output_directory',
             default=DEFAULT_OUTPUT_DIRECTORY)
-    parser_gen_build.add_argument('--bake', action='store_true')
-    parser_gen_build.add_argument('--skip-textures', action='store_true')
+    parser_gen_build.add_argument('--bake', action='store_true',
+        help='Bake models and textures')
+    parser_gen_build.add_argument('--skip-baking-skyboxes', action='store_true',
+        help='If baking, do not bake skybox textures')
 
     parser_pull_entities = subparsers.add_parser('pull',
         help='Pull the models.json.gz file from an output directory back into '\
