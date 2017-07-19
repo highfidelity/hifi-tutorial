@@ -95,9 +95,9 @@ def create_assets_map(file_path_pairs):
         assets_path = '/' + '/'.join(path_parts)
         if assets_path in assets_map:
             if assets_map[assets_path] == filehash:
-                print("**** Found duplicate: {}".format(assets_path), flush=True)
+                print("    Found duplicate: {}".format(assets_path), flush=True)
             else:
-                print("**** Overwriting: {}".format(assets_path), flush=True)
+                print("    !!!! Overwriting asset: {}".format(assets_path), flush=True)
         assets_map[assets_path] = filehash
     return assets_map
 
@@ -145,6 +145,12 @@ def basename_without_extension(filepath):
 
 
 def get_extension(filepath):
+    """
+    Return the extension for a file, without the dot.
+
+    Example: /home/ryan/sphere.fbx => fbx
+
+    """
     dotpos = filepath.rfind('.')
     if dotpos == -1:
         extension = ''
@@ -223,6 +229,11 @@ def bake_file(input_filepath, output_directory):
 
 
 def ask_yes_no(prompt):
+    """
+    Prompt the user to answer yes or no to the question in `prompt`. The
+    default response is no if nothing has been entered.
+
+    """
     while True:
         resp = input(prompt + " (y/N) ")
         if resp == 'y' or resp == 'Y':
@@ -231,12 +242,26 @@ def ask_yes_no(prompt):
             return False
 
 
+def remove_baked_extension(filepath):
+    """
+    Remove the ".baked." portion of an extension from the path `filepath`.
+    If the filepath does not contain ".baked." in the extension, the original
+    path will be returned.
+
+    """
+    pos = filepath.rfind('.baked.')
+    if pos > -1:
+        return filepath[:pos] + filepath[pos + len('.baked'):]
+    return filepath
+
+
 def generate_build(source_dir, output_dir, bake=False, skip_baking_skyboxes=False,
                    version=None):
     """
     Generate a build by processing the directories and files in source_dir
     and outputting the build to build_dir. if a version is specified, it will
     be written to a file in the assignment-client directory.
+
     """
     src_assets_dir = os.path.join(source_dir, 'assets')
     src_entities_dir = os.path.join(source_dir, 'entities')
@@ -267,14 +292,12 @@ def generate_build(source_dir, output_dir, bake=False, skip_baking_skyboxes=Fals
     models_filepath = os.path.join(src_entities_dir, 'models.json')
     output_models_filepath = os.path.join(output_entities_dir, 'models.json.gz')
 
-
     should_copy_entities_to_build = False
     if os.path.exists(output_models_filepath):
         print("    models.json.gz in build directory already exists.")
         should_copy_entities_to_build = ask_yes_no("    Do you want to replace it?")
     else:
         should_copy_entities_to_build = True;
-
 
     # Find zone entities to determine which files are used as a skybox
     skybox_asset_files = []
@@ -305,7 +328,7 @@ def generate_build(source_dir, output_dir, bake=False, skip_baking_skyboxes=Fals
         for filename in files:
             abs_filepath = os.path.abspath(os.path.join(dirpath, filename))
             asset_dir = os.path.relpath(os.path.abspath(dirpath), src_assets_dir)
-            asset_path = os.path.normpath(os.path.join(asset_dir, filename)).replace('\\', '/')
+            asset_filepath = os.path.normpath(os.path.join(asset_dir, filename)).replace('\\', '/')
 
             asset_files_to_copy = []
 
@@ -313,7 +336,7 @@ def generate_build(source_dir, output_dir, bake=False, skip_baking_skyboxes=Fals
             if bake:
                 extension = get_extension(filename)
                 is_texture = is_texture_extension(extension)
-                is_skybox_texture = (is_texture and asset_path in skybox_asset_files)
+                is_skybox_texture = (is_texture and asset_filepath in skybox_asset_files)
                 if extension == 'fbx' or (not skip_baking_skyboxes and is_skybox_texture):
                     print("      Baking ", abs_filepath, flush=True)
                     baked_files = bake_file(abs_filepath, temp_dir)
@@ -326,11 +349,8 @@ def generate_build(source_dir, output_dir, bake=False, skip_baking_skyboxes=Fals
                             abs_path = baked_file_info['absolute_path']
                             print_verbose('Got baked file: ', rel_path, abs_path)
 
-                            pos = rel_path.rfind('.baked.')
-                            if pos > -1:
-                                asset_path = rel_path[:pos] + rel_path[pos + len('.baked'):]
-                            else:
-                                asset_path = rel_path
+
+                            asset_filepath = remove_baked_extension(rel_path)
 
                             with open(abs_path, 'rb') as f:
                                 sha256 = hashlib.sha256()
@@ -338,27 +358,27 @@ def generate_build(source_dir, output_dir, bake=False, skip_baking_skyboxes=Fals
                                     sha256.update(chunk)
                                 filehash = sha256.hexdigest()
 
-                            asset_path = os.path.normpath(os.path.join(asset_dir, asset_path))
+                            asset_filepath = os.path.normpath(os.path.join(asset_dir, asset_filepath))
 
-                            asset_files_to_copy.append( (filehash, abs_path, asset_path) )
+                            asset_files_to_copy.append( (filehash, abs_path, asset_filepath) )
 
                             if is_skybox_texture:
-                                rel_asset_path = asset_dir.replace('\\', '/')
+                                rel_asset_filepath = asset_dir.replace('\\', '/')
                                 pos = rel_path.rfind('.')
-                                original_path = 'atp:/' + '/'.join((rel_asset_path, filename))
-                                baked_path = 'atp:/' + '/'.join((rel_asset_path, rel_path[:pos] + '.ktx'))
+                                original_path = 'atp:/' + '/'.join((rel_asset_filepath, filename))
+                                baked_path = 'atp:/' + '/'.join((rel_asset_filepath, rel_path[:pos] + '.ktx'))
                                 print("Mapping {} to {}".format(original_path, baked_path))
                                 skyboxes_to_update[original_path] = baked_path
 
 
             if needs_copy:
-                asset_path = os.path.normpath(os.path.join(asset_dir, filename))
+                asset_filepath = os.path.normpath(os.path.join(asset_dir, filename))
                 with open(abs_filepath, 'rb') as f:
                     filehash = hashlib.sha256(f.read()).hexdigest()
-                asset_files_to_copy.append( (filehash, abs_filepath, asset_path) )
+                asset_files_to_copy.append( (filehash, abs_filepath, asset_filepath) )
 
-            for filehash, source_filepath, asset_path in asset_files_to_copy:
-                assets_files.append((source_filepath, asset_path, filehash))
+            for filehash, source_filepath, asset_filepath in asset_files_to_copy:
+                assets_files.append((source_filepath, asset_filepath, filehash))
                 output_filepath = os.path.join(output_assets_files_dir, filehash)
                 print_verbose("      Copying {} to {}".format(source_filepath, output_filepath))
                 shutil.copy(source_filepath, output_filepath)
