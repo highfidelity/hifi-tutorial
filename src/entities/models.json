@@ -14,7 +14,7 @@
                 "z": 0.04209943115711212
             },
             "id": "{80abeb3e-15bc-4b55-8cc3-04274bced21c}",
-            "lastEdited": 1505338927162520,
+            "lastEdited": 1507328406882759,
             "name": "lighter_sound_butane",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
             "position": {
@@ -55,7 +55,7 @@
                 "z": 0
             },
             "id": "{5685635a-1865-4d91-b232-86522231544c}",
-            "lastEdited": 1505338927162957,
+            "lastEdited": 1507328406916873,
             "lastEditedBy": "{b9f33f23-6caf-458b-96ff-facdcf2fd78b}",
             "modelURL": "http://mpassets.highfidelity.com/c3f639ca-a75e-42bc-9ab9-9fa053278271-v1/PizzaBox_TP.fbx",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
@@ -96,7 +96,7 @@
                 "z": 0
             },
             "id": "{907b8119-5dde-43d3-b778-8f2f97e0d008}",
-            "lastEdited": 1505338927163248,
+            "lastEdited": 1507328406931950,
             "lastEditedBy": "{b9f33f23-6caf-458b-96ff-facdcf2fd78b}",
             "modelURL": "http://mpassets.highfidelity.com/c3f639ca-a75e-42bc-9ab9-9fa053278271-v1/PizzaBox_TP.fbx",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
@@ -138,7 +138,7 @@
             "dynamic": 1,
             "id": "{eafd1913-3e89-4a94-876b-b78a55fddec9}",
             "ignoreForCollisions": 1,
-            "lastEdited": 1505338927163533,
+            "lastEdited": 1507328406932441,
             "lastEditedBy": "{e5eead1d-4d12-4eca-a0f1-eb6aa6068aa0}",
             "modelURL": "http://hifi-content.s3.amazonaws.com/caitlyn/production/raveStick/newRaveStick2.fbx?v=0.6774211255833507",
             "name": "raveStick",
@@ -182,7 +182,7 @@
             "dynamic": 1,
             "id": "{452b4ba5-4b93-4f3c-a965-31a6ea8cab3b}",
             "ignoreForCollisions": 1,
-            "lastEdited": 1505338927163857,
+            "lastEdited": 1507328406932837,
             "lastEditedBy": "{e5eead1d-4d12-4eca-a0f1-eb6aa6068aa0}",
             "modelURL": "http://hifi-content.s3.amazonaws.com/caitlyn/production/raveStick/newRaveStick2.fbx?v=0.6774211255833507",
             "name": "raveStick",
@@ -251,7 +251,7 @@
             "emitRate": 1000,
             "emitSpeed": 0.20000000298023224,
             "id": "{0b15ae47-6f9b-4b8d-839a-884cf44c294b}",
-            "lastEdited": 1505338927164204,
+            "lastEdited": 1507328406933167,
             "lastEditedBy": "{e5eead1d-4d12-4eca-a0f1-eb6aa6068aa0}",
             "lifespan": 0.800000011920929,
             "maxParticles": 60000,
@@ -324,7 +324,7 @@
             "emitRate": 1000,
             "emitSpeed": 0.20000000298023224,
             "id": "{2bdf560b-de20-489a-883e-c16ffa81e4f6}",
-            "lastEdited": 1505338927164693,
+            "lastEdited": 1507328406933930,
             "lastEditedBy": "{e5eead1d-4d12-4eca-a0f1-eb6aa6068aa0}",
             "lifespan": 0.800000011920929,
             "maxParticles": 60000,
@@ -370,7 +370,7 @@
             },
             "id": "{93b3c260-7219-40dc-a0b8-376ffe331e45}",
             "intensity": 5,
-            "lastEdited": 1505338927172802,
+            "lastEdited": 1507328406934360,
             "lastEditedBy": "{e5eead1d-4d12-4eca-a0f1-eb6aa6068aa0}",
             "name": "raveLight",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
@@ -404,7 +404,7 @@
             },
             "id": "{ef097e10-3c90-4b25-8dcd-d52d979c3d1f}",
             "intensity": 5,
-            "lastEdited": 1505338927173200,
+            "lastEdited": 1507328406934660,
             "lastEditedBy": "{e5eead1d-4d12-4eca-a0f1-eb6aa6068aa0}",
             "name": "raveLight",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
@@ -440,7 +440,7 @@
             "dynamic": 1,
             "id": "{d9629d67-02f0-4330-bb33-00a4956d7532}",
             "ignoreForCollisions": 1,
-            "lastEdited": 1505338927173508,
+            "lastEdited": 1507328406934924,
             "lastEditedBy": "{b9f33f23-6caf-458b-96ff-facdcf2fd78b}",
             "modelURL": "http://hifi-content.s3.amazonaws.com/caitlyn/production/raveStick/newRaveStick2.fbx?v=0.6774211255833507",
             "name": "raveStick",
@@ -484,7 +484,7 @@
             "dynamic": 1,
             "id": "{f486b7f0-ed1a-4517-b7ca-6bdab34f5db2}",
             "ignoreForCollisions": 1,
-            "lastEdited": 1505338927173834,
+            "lastEdited": 1507328406935225,
             "lastEditedBy": "{b9f33f23-6caf-458b-96ff-facdcf2fd78b}",
             "modelURL": "http://hifi-content.s3.amazonaws.com/caitlyn/production/raveStick/newRaveStick2.fbx?v=0.6774211255833507",
             "name": "raveStick",
@@ -553,7 +553,7 @@
             "emitRate": 1000,
             "emitSpeed": 0.20000000298023224,
             "id": "{e350a21a-9eb4-4598-9aab-38f66cf7b98e}",
-            "lastEdited": 1505338927174141,
+            "lastEdited": 1507328406935504,
             "lastEditedBy": "{b9f33f23-6caf-458b-96ff-facdcf2fd78b}",
             "lifespan": 0.800000011920929,
             "maxParticles": 60000,
@@ -626,7 +626,7 @@
             "emitRate": 1000,
             "emitSpeed": 0.20000000298023224,
             "id": "{95aa7551-d5d6-4796-aa2c-31bec48a1fff}",
-            "lastEdited": 1505338927174483,
+            "lastEdited": 1507328406935823,
             "lastEditedBy": "{b9f33f23-6caf-458b-96ff-facdcf2fd78b}",
             "lifespan": 0.800000011920929,
             "maxParticles": 60000,
@@ -672,7 +672,7 @@
             },
             "id": "{4bb3aafe-24e9-4c4b-8bf5-39c9c5807b97}",
             "intensity": 5,
-            "lastEdited": 1505338927174821,
+            "lastEdited": 1507328406936106,
             "lastEditedBy": "{b9f33f23-6caf-458b-96ff-facdcf2fd78b}",
             "name": "raveLight",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
@@ -706,7 +706,7 @@
             },
             "id": "{2c27c5db-f959-46e9-ae9c-5e8a774e9e0b}",
             "intensity": 5,
-            "lastEdited": 1505338927175129,
+            "lastEdited": 1507328406936356,
             "lastEditedBy": "{b9f33f23-6caf-458b-96ff-facdcf2fd78b}",
             "name": "raveLight",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
@@ -744,8 +744,8 @@
                 },
                 "intensity": 1.100000023841858
             },
-            "lastEdited": 1505338927175683,
-            "lastEditedBy": "{7a3caed2-ec96-4f13-8b4a-eacdf8998548}",
+            "lastEdited": 1507328484375415,
+            "lastEditedBy": "{5ddc52ce-d804-445d-b9ea-7df5d380253a}",
             "locked": 1,
             "name": "Building_platform_zone",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
@@ -768,7 +768,7 @@
             },
             "shapeType": "box",
             "skybox": {
-                "url": "atp:/skyboxes/Skybox-Sun-high.ktx"
+                "url": "atp:/skyboxes/Skybox-Sun-high.png"
             },
             "type": "Zone"
         },
@@ -783,7 +783,7 @@
             },
             "friction": 0.30000001192092896,
             "id": "{ef893599-9be1-4c97-ae51-b1bb3277daaa}",
-            "lastEdited": 1505338927176499,
+            "lastEdited": 1507328406937437,
             "lastEditedBy": "{7ae19691-f059-45e3-a394-cd74102aba54}",
             "modelURL": "atp:/1592e15e-c822-41aa-b314-4ef261e5d843-v1/builder-grid.fbx",
             "name": "builders_grid_bottom",
@@ -818,7 +818,7 @@
                 "z": 0.7604697346687317
             },
             "id": "{a981f081-fee1-4edd-b769-2356a8f18748}",
-            "lastEdited": 1505338927176770,
+            "lastEdited": 1507328406937726,
             "lastEditedBy": "{7ca6f1aa-4e31-4e1d-bc7a-3803ef4e8d3d}",
             "modelURL": "http://hifi-content.s3.amazonaws.com/DomainContent/BuildersGrid/Sandbox-Intro-3.fbx",
             "name": "Sandbox Intro Sign",
@@ -852,7 +852,7 @@
                 "z": 2.429999828338623
             },
             "id": "{e6be9d3f-03be-4feb-a442-024222050032}",
-            "lastEdited": 1505339068289203,
+            "lastEdited": 1507328406938014,
             "lastEditedBy": "{12cfc5d4-0eb2-40dd-b591-1b12edb88b62}",
             "modelURL": "http://hifi-content.s3.amazonaws.com/DomainContent/production/welcomeWagon/baked/howToBringUpYourTablet/baked/howToBringUpYourTablet.baked.fbx",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
@@ -885,7 +885,7 @@
                 "z": 0.5460420250892639
             },
             "id": "{e83075d0-7814-422e-9eee-497b2e78e5b9}",
-            "lastEdited": 1505339036269260,
+            "lastEdited": 1507328406938243,
             "lastEditedBy": "{12cfc5d4-0eb2-40dd-b591-1b12edb88b62}",
             "modelURL": "https://hifi-content.s3.amazonaws.com/jimi/welcome_Area/tutorialBlocks/GoToTutorial.fbx",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
@@ -911,5 +911,5 @@
             "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
         }
     ],
-    "Version": 72
+    "Version": 73
 }

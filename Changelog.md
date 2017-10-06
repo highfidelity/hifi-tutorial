@@ -1,3 +1,6 @@
+  * home-tutorial-41
+  	* Add ACSearchAndInjectAudio_tutorial.js back into asset browser
+  
   * home-tutorial-40
     * Update builder grid to be at /0,-10,0
     * Remove portal to tutorial garden
