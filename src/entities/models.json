@@ -1,39 +1,3167 @@
 {
     "Entities": [
         {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{a9a2ddd3-653b-427c-b055-ee5f9b3e33a7}",
+            "lastEdited": 1515450847174147,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": -18.86590576171875,
+                "y": -11.367654800415039,
+                "z": -10.702414512634277
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": -19.09107208251953,
+                "y": -11.59282112121582,
+                "z": -10.927580833435059
+            },
+            "rotation": {
+                "w": 0.5918517112731934,
+                "x": -0.689692497253418,
+                "y": -0.21959257125854492,
+                "z": 0.3546959161758423
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{155f26e8-d9b4-4224-8b33-8879a7ede3b2}",
+            "lastEdited": 1515450847174471,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": -17.773618698120117,
+                "y": -11.39763069152832,
+                "z": -10.406410217285156
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": -17.946823120117188,
+                "y": -11.570836067199707,
+                "z": -10.579615592956543
+            },
+            "rotation": {
+                "w": -0.1746700406074524,
+                "x": 0.39177536964416504,
+                "y": 0.20286870002746582,
+                "z": 0.8802472352981567
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{9fda4b9b-f144-4b07-bf11-4358a4a133ce}",
+            "lastEdited": 1515450847174682,
+            "lastEditedBy": "{e1130101-409b-4a8c-a2dc-691e85020b71}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": -11.057535171508789,
+                "y": -11.317856788635254,
+                "z": -24.458614349365234
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": -11.367815017700195,
+                "y": -11.62813663482666,
+                "z": -24.76889419555664
+            },
+            "rotation": {
+                "w": -0.08058291673660278,
+                "x": -0.5049973726272583,
+                "y": 0.7953765392303467,
+                "z": 0.32536816596984863
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{501f5a39-8f3b-4090-ba67-9f36d65316c8}",
+            "lastEdited": 1515450847174895,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": -2.5171003341674805,
+                "y": -11.366955757141113,
+                "z": -17.283710479736328
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": -2.742266893386841,
+                "y": -11.592122077941895,
+                "z": -17.50887680053711
+            },
+            "rotation": {
+                "w": -0.4728313088417053,
+                "x": 0.7425497770309448,
+                "y": -0.3199969530105591,
+                "z": -0.3502708673477173
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{5c612d81-26bd-4006-8cca-5aec6ea132be}",
+            "lastEdited": 1515450847175092,
+            "lastEditedBy": "{e1130101-409b-4a8c-a2dc-691e85020b71}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": -14.542364120483398,
+                "y": -11.397424697875977,
+                "z": -13.911121368408203
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": -14.715569496154785,
+                "y": -11.570630073547363,
+                "z": -14.08432674407959
+            },
+            "rotation": {
+                "w": 0.847104549407959,
+                "x": 0.3958038091659546,
+                "y": -0.3363851308822632,
+                "z": 0.11189436912536621
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 0,
+                "green": 0,
+                "red": 255
+            },
+            "created": "2017-11-08T18:37:13Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "id": "{90b11bd9-b7e9-4fcd-b2f8-09ad64b34da4}",
+            "lastEdited": 1515450847175247,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
+            "marketplaceID": "95460aca-88a9-4bb8-aae0-efccc5dd7d6f",
+            "name": "Ambisonic -  Quiet Outdoor Ambience",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": -0.9311342239379883,
+                "y": -11.324058532714844,
+                "z": 0.24831914901733398
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": -1.104339361190796,
+                "y": -11.49726390838623,
+                "z": 0.07511407136917114
+            },
+            "rotation": {
+                "w": 1,
+                "x": -1.52587890625e-05,
+                "y": -1.52587890625e-05,
+                "z": -1.52587890625e-05
+            },
+            "script": "http://mpassets.highfidelity.com/95460aca-88a9-4bb8-aae0-efccc5dd7d6f-v1/ambientSound.js",
+            "scriptTimestamp": 1482281634132,
+            "type": "Sphere",
+            "userData": "{\"soundURL\":\"http://mpassets.highfidelity.com/95460aca-88a9-4bb8-aae0-efccc5dd7d6f-v1/monte rio - quietOutdoorAmbience.wav\",\"volume\":0.5,\"range\":150,\"grabbableKey\":{\"grabbable\":false}}",
+            "visible": 0
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 3.5350875854492188,
+                "y": 3.5350875854492188,
+                "z": 3.5350875854492188
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{d350a84f-2ca0-4db6-a223-047183a5c45c}",
+            "lastEdited": 1515450847175407,
+            "lastEditedBy": "{e1130101-409b-4a8c-a2dc-691e85020b71}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": -1117.0546875,
+                "y": 3962.938232421875,
+                "z": 34.72944641113281
+            },
+            "queryAACube": {
+                "scale": 6.122951030731201,
+                "x": -1120.1162109375,
+                "y": 3959.876708984375,
+                "z": 31.667970657348633
+            },
+            "rotation": {
+                "w": 0.3502403497695923,
+                "x": -0.11613643169403076,
+                "y": 0.038529038429260254,
+                "z": 0.928618311882019
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 247,
+                "green": 247,
+                "red": 247
+            },
+            "created": "2017-11-15T19:09:25Z",
+            "dimensions": {
+                "x": 0.8068006634712219,
+                "y": 0.8068006634712219,
+                "z": 0.8068006634712219
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -3,
+                "z": 0
+            },
+            "id": "{ba7d33b1-991c-4962-85b4-3c6127796822}",
+            "lastEdited": 1515450847175544,
+            "lastEditedBy": "{e1130101-409b-4a8c-a2dc-691e85020b71}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 43.96273422241211,
+                "y": -5258.13330078125,
+                "z": -315.75177001953125
+            },
+            "queryAACube": {
+                "scale": 1.3974196910858154,
+                "x": 43.26402282714844,
+                "y": -5258.83203125,
+                "z": -316.4504699707031
+            },
+            "restitution": 0.25,
+            "rotation": {
+                "w": 0.5697871446609497,
+                "x": -0.6398565769195557,
+                "y": -0.10972762107849121,
+                "z": -0.5038986802101135
+            },
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 247,
+                "green": 247,
+                "red": 247
+            },
+            "created": "2017-11-15T19:07:14Z",
+            "dimensions": {
+                "x": 0.32210201025009155,
+                "y": 0.32210201025009155,
+                "z": 0.32210201025009155
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -3,
+                "z": 0
+            },
+            "id": "{d3f416ba-32e9-4d36-903b-80ec0c6535a8}",
+            "lastEdited": 1515450847175721,
+            "lastEditedBy": "{5a1720ab-4af5-435b-b03b-2b1d42490268}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 4.237093925476074,
+                "y": -1216.7442626953125,
+                "z": -3.826606035232544
+            },
+            "queryAACube": {
+                "scale": 0.5578970909118652,
+                "x": 3.9581453800201416,
+                "y": -1217.023193359375,
+                "z": -4.105554580688477
+            },
+            "restitution": 0.25,
+            "rotation": {
+                "w": -0.1268133670091629,
+                "x": 0.1335812658071518,
+                "y": 0.6248417496681213,
+                "z": -0.7587141990661621
+            },
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{40692266-12aa-47f7-8e98-3f7fbf6384bd}",
+            "lastEdited": 1515450847175857,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 6.491794586181641,
+                "y": -11.366713523864746,
+                "z": -16.229021072387695
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 6.266627788543701,
+                "y": -11.591879844665527,
+                "z": -16.454187393188477
+            },
+            "rotation": {
+                "w": 0.7157549858093262,
+                "x": 0.6349736452102661,
+                "y": -0.1299610733985901,
+                "z": 0.2599374055862427
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{f1d964eb-f2ca-40d1-b4e7-59f782242ebe}",
+            "lastEdited": 1515450847175994,
+            "lastEditedBy": "{6102fddd-eb60-4a50-bc94-5832503d3f4d}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 9.983240127563477,
+                "y": -11.366604804992676,
+                "z": -16.235912322998047
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 9.758073806762695,
+                "y": -11.591771125793457,
+                "z": -16.461078643798828
+            },
+            "rotation": {
+                "w": 0.062150001525878906,
+                "x": 0.8993514776229858,
+                "y": -0.24113833904266357,
+                "z": -0.35933470726013184
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{dc8b8d04-b46c-4706-a400-c8856eede43f}",
+            "lastEdited": 1515450847176115,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 13.705802917480469,
+                "y": -11.369490623474121,
+                "z": -18.01860809326172
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 13.480636596679688,
+                "y": -11.594656944274902,
+                "z": -18.2437744140625
+            },
+            "rotation": {
+                "w": 0.7094377279281616,
+                "x": -0.6598458886146545,
+                "y": -0.022476553916931152,
+                "z": 0.24647903442382812
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2018-01-06T01:35:43Z",
+            "dimensions": {
+                "x": 1.2278845310211182,
+                "y": 0.03176399692893028,
+                "z": 0.1721571534872055
+            },
+            "id": "{d5834990-2049-4178-b7d1-92c06f5e39fb}",
+            "lastEdited": 1515450847176251,
+            "lastEditedBy": "{42106a69-a316-4741-956f-af56f0ebf247}",
+            "locked": 1,
+            "modelURL": "atp:/models/teleport-sign.fbx",
+            "name": "teleport-sign.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 1.0817162990570068,
+                "y": -10.342811584472656,
+                "z": -1.6193290948867798
+            },
+            "queryAACube": {
+                "scale": 1.2403013706207275,
+                "x": 0.46156561374664307,
+                "y": -10.96296215057373,
+                "z": -2.2394797801971436
+            },
+            "rotation": {
+                "w": 0.9131456613540649,
+                "x": -7.62939453125e-05,
+                "y": -0.40764474868774414,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "angularDamping": 1,
+            "clientOnly": 0,
+            "created": "2017-11-08T20:39:33Z",
+            "damping": 1,
+            "dimensions": {
+                "x": 0.321602463722229,
+                "y": 0.10645301640033722,
+                "z": 0.321602463722229
+            },
+            "friction": 0,
+            "id": "{c79c5973-e6d7-4c77-9a3d-7242229d6b1f}",
+            "lastEdited": 1515450847176397,
+            "lastEditedBy": "{42106a69-a316-4741-956f-af56f0ebf247}",
+            "locked": 1,
+            "modelURL": "atp:/models/Teleport-Pad.fbx?1",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 1.8545457124710083,
+                "y": -10.222334861755371,
+                "z": -0.8305273056030273
+            },
+            "queryAACube": {
+                "scale": 0.46710655093193054,
+                "x": 1.6209924221038818,
+                "y": -10.455887794494629,
+                "z": -1.0640805959701538
+            },
+            "rotation": {
+                "w": 0.9219043254852295,
+                "x": 1.52587890625e-05,
+                "y": -0.38741129636764526,
+                "z": 1.52587890625e-05
+            },
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2018-01-06T01:57:34Z",
+            "dimensions": {
+                "x": 1.645273208618164,
+                "y": 0.6213332414627075,
+                "z": 0.5391852259635925
+            },
+            "id": "{04e03a72-87aa-4d07-82d0-f60bb446688c}",
+            "lastEdited": 1515450847176526,
+            "lastEditedBy": "{42106a69-a316-4741-956f-af56f0ebf247}",
+            "locked": 1,
+            "modelURL": "atp:/models/teleport-controllers.fbx",
+            "name": "teleport-controllers.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 0.955890417098999,
+                "y": -10.1400728225708,
+                "z": -2.2227275371551514
+            },
+            "queryAACube": {
+                "scale": 1.8394834995269775,
+                "x": 0.036148667335510254,
+                "y": -11.059814453125,
+                "z": -3.1424694061279297
+            },
+            "rotation": {
+                "w": 0.9107652902603149,
+                "x": -1.52587890625e-05,
+                "y": -0.4129244089126587,
+                "z": -4.57763671875e-05
+            },
+            "shapeType": "simple-compound",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2018-01-06T02:08:29Z",
+            "dimensions": {
+                "x": 0.5807868242263794,
+                "y": 0.3129503130912781,
+                "z": 0.0010000000474974513
+            },
+            "id": "{8282fd30-6ee3-4b08-ada5-a7172c9d316d}",
+            "lastEdited": 1515450847176671,
+            "lastEditedBy": "{42106a69-a316-4741-956f-af56f0ebf247}",
+            "locked": 1,
+            "modelURL": "atp:/models/teleport-guy.fbx",
+            "name": "teleport-guy.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 1.7219315767288208,
+                "y": -10.175743103027344,
+                "z": -1.1441668272018433
+            },
+            "queryAACube": {
+                "scale": 0.6597365140914917,
+                "x": 1.3920633792877197,
+                "y": -10.505611419677734,
+                "z": -1.4740350246429443
+            },
+            "rotation": {
+                "w": 0.8036164045333862,
+                "x": -1.52587890625e-05,
+                "y": -0.5951476097106934,
+                "z": -4.57763671875e-05
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2018-01-06T02:08:29Z",
+            "dimensions": {
+                "x": 1.302155613899231,
+                "y": 0.00047686786274425685,
+                "z": 0.05738600343465805
+            },
+            "id": "{73335b13-0d31-41de-ba2e-163d78d4c1b9}",
+            "lastEdited": 1515450847176822,
+            "lastEditedBy": "{42106a69-a316-4741-956f-af56f0ebf247}",
+            "locked": 1,
+            "modelURL": "atp:/models/teleport-explainer.fbx",
+            "name": "teleport-explainer.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 1.082054853439331,
+                "y": -9.857510566711426,
+                "z": -2.2603111267089844
+            },
+            "queryAACube": {
+                "scale": 1.303419589996338,
+                "x": 0.4303450584411621,
+                "y": -10.509220123291016,
+                "z": -2.9120209217071533
+            },
+            "rotation": {
+                "w": 0.6466926336288452,
+                "x": 0.6500190496444702,
+                "y": -0.2845960259437561,
+                "z": 0.27962160110473633
+            },
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2018-01-05T22:58:26Z",
+            "dimensions": {
+                "x": 0.36296454071998596,
+                "y": 0.048084937036037445,
+                "z": 0.36296460032463074
+            },
+            "id": "{21fdee4e-04e1-4939-8ef2-9401ba67d377}",
+            "lastEdited": 1515450847176950,
+            "lastEditedBy": "{9cba3f41-2cfb-45ac-bbe0-988737ecb0ca}",
+            "locked": 1,
+            "modelURL": "atp:/models/avatar-pedestal.fbx",
+            "name": "avatar-pedestal.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 5.685561180114746,
+                "y": -10.538536071777344,
+                "z": -2.2755227088928223
+            },
+            "queryAACube": {
+                "scale": 0.5155566930770874,
+                "x": 5.427783012390137,
+                "y": -10.796314239501953,
+                "z": -2.5333011150360107
+            },
+            "rotation": {
+                "w": 0.9154039621353149,
+                "x": -1.52587890625e-05,
+                "y": -0.40248721837997437,
+                "z": -4.57763671875e-05
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2018-01-05T22:58:26Z",
+            "dimensions": {
+                "x": 0.36296454071998596,
+                "y": 0.048084937036037445,
+                "z": 0.36296460032463074
+            },
+            "id": "{bf2e22e9-7d90-4dad-85f5-4d8861487948}",
+            "lastEdited": 1515450847177102,
+            "lastEditedBy": "{9cba3f41-2cfb-45ac-bbe0-988737ecb0ca}",
+            "locked": 1,
+            "modelURL": "atp:/models/avatar-pedestal.fbx",
+            "name": "avatar-pedestal.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 5.313040256500244,
+                "y": -10.538536071777344,
+                "z": -2.68939471244812
+            },
+            "queryAACube": {
+                "scale": 0.5155566930770874,
+                "x": 5.055262088775635,
+                "y": -10.796314239501953,
+                "z": -2.9471731185913086
+            },
+            "rotation": {
+                "w": 0.9147936105728149,
+                "x": -1.52587890625e-05,
+                "y": -0.40392154455184937,
+                "z": -4.57763671875e-05
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2018-01-05T22:58:26Z",
+            "dimensions": {
+                "x": 0.36296454071998596,
+                "y": 0.048084937036037445,
+                "z": 0.36296460032463074
+            },
+            "id": "{f1bd3078-4cf3-49f5-8647-e9a1f5d1a4fa}",
+            "lastEdited": 1515450847177261,
+            "lastEditedBy": "{9cba3f41-2cfb-45ac-bbe0-988737ecb0ca}",
+            "locked": 1,
+            "modelURL": "atp:/models/avatar-pedestal.fbx",
+            "name": "avatar-pedestal.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 6.480530738830566,
+                "y": -10.538536071777344,
+                "z": -1.4218456745147705
+            },
+            "queryAACube": {
+                "scale": 0.5155566930770874,
+                "x": 6.222752571105957,
+                "y": -10.796314239501953,
+                "z": -1.679624080657959
+            },
+            "rotation": {
+                "w": 0.9147936105728149,
+                "x": -1.52587890625e-05,
+                "y": -0.40392154455184937,
+                "z": -4.57763671875e-05
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "animation": {
+                "allowTranslation": 0,
+                "currentFrame": 21,
+                "running": 1,
+                "url": "http://hifi-content.s3.amazonaws.com/DomainContent/AvatarStore/BodyMart/idle.fbx"
+            },
+            "clientOnly": 0,
+            "created": "2018-01-05T22:23:29Z",
+            "dimensions": {
+                "x": 0.6964755058288574,
+                "y": 0.7803581953048706,
+                "z": 0.1412927806377411
+            },
+            "id": "{372146de-d624-4152-8305-6b94ac3fe9c7}",
+            "lastEdited": 1515450847177395,
+            "lastEditedBy": "{9cba3f41-2cfb-45ac-bbe0-988737ecb0ca}",
+            "locked": 1,
+            "modelURL": "http://mpassets.highfidelity.com/0dce3426-55c8-4641-8dd5-d76eb575b64a-v1/Anime_F_Outfit.fst",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 5.717153072357178,
+                "y": -10.129717826843262,
+                "z": -2.328688383102417
+            },
+            "queryAACube": {
+                "scale": 1.05546236038208,
+                "x": 5.189421653747559,
+                "y": -10.657448768615723,
+                "z": -2.856419563293457
+            },
+            "rotation": {
+                "w": 0.9147936105728149,
+                "x": -0.0001068115234375,
+                "y": -0.40392154455184937,
+                "z": -4.57763671875e-05
+            },
+            "script": "http://hifi-content.s3.amazonaws.com/alan/dev/Scripts/wearAvatar.js",
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false,\"wantsTrigger\":true}}"
+        },
+        {
+            "animation": {
+                "allowTranslation": 0,
+                "running": 1,
+                "url": "http://hifi-content.s3.amazonaws.com/DomainContent/AvatarStore/BodyMart/idle.fbx"
+            },
+            "clientOnly": 0,
+            "created": "2018-01-05T22:23:29Z",
+            "dimensions": {
+                "x": 0.7716084122657776,
+                "y": 0.6177299618721008,
+                "z": 0.2670249342918396
+            },
+            "id": "{aa708c10-9f9a-460f-a981-1acbb4115d52}",
+            "lastEdited": 1515450847177534,
+            "lastEditedBy": "{9cba3f41-2cfb-45ac-bbe0-988737ecb0ca}",
+            "locked": 1,
+            "modelURL": "http://mpassets.highfidelity.com/9515f437-f4e1-49a7-b6bf-0423873cd576-v1/FireBrandedOgre.fst",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 6.0493292808532715,
+                "y": -10.22122573852539,
+                "z": -1.891324758529663
+            },
+            "queryAACube": {
+                "scale": 1.0238516330718994,
+                "x": 5.537403583526611,
+                "y": -10.73315143585205,
+                "z": -2.4032506942749023
+            },
+            "rotation": {
+                "w": -0.9210803508758545,
+                "x": -7.62939453125e-05,
+                "y": 0.38936448097229004,
+                "z": -1.52587890625e-05
+            },
+            "script": "http://hifi-content.s3.amazonaws.com/alan/dev/Scripts/wearAvatar.js",
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false,\"wantsTrigger\":true}}"
+        },
+        {
+            "animation": {
+                "allowTranslation": 0
+            },
+            "clientOnly": 0,
+            "created": "2018-01-05T22:23:29Z",
+            "dimensions": {
+                "x": 0.5300021171569824,
+                "y": 0.535938024520874,
+                "z": 0.1448037326335907
+            },
+            "id": "{880ec198-3c54-4c20-8452-b15e652d6811}",
+            "lastEdited": 1515450847177679,
+            "lastEditedBy": "{9cba3f41-2cfb-45ac-bbe0-988737ecb0ca}",
+            "locked": 1,
+            "modelURL": "http://mpassets.highfidelity.com/b7c412a8-5278-4778-b62e-a1dafee6c5f4-v1/Robimo_black[1].fst?1",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 6.504237651824951,
+                "y": -10.27224349975586,
+                "z": -1.4472888708114624
+            },
+            "queryAACube": {
+                "scale": 0.7675284743309021,
+                "x": 6.120473384857178,
+                "y": -10.656007766723633,
+                "z": -1.8310531377792358
+            },
+            "rotation": {
+                "w": 0.9147936105728149,
+                "x": -0.0001068115234375,
+                "y": -0.40392154455184937,
+                "z": -4.57763671875e-05
+            },
+            "script": "http://hifi-content.s3.amazonaws.com/alan/dev/Scripts/wearAvatar.js",
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false,\"wantsTrigger\":true}}"
+        },
+        {
+            "animation": {
+                "allowTranslation": 0,
+                "currentFrame": 14,
+                "running": 1,
+                "url": "http://hifi-content.s3.amazonaws.com/DomainContent/AvatarStore/BodyMart/idle.fbx"
+            },
+            "clientOnly": 0,
+            "created": "2018-01-05T22:30:02Z",
+            "dimensions": {
+                "x": 0.9323366284370422,
+                "y": 0.9670527577400208,
+                "z": 0.21195586025714874
+            },
+            "id": "{def8a2e6-3ec3-46e6-85ad-f832eb1cebc7}",
+            "lastEdited": 1515450847177888,
+            "lastEditedBy": "{9cba3f41-2cfb-45ac-bbe0-988737ecb0ca}",
+            "locked": 1,
+            "modelURL": "http://mpassets.highfidelity.com/7fe80a1e-f445-4800-9e89-40e677b03bee-v3/mannequin.fst",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 5.362990856170654,
+                "y": -10.069156646728516,
+                "z": -2.7700071334838867
+            },
+            "queryAACube": {
+                "scale": 1.3599146604537964,
+                "x": 4.683033466339111,
+                "y": -10.749114036560059,
+                "z": -3.4499645233154297
+            },
+            "rotation": {
+                "w": 0.9167772531509399,
+                "x": -1.52587890625e-05,
+                "y": -0.3993743658065796,
+                "z": -0.0001373291015625
+            },
+            "script": "http://hifi-content.s3.amazonaws.com/alan/dev/Scripts/wearAvatar.js",
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false,\"wantsTrigger\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2018-01-05T22:56:15Z",
+            "dimensions": {
+                "x": 1.6062285900115967,
+                "y": 0.01794176921248436,
+                "z": 0.160691499710083
+            },
+            "id": "{137abd12-1897-4394-bcc8-f8172031e7cc}",
+            "lastEdited": 1515450847178075,
+            "lastEditedBy": "{42106a69-a316-4741-956f-af56f0ebf247}",
+            "locked": 1,
+            "modelURL": "atp:/models/choose-avatar-sign.fbx",
+            "name": "choose-avatar-sign.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 5.7552995681762695,
+                "y": -10.546416282653809,
+                "z": -1.772545576095581
+            },
+            "queryAACube": {
+                "scale": 1.6143462657928467,
+                "x": 4.948126316070557,
+                "y": -11.353589057922363,
+                "z": -2.579718589782715
+            },
+            "rotation": {
+                "w": 0.9149156808853149,
+                "x": -1.52587890625e-05,
+                "y": -0.40358585119247437,
+                "z": -7.62939453125e-05
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2018-01-05T23:00:37Z",
+            "dimensions": {
+                "x": 0.36296454071998596,
+                "y": 0.048084937036037445,
+                "z": 0.36296460032463074
+            },
+            "id": "{b963b586-55d0-41a0-9e09-4d1ec6e27b9f}",
+            "lastEdited": 1515450847178343,
+            "lastEditedBy": "{9cba3f41-2cfb-45ac-bbe0-988737ecb0ca}",
+            "locked": 1,
+            "modelURL": "atp:/models/avatar-pedestal.fbx",
+            "name": "avatar-pedestal.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 6.066493511199951,
+                "y": -10.538536071777344,
+                "z": -1.854325771331787
+            },
+            "queryAACube": {
+                "scale": 0.5155566930770874,
+                "x": 5.808715343475342,
+                "y": -10.796314239501953,
+                "z": -2.1121041774749756
+            },
+            "rotation": {
+                "w": 0.9147936105728149,
+                "x": -1.52587890625e-05,
+                "y": -0.40392154455184937,
+                "z": -4.57763671875e-05
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-11-07T19:54:04Z",
+            "dimensions": {
+                "x": 2.7596800327301025,
+                "y": 0.5776242613792419,
+                "z": 0.6272000670433044
+            },
+            "id": "{4b3b289d-ada1-4fc3-8311-f83473cfd496}",
+            "lastEdited": 1515450847178498,
+            "lastEditedBy": "{a1d921ee-c139-43fa-a4ae-aefee15513cd}",
+            "locked": 1,
+            "modelURL": "atp:/models/Block-Display-FTUE.fbx?4",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 5.857770919799805,
+                "y": -10.844785690307617,
+                "z": -1.9596397876739502
+            },
+            "queryAACube": {
+                "scale": 2.888401508331299,
+                "x": 4.413570404052734,
+                "y": -12.288986206054688,
+                "z": -3.4038405418395996
+            },
+            "rotation": {
+                "w": -0.40187686681747437,
+                "x": 1.52587890625e-05,
+                "y": -0.9157091379165649,
+                "z": -4.57763671875e-05
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:15:12Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{da651d3f-3fac-4949-a61b-3a04fe94bfbe}",
+            "lastEdited": 1515450847178630,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 11.962201118469238,
+                "y": -11.396597862243652,
+                "z": -14.554800033569336
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": 11.788995742797852,
+                "y": -11.569803237915039,
+                "z": -14.728005409240723
+            },
+            "rotation": {
+                "w": 0.22441446781158447,
+                "x": 0.8045319318771362,
+                "y": 0.36241698265075684,
+                "z": -0.4135347604751587
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 255,
+                "green": 157,
+                "red": 0
+            },
+            "created": "2017-11-08T20:26:26Z",
+            "cutoff": 90,
+            "dimensions": {
+                "x": 0.33092576265335083,
+                "y": 0.33092576265335083,
+                "z": 0.33092576265335083
+            },
+            "falloffRadius": 22,
+            "id": "{832652f7-d9ac-459a-a592-55316b0c7e04}",
+            "intensity": 44,
+            "lastEdited": 1515450847178794,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 10.888574600219727,
+                "y": -9.907865524291992,
+                "z": -2.493134021759033
+            },
+            "queryAACube": {
+                "scale": 0.5731802582740784,
+                "x": 10.601984024047852,
+                "y": -10.194456100463867,
+                "z": -2.77972412109375
+            },
+            "rotation": {
+                "w": 0.49962615966796875,
+                "x": -1.52587890625e-05,
+                "y": 0.8662089109420776,
+                "z": -4.57763671875e-05
+            },
+            "type": "Light",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "collisionless": 1,
+            "created": "2017-11-08T23:03:43Z",
+            "dimensions": {
+                "x": 0.3770368993282318,
+                "y": 0.2550869584083557,
+                "z": 0.2422415018081665
+            },
+            "id": "{514ec0ef-5f8f-4778-957c-cc02faef05a0}",
+            "ignoreForCollisions": 1,
+            "lastEdited": 1515450847178928,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/FTUE-Tablet-Market.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 10.794285774230957,
+                "y": -9.917487144470215,
+                "z": -2.78232479095459
+            },
+            "queryAACube": {
+                "scale": 0.5156618356704712,
+                "x": 10.536455154418945,
+                "y": -10.175317764282227,
+                "z": -3.0401556491851807
+            },
+            "rotation": {
+                "w": 0.9167162179946899,
+                "x": -1.52587890625e-05,
+                "y": -0.3994964361190796,
+                "z": -1.52587890625e-05
+            },
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-11-08T20:22:04Z",
+            "dimensions": {
+                "x": 2.042111873626709,
+                "y": 0.5763819813728333,
+                "z": 1.0812318325042725
+            },
+            "id": "{665e7b3d-602e-40c8-b0df-a47a93ef3fa8}",
+            "lastEdited": 1515450847179054,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/FTUE-Table-5.fbx?3",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 11.437237739562988,
+                "y": -10.055195808410645,
+                "z": -2.0615696907043457
+            },
+            "queryAACube": {
+                "scale": 2.38149094581604,
+                "x": 10.246492385864258,
+                "y": -11.245941162109375,
+                "z": -3.252315044403076
+            },
+            "rotation": {
+                "w": 0.9155565500259399,
+                "x": -1.52587890625e-05,
+                "y": -0.40212100744247437,
+                "z": -1.52587890625e-05
+            },
+            "script": "atp:/scripts/marketplaceEnvironmentScript.js",
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false,\"wantsTrigger\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-11-08T19:55:51Z",
+            "dimensions": {
+                "x": 2.6138203144073486,
+                "y": 0.8329697251319885,
+                "z": 1.3377408981323242
+            },
+            "id": "{7eb7ec69-6b59-4d55-8175-515cc4525f9e}",
+            "lastEdited": 1515450847179210,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/Block-Display-round-FTUE.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 11.50175666809082,
+                "y": -10.707625389099121,
+                "z": -2.0533761978149414
+            },
+            "queryAACube": {
+                "scale": 3.052121639251709,
+                "x": 9.975695610046387,
+                "y": -12.233686447143555,
+                "z": -3.579437017440796
+            },
+            "rotation": {
+                "w": 0.9147936105728149,
+                "x": -1.52587890625e-05,
+                "y": -0.40392154455184937,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T00:05:07Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{6c40cb95-21c0-4d89-a2c4-0d52925565d7}",
+            "lastEdited": 1515450847179408,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 11.762128829956055,
+                "y": -11.314629554748535,
+                "z": -7.096938610076904
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": 11.451848983764648,
+                "y": -11.624909400939941,
+                "z": -7.407217979431152
+            },
+            "rotation": {
+                "w": 0.7938506603240967,
+                "x": 0.5864194631576538,
+                "y": 0.11903560161590576,
+                "z": 0.10817122459411621
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{7a705013-0b7e-4a4b-a295-ffc1707978b1}",
+            "lastEdited": 1515450847179592,
+            "lastEditedBy": "{b9150ee7-4dc1-4e89-a124-bf292b5d0e8d}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 11.7279634475708,
+                "y": -10.837957382202148,
+                "z": -2.4460089206695557
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": 11.417683601379395,
+                "y": -11.148237228393555,
+                "z": -2.756288528442383
+            },
+            "rotation": {
+                "w": 0.22313272953033447,
+                "x": 0.37218284606933594,
+                "y": 0.5008163452148438,
+                "z": 0.7488670349121094
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{c6b51573-e418-452b-b6f8-c8065389c4d8}",
+            "lastEdited": 1515450847179800,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 29.80107879638672,
+                "y": -11.368855476379395,
+                "z": -22.65805435180664
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 29.575912475585938,
+                "y": -11.594021797180176,
+                "z": -22.883220672607422
+            },
+            "rotation": {
+                "w": -0.4120088219642639,
+                "x": 0.6962538957595825,
+                "y": -0.3181048035621643,
+                "z": -0.494285523891449
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{1c8c11c3-ced8-4156-b302-db95a9cc50f2}",
+            "lastEdited": 1515450847180003,
+            "lastEditedBy": "{2b735469-a7a0-40b5-9640-89c903b10fd9}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 20.256290435791016,
+                "y": -11.399393081665039,
+                "z": -14.615124702453613
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": 20.083086013793945,
+                "y": -11.572598457336426,
+                "z": -14.788330078125
+            },
+            "rotation": {
+                "w": 0.5073472261428833,
+                "x": 0.8342565298080444,
+                "y": -0.014145135879516602,
+                "z": -0.21535056829452515
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{ae66bc98-6c3a-4b26-8122-c4c1253979db}",
+            "lastEdited": 1515450847180204,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 21.03437042236328,
+                "y": -11.36937427520752,
+                "z": -14.449124336242676
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 20.8092041015625,
+                "y": -11.5945405960083,
+                "z": -14.674290657043457
+            },
+            "rotation": {
+                "w": -0.4732585549354553,
+                "x": 0.32704663276672363,
+                "y": 0.770107626914978,
+                "z": 0.2756847143173218
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{31ef0a3d-d8e7-47ea-aed6-04ef52caf30f}",
+            "lastEdited": 1515450847180376,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 18.691301345825195,
+                "y": -11.366743087768555,
+                "z": -2.766026735305786
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 18.466135025024414,
+                "y": -11.591909408569336,
+                "z": -2.9911932945251465
+            },
+            "rotation": {
+                "w": 0.460410475730896,
+                "x": -0.1285572648048401,
+                "y": 0.8759441375732422,
+                "z": 0.0646524429321289
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{73f4032c-d579-4440-84bd-7ba76592f1f6}",
+            "lastEdited": 1515450847180594,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 22.63691520690918,
+                "y": -11.396671295166016,
+                "z": -1.1328809261322021
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": 22.46371078491211,
+                "y": -11.569876670837402,
+                "z": -1.3060860633850098
+            },
+            "rotation": {
+                "w": 0.7127946615219116,
+                "x": -0.5741512179374695,
+                "y": 0.2538032531738281,
+                "z": 0.31276416778564453
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{b5b1ce21-41b2-4dce-bfc9-35f28b4544a0}",
+            "lastEdited": 1515450847180788,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 25.76377296447754,
+                "y": -11.399248123168945,
+                "z": -14.198297500610352
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": 25.59056854248047,
+                "y": -11.572453498840332,
+                "z": -14.371502876281738
+            },
+            "rotation": {
+                "w": 0.04557866230607033,
+                "x": -0.6003326177597046,
+                "y": 0.6512730717658997,
+                "z": -0.46191632747650146
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{6dcc80ba-f93b-40e6-9363-f0d273cad738}",
+            "lastEdited": 1515450847180994,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 27.565855026245117,
+                "y": -11.366482734680176,
+                "z": -2.4345219135284424
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 27.340688705444336,
+                "y": -11.591649055480957,
+                "z": -2.6596884727478027
+            },
+            "rotation": {
+                "w": 0.6659799814224243,
+                "x": -0.2746471166610718,
+                "y": 0.686671257019043,
+                "z": -0.09761196374893188
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{a29aae54-2982-465d-aaeb-da91387fce85}",
+            "lastEdited": 1515450847181200,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 1.991228461265564,
+                "y": -11.396851539611816,
+                "z": -16.140810012817383
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": 1.818023443222046,
+                "y": -11.570056915283203,
+                "z": -16.314014434814453
+            },
+            "rotation": {
+                "w": 0.23503470420837402,
+                "x": 0.8070954084396362,
+                "y": 0.3548485040664673,
+                "z": -0.4092012047767639
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:15:12Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{a0a30c8b-a011-4f86-a059-1e6aaee3f0a9}",
+            "lastEdited": 1515450847181386,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 39.1755256652832,
+                "y": -11.368595123291016,
+                "z": -21.86526870727539
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 38.95035934448242,
+                "y": -11.593761444091797,
+                "z": -22.090435028076172
+            },
+            "rotation": {
+                "w": 0.8319370746612549,
+                "x": -0.49828338623046875,
+                "y": 0.20234990119934082,
+                "z": 0.13652241230010986
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{ef748316-b8f5-455d-b98e-f25154f8eaa5}",
+            "lastEdited": 1515450847181589,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 46.32415771484375,
+                "y": -11.368322372436523,
+                "z": -23.658260345458984
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 46.09899139404297,
+                "y": -11.593488693237305,
+                "z": -23.883426666259766
+            },
+            "rotation": {
+                "w": 0.5565117597579956,
+                "x": 0.6688792705535889,
+                "y": -0.47032880783081055,
+                "z": -0.14732587337493896
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{c16d5fa3-4c3a-4f63-b279-4a2eecb7e2e0}",
+            "lastEdited": 1515450847181816,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 36.604007720947266,
+                "y": -11.36599349975586,
+                "z": -9.327594757080078
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 36.378841400146484,
+                "y": -11.59115982055664,
+                "z": -9.55276107788086
+            },
+            "rotation": {
+                "w": 0.6436102390289307,
+                "x": 0.6982375383377075,
+                "y": -0.13838404417037964,
+                "z": 0.28108644485473633
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{03fa824b-b034-4955-bf74-e75c2a4cb4bf}",
+            "lastEdited": 1515450847182020,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 36.04939270019531,
+                "y": -11.319784164428711,
+                "z": -14.225064277648926
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": 35.739112854003906,
+                "y": -11.630064010620117,
+                "z": -14.535344123840332
+            },
+            "rotation": {
+                "w": -0.12474250793457031,
+                "x": 0.39320969581604004,
+                "y": 0.13807892799377441,
+                "z": 0.9003890752792358
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{81e01743-0593-4505-a232-26f9260b94c6}",
+            "lastEdited": 1515450847182215,
+            "lastEditedBy": "{e1130101-409b-4a8c-a2dc-691e85020b71}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 33.23908996582031,
+                "y": -11.317219734191895,
+                "z": -0.7893918752670288
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": 32.928810119628906,
+                "y": -11.6274995803833,
+                "z": -1.0996713638305664
+            },
+            "rotation": {
+                "w": 0.6351872682571411,
+                "x": 0.17286944389343262,
+                "y": -0.4800030589103699,
+                "z": -0.5798580646514893
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{935d739b-b38b-4b0b-a54d-89a493bc9a7d}",
+            "lastEdited": 1515450847182415,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 33.733829498291016,
+                "y": -11.317180633544922,
+                "z": -1.5208783149719238
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": 33.42354965209961,
+                "y": -11.627460479736328,
+                "z": -1.831157922744751
+            },
+            "rotation": {
+                "w": 0.16484320163726807,
+                "x": 0.22972452640533447,
+                "y": -0.6287174820899963,
+                "z": 0.7243915796279907
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{3bf3667c-7e18-43fa-9a2c-6c5f7087fdce}",
+            "lastEdited": 1515450847182615,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 43.66532516479492,
+                "y": -11.368778228759766,
+                "z": -11.363075256347656
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 43.44015884399414,
+                "y": -11.593944549560547,
+                "z": -11.588241577148438
+            },
+            "rotation": {
+                "w": 0.3380941152572632,
+                "x": 0.9240100383758545,
+                "y": -0.1452201008796692,
+                "z": 0.10392916202545166
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{28ae9837-9535-4da2-b61c-89566b62ebeb}",
+            "lastEdited": 1515450847182816,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 50.51424026489258,
+                "y": -11.398199081420898,
+                "z": -23.396392822265625
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": 50.341033935546875,
+                "y": -11.571404457092285,
+                "z": -23.569597244262695
+            },
+            "rotation": {
+                "w": 0.42057982087135315,
+                "x": -0.7690714597702026,
+                "y": 0.3619964122772217,
+                "z": 0.31717556715011597
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{0bcd83a3-c9f9-4c9f-96b2-3ae8ea1862b0}",
+            "lastEdited": 1515450847183015,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 48.894691467285156,
+                "y": -11.398637771606445,
+                "z": -10.79719066619873
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": 48.72148513793945,
+                "y": -11.571843147277832,
+                "z": -10.970396041870117
+            },
+            "rotation": {
+                "w": 0.6475776433944702,
+                "x": 0.15700006484985352,
+                "y": 0.7286945581436157,
+                "z": -0.15803766250610352
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{c0e754fb-5964-4027-a15c-4ae551a74231}",
+            "lastEdited": 1515450847183208,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 52.21103286743164,
+                "y": -11.319260597229004,
+                "z": -15.2218017578125
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": 51.900753021240234,
+                "y": -11.62954044342041,
+                "z": -15.532081604003906
+            },
+            "rotation": {
+                "w": -0.42003512382507324,
+                "x": 0.7831997871398926,
+                "y": -0.26228731870651245,
+                "z": -0.37602806091308594
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{0c2342ee-9df4-4b06-98ca-d33ad2f858b2}",
+            "lastEdited": 1515450847183389,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 49.4832878112793,
+                "y": -11.316673278808594,
+                "z": -2.3716087341308594
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": 49.17300796508789,
+                "y": -11.626953125,
+                "z": -2.6818883419036865
+            },
+            "rotation": {
+                "w": 0.529411792755127,
+                "x": 0.38850998878479004,
+                "y": -0.7120317220687866,
+                "z": 0.24855422973632812
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{83b73fc6-2b71-4bc8-9188-91daab3e9ccb}",
+            "lastEdited": 1515450847183569,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 49.105098724365234,
+                "y": -11.395882606506348,
+                "z": -0.8003486394882202
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": 48.93189239501953,
+                "y": -11.569087982177734,
+                "z": -0.9735537171363831
+            },
+            "rotation": {
+                "w": 0.35745224356651306,
+                "x": 0.6995010375976562,
+                "y": 0.5701673626899719,
+                "z": -0.24048981070518494
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 255,
+                "green": 157,
+                "red": 0
+            },
+            "created": "2017-11-07T19:51:53Z",
+            "cutoff": 90,
+            "dimensions": {
+                "x": 0.33092576265335083,
+                "y": 0.33092576265335083,
+                "z": 0.33092576265335083
+            },
+            "falloffRadius": 22,
+            "id": "{c39f8d8c-aa1d-4bc8-81fb-10aba7ad8c17}",
+            "intensity": 44,
+            "lastEdited": 1515450847183785,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 2.962045669555664,
+                "y": -9.842641830444336,
+                "z": 2.336517333984375
+            },
+            "queryAACube": {
+                "scale": 0.5731802582740784,
+                "x": 2.6754555702209473,
+                "y": -10.129232406616211,
+                "z": 2.049927234649658
+            },
+            "rotation": {
+                "w": -0.06581217050552368,
+                "x": -1.52587890625e-05,
+                "y": 0.997802734375,
+                "z": -1.52587890625e-05
+            },
+            "type": "Light",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 255,
+                "green": 157,
+                "red": 0
+            },
+            "created": "2017-11-08T00:18:23Z",
+            "cutoff": 90,
+            "dimensions": {
+                "x": 0.33092576265335083,
+                "y": 0.33092576265335083,
+                "z": 0.33092576265335083
+            },
+            "falloffRadius": 22,
+            "id": "{fa3ed763-0198-4e18-b971-f373d39a43fc}",
+            "intensity": 44,
+            "lastEdited": 1515450847183990,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 3.4728479385375977,
+                "y": -9.785618782043457,
+                "z": 1.9361060857772827
+            },
+            "queryAACube": {
+                "scale": 0.5731802582740784,
+                "x": 3.186257839202881,
+                "y": -10.072209358215332,
+                "z": 1.649515986442566
+            },
+            "rotation": {
+                "w": -0.06587320566177368,
+                "x": -1.52587890625e-05,
+                "y": 0.997802734375,
+                "z": -1.52587890625e-05
+            },
+            "type": "Light",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-11-08T00:14:01Z",
+            "dimensions": {
+                "x": 2.067044258117676,
+                "y": 0.9637600183486938,
+                "z": 0.7104557752609253
+            },
+            "id": "{afc29b89-94a0-49b6-b51f-33d209ffb773}",
+            "lastEdited": 1515450847184173,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/FTUE-controllers.fbx?5",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 3.457307815551758,
+                "y": -9.936989784240723,
+                "z": 1.8492406606674194
+            },
+            "queryAACube": {
+                "scale": 2.3887765407562256,
+                "x": 2.2629194259643555,
+                "y": -11.131378173828125,
+                "z": 0.6548523902893066
+            },
+            "rotation": {
+                "w": -0.35365837812423706,
+                "x": -1.52587890625e-05,
+                "y": 0.9353628158569336,
+                "z": -1.52587890625e-05
+            },
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 255,
+                "green": 157,
+                "red": 0
+            },
+            "created": "2017-11-08T01:41:24Z",
+            "cutoff": 90,
+            "dimensions": {
+                "x": 0.33092576265335083,
+                "y": 0.33092576265335083,
+                "z": 0.33092576265335083
+            },
+            "falloffRadius": 22,
+            "id": "{4f6a7da9-c24c-4851-8dce-da4a08a7973b}",
+            "intensity": 44,
+            "lastEdited": 1515450847184356,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 3.9642457962036133,
+                "y": -9.837759017944336,
+                "z": 1.4334890842437744
+            },
+            "queryAACube": {
+                "scale": 0.5731802582740784,
+                "x": 3.6776556968688965,
+                "y": -10.124349594116211,
+                "z": 1.1468989849090576
+            },
+            "rotation": {
+                "w": -0.06593424081802368,
+                "x": -1.52587890625e-05,
+                "y": 0.997802734375,
+                "z": -1.52587890625e-05
+            },
+            "type": "Light",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-11-15T18:54:07Z",
+            "dimensions": {
+                "x": 2.7596800327301025,
+                "y": 0.7951445579528809,
+                "z": 0.6272000670433044
+            },
+            "id": "{322980f1-368c-4c80-8165-94ab19f99566}",
+            "lastEdited": 1515450847184545,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/Block-Display-FTUE.fbx?4",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 3.3740954399108887,
+                "y": -10.734626770019531,
+                "z": 1.755892276763916
+            },
+            "queryAACube": {
+                "scale": 2.9396376609802246,
+                "x": 1.9042766094207764,
+                "y": -12.204445838928223,
+                "z": 0.2860734462738037
+            },
+            "rotation": {
+                "w": 0.36314940452575684,
+                "x": 1.52587890625e-05,
+                "y": -0.931731104850769,
+                "z": -4.57763671875e-05
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{aabbf271-ce4c-4729-ae34-754300d66865}",
+            "lastEdited": 1515450847184744,
+            "lastEditedBy": "{c92ff875-b6de-454e-b238-9c184d893078}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 2.2038471698760986,
+                "y": -11.36469554901123,
+                "z": 13.646686553955078
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 1.9786806106567383,
+                "y": -11.589861869812012,
+                "z": 13.421520233154297
+            },
+            "rotation": {
+                "w": 0.5684138536453247,
+                "x": -0.23381400108337402,
+                "y": 0.7192950248718262,
+                "z": -0.32378119230270386
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 255,
+                "green": 157,
+                "red": 0
+            },
+            "created": "2017-11-08T20:26:26Z",
+            "cutoff": 90,
+            "dimensions": {
+                "x": 0.33092576265335083,
+                "y": 0.33092576265335083,
+                "z": 0.33092576265335083
+            },
+            "falloffRadius": 22,
+            "id": "{b6fb1795-5b61-4b74-9e46-99ff72c495c4}",
+            "intensity": 44,
+            "lastEdited": 1515450847184946,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 9.219184875488281,
+                "y": -9.882539749145508,
+                "z": 1.4580254554748535
+            },
+            "queryAACube": {
+                "scale": 0.5731802582740784,
+                "x": 8.932594299316406,
+                "y": -10.169130325317383,
+                "z": 1.1714353561401367
+            },
+            "rotation": {
+                "w": 0.49962615966796875,
+                "x": -1.52587890625e-05,
+                "y": 0.8662089109420776,
+                "z": -4.57763671875e-05
+            },
+            "type": "Light",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "collisionless": 1,
+            "created": "2017-11-08T23:01:32Z",
+            "dimensions": {
+                "x": 0.3770368993282318,
+                "y": 0.2550869584083557,
+                "z": 0.2422415018081665
+            },
+            "id": "{ba9c0233-1211-443f-a6ad-0c55fdbf05c1}",
+            "ignoreForCollisions": 1,
+            "lastEdited": 1515450847185147,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/FTUE-Tablet-Bubble.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 9.515481948852539,
+                "y": -9.92824935913086,
+                "z": 1.3328981399536133
+            },
+            "queryAACube": {
+                "scale": 0.5156618356704712,
+                "x": 9.257651329040527,
+                "y": -10.186079978942871,
+                "z": 1.0750672817230225
+            },
+            "rotation": {
+                "w": 0.3657435178756714,
+                "x": -1.52587890625e-05,
+                "y": -0.930724024772644,
+                "z": -1.52587890625e-05
+            },
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2018-01-05T23:13:43Z",
+            "dimensions": {
+                "x": 0.9381011128425598,
+                "y": 0.0005153710371814668,
+                "z": 0.1605016142129898
+            },
+            "id": "{b5dac223-4b3f-4e96-9bd2-e57f13553abf}",
+            "lastEdited": 1515450847185360,
+            "lastEditedBy": "{9cba3f41-2cfb-45ac-bbe0-988737ecb0ca}",
+            "locked": 1,
+            "modelURL": "atp:/models/bubble-explainer.fbx",
+            "name": "bubble-explainer.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 9.129387855529785,
+                "y": -10.274120330810547,
+                "z": 1.3425387144088745
+            },
+            "queryAACube": {
+                "scale": 0.9517324566841125,
+                "x": 8.653521537780762,
+                "y": -10.74998664855957,
+                "z": 0.8666725158691406
+            },
+            "rotation": {
+                "w": 0.3343099355697632,
+                "x": 0.13783478736877441,
+                "y": -0.8632486462593079,
+                "z": 0.3521934747695923
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "collisionless": 1,
+            "color": {
+                "blue": 0,
+                "green": 0,
+                "red": 255
+            },
+            "created": "2017-11-08T21:12:19Z",
+            "dimensions": {
+                "x": 1.1678450107574463,
+                "y": 2.019850015640259,
+                "z": 1.1727733612060547
+            },
+            "id": "{fd03acd1-1a92-47e9-8303-3f6368445d17}",
+            "ignoreForCollisions": 1,
+            "lastEdited": 1515451026023275,
+            "lastEditedBy": "{2e662d74-82c3-474c-8a7e-53aa24f8f826}",
+            "locked": 1,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 14.202737808227539,
+                "y": -10.060141563415527,
+                "z": 2.3831942081451416
+            },
+            "queryAACube": {
+                "scale": 2.6113317012786865,
+                "x": 12.897071838378906,
+                "y": -11.36580753326416,
+                "z": 1.0775283575057983
+            },
+            "rotation": {
+                "w": -0.3842068910598755,
+                "x": -1.52587890625e-05,
+                "y": 0.9232470989227295,
+                "z": -1.52587890625e-05
+            },
+            "script": "atp:/portal.js",
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "hifi://welcome",
+            "visible": 0
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{c4a07018-9a1f-4d7e-9b5c-973ce5006775}",
+            "lastEdited": 1515450847185830,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 15.323039054870605,
+                "y": -11.397103309631348,
+                "z": 5.703467845916748
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": 15.149833679199219,
+                "y": -11.570308685302734,
+                "z": 5.5302629470825195
+            },
+            "rotation": {
+                "w": -0.28218507766723633,
+                "x": -0.31178760528564453,
+                "y": 0.13636982440948486,
+                "z": 0.8969711065292358
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 255,
+                "green": 204,
+                "red": 0
+            },
+            "created": "2017-11-08T01:43:35Z",
+            "cutoff": 90,
+            "dimensions": {
+                "x": 1.1194169521331787,
+                "y": 1.1194169521331787,
+                "z": 1.1194169521331787
+            },
+            "falloffRadius": 11,
+            "id": "{71c31776-329d-4fbf-8714-0a8715740891}",
+            "intensity": 22,
+            "lastEdited": 1515450847186047,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 8.432526588439941,
+                "y": -9.882539749145508,
+                "z": 2.217592477798462
+            },
+            "queryAACube": {
+                "scale": 1.938887119293213,
+                "x": 7.463083267211914,
+                "y": -10.851983070373535,
+                "z": 1.2481489181518555
+            },
+            "rotation": {
+                "w": 0.49962615966796875,
+                "x": -1.52587890625e-05,
+                "y": 0.8662089109420776,
+                "z": -4.57763671875e-05
+            },
+            "type": "Light",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-11-07T19:54:04Z",
+            "dimensions": {
+                "x": 2.7596800327301025,
+                "y": 0.7924456000328064,
+                "z": 0.6272000670433044
+            },
+            "id": "{a5f352d7-ba48-44c1-a3d6-b97611fcf832}",
+            "lastEdited": 1515450847186245,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/Block-Display-FTUE.fbx?4",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 8.653060913085938,
+                "y": -10.733277320861816,
+                "z": 1.7274088859558105
+            },
+            "queryAACube": {
+                "scale": 2.938908576965332,
+                "x": 7.1836066246032715,
+                "y": -12.20273208618164,
+                "z": 0.25795459747314453
+            },
+            "rotation": {
+                "w": -0.931090235710144,
+                "x": 1.52587890625e-05,
+                "y": -0.3648584485054016,
+                "z": -4.57763671875e-05
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-11-08T17:57:53Z",
+            "dimensions": {
+                "x": 1.8424386978149414,
+                "y": 0.7853294610977173,
+                "z": 0.8340673446655273
+            },
+            "id": "{aa31b8d6-7931-46f0-b7f5-ddb0cd7fbc59}",
+            "lastEdited": 1515450847186440,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/FTUE-bubble.fbx?1",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 8.699543952941895,
+                "y": -9.946165084838867,
+                "z": 1.8764195442199707
+            },
+            "queryAACube": {
+                "scale": 2.169560194015503,
+                "x": 7.6147637367248535,
+                "y": -11.03094482421875,
+                "z": 0.7916394472122192
+            },
+            "rotation": {
+                "w": -0.35896849632263184,
+                "x": -1.52587890625e-05,
+                "y": 0.933348536491394,
+                "z": -1.52587890625e-05
+            },
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{8262cb18-1e03-47ad-ad95-69de837f2b3a}",
+            "lastEdited": 1515450847186652,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 16.819252014160156,
+                "y": -11.318174362182617,
+                "z": 14.011950492858887
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": 16.50897216796875,
+                "y": -11.628454208374023,
+                "z": 13.70167064666748
+            },
+            "rotation": {
+                "w": 0.6727244853973389,
+                "x": 0.40746164321899414,
+                "y": 0.5656976699829102,
+                "z": -0.24776071310043335
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{26653739-2c5e-447f-8c42-4a79c3a79a8e}",
+            "lastEdited": 1515450847186844,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 24.45850372314453,
+                "y": -11.31770133972168,
+                "z": 6.243945121765137
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": 24.148223876953125,
+                "y": -11.627981185913086,
+                "z": 5.933665752410889
+            },
+            "rotation": {
+                "w": -0.46981000900268555,
+                "x": -0.10923933982849121,
+                "y": -0.6027160882949829,
+                "z": 0.6356755495071411
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{478c2777-8824-4e71-94dd-a82c889ffe2f}",
+            "lastEdited": 1515450847187037,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 24.857759475708008,
+                "y": -11.366948127746582,
+                "z": 10.115226745605469
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 24.632593154907227,
+                "y": -11.592114448547363,
+                "z": 9.890060424804688
+            },
+            "rotation": {
+                "w": 0.6374151706695557,
+                "x": 0.43480587005615234,
+                "y": -0.43663692474365234,
+                "z": 0.462546706199646
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.25999999046325684,
+                "y": 0.25999999046325684,
+                "z": 0.25999999046325684
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{cf3e14b7-7d54-4454-a548-8374b7f22c47}",
+            "lastEdited": 1515450847187250,
+            "lastEditedBy": "{e1130101-409b-4a8c-a2dc-691e85020b71}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 26.369178771972656,
+                "y": -11.367152214050293,
+                "z": 18.2473201751709
+            },
+            "queryAACube": {
+                "scale": 0.45033320784568787,
+                "x": 26.144012451171875,
+                "y": -11.592318534851074,
+                "z": 18.022153854370117
+            },
+            "rotation": {
+                "w": 0.3174639940261841,
+                "x": 0.41960787773132324,
+                "y": -0.018844902515411377,
+                "z": 0.8501259088516235
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{749b9bdb-ae33-472d-8fc1-3038811dfa7b}",
+            "lastEdited": 1515450847187455,
+            "lastEditedBy": "{e1130101-409b-4a8c-a2dc-691e85020b71}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 33.18864059448242,
+                "y": -11.317455291748047,
+                "z": 6.856298923492432
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": 32.878360748291016,
+                "y": -11.627735137939453,
+                "z": 6.546019554138184
+            },
+            "rotation": {
+                "w": 0.16328680515289307,
+                "x": 0.776455283164978,
+                "y": -0.3970245122909546,
+                "z": 0.461295485496521
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{8cd9fcb4-64d4-4cb9-88c3-99c2679e9d75}",
+            "lastEdited": 1515450847187649,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 45.66946792602539,
+                "y": -11.396366119384766,
+                "z": 11.852797508239746
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": 45.49626159667969,
+                "y": -11.569571495056152,
+                "z": 11.67959213256836
+            },
+            "rotation": {
+                "w": 0.11470210552215576,
+                "x": -0.13792628049850464,
+                "y": 0.8974288702011108,
+                "z": 0.40300607681274414
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:19:34Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{dbd92848-2273-4284-9c51-23129668ca91}",
+            "lastEdited": 1515450847187831,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 46.89131164550781,
+                "y": -11.317453384399414,
+                "z": 20.4871826171875
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": 46.581031799316406,
+                "y": -11.62773323059082,
+                "z": 20.176902770996094
+            },
+            "rotation": {
+                "w": 0.33092236518859863,
+                "x": 0.7461509704589844,
+                "y": 0.5655145645141602,
+                "z": 0.11787593364715576
+            },
+            "type": "Sphere"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "color": {
+                "blue": 192,
+                "green": 192,
+                "red": 192
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 0.3582799732685089,
+                "y": 0.3582799732685089,
+                "z": 0.3582799732685089
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "id": "{6b091040-a4b2-4613-9990-1b247c916ff4}",
+            "lastEdited": 1515450847188028,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 49.87453079223633,
+                "y": -11.316987037658691,
+                "z": 8.189126968383789
+            },
+            "queryAACube": {
+                "scale": 0.6205590963363647,
+                "x": 49.56425094604492,
+                "y": -11.627266883850098,
+                "z": 7.878847599029541
+            },
+            "rotation": {
+                "w": 0.23588919639587402,
+                "x": 0.9357900619506836,
+                "y": -0.22874802350997925,
+                "z": -0.1276417374610901
+            },
+            "type": "Sphere"
+        },
+        {
             "backgroundMode": "skybox",
             "clientOnly": 0,
             "created": "2016-09-20T17:58:44Z",
             "dimensions": {
-                "x": 132.68795776367188,
-                "y": 26.1063232421875,
-                "z": 129.63905334472656
+                "x": 517.2118530273438,
+                "y": 500,
+                "z": 569.365478515625
             },
+            "haze": {
+                "hazeBackgroundBlend": 0.550000011920929,
+                "hazeCeiling": 90,
+                "hazeColor": {
+                    "blue": 212,
+                    "green": 199,
+                    "red": 193
+                },
+                "hazeEnableGlare": 1,
+                "hazeGlareAngle": 52,
+                "hazeGlareColor": {
+                    "blue": 255,
+                    "green": 255,
+                    "red": 255
+                },
+                "hazeRange": 800
+            },
+            "hazeMode": "enabled",
             "id": "{2ff4adaa-4b38-467f-9385-618c603a0cfe}",
             "keyLight": {
-                "ambientIntensity": 0.4000000059604645,
-                "direction": {
-                    "x": -0.04932527244091034,
-                    "y": -0.7071067690849304,
-                    "z": 0.7053843140602112
+                "color": {
+                    "blue": 166,
+                    "green": 191,
+                    "red": 255
                 },
-                "intensity": 1.100000023841858
+                "direction": {
+                    "x": -0.23824656009674072,
+                    "y": -0.1736481785774231,
+                    "z": 0.955554723739624
+                },
+                "intensity": 2.799999952316284
             },
-            "lastEdited": 1507328484375415,
-            "lastEditedBy": "{5ddc52ce-d804-445d-b9ea-7df5d380253a}",
+            "lastEdited": 1515455436950762,
+            "lastEditedBy": "{9994b348-84c3-4f8a-b6a4-d9d76ee94fbe}",
             "locked": 1,
             "name": "Building_platform_zone",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
             "position": {
-                "x": -2.396211624145508,
-                "y": -5.734611511230469,
-                "z": 8.205123901367188
+                "x": -24.483882904052734,
+                "y": 0.00047244285815395415,
+                "z": 60.44493865966797
             },
             "queryAACube": {
-                "scale": 187.33370971679688,
-                "x": -96.06306457519531,
-                "y": -99.4014663696289,
-                "z": -85.46173095703125
+                "scale": 917.4339599609375,
+                "x": -483.20086669921875,
+                "y": -458.7165222167969,
+                "z": -398.27203369140625
             },
             "rotation": {
                 "w": 1,
@@ -45,11 +3173,12 @@
             "skybox": {
                 "url": "atp:/skyboxes/Skybox-Sun-high.png"
             },
-            "type": "Zone"
+            "type": "Zone",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
         },
         {
             "clientOnly": 0,
-            "created": "2016-09-20T18:09:40Z",
+            "created": "2017-11-07T19:06:00Z",
             "density": 8000,
             "dimensions": {
                 "x": 99.99999237060547,
@@ -57,134 +3186,1067 @@
                 "z": 99.99999237060547
             },
             "friction": 0.30000001192092896,
-            "id": "{ef893599-9be1-4c97-ae51-b1bb3277daaa}",
-            "lastEdited": 1507328406937437,
-            "lastEditedBy": "{7ae19691-f059-45e3-a394-cd74102aba54}",
+            "id": "{d0fc29f7-2bf9-4449-8a38-05ea3c9c556d}",
+            "lastEdited": 1515450847188871,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
             "modelURL": "atp:/1592e15e-c822-41aa-b314-4ef261e5d843-v1/builder-grid.fbx",
             "name": "builders_grid_bottom",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
             "position": {
-                "x": -0.2364349365234375,
-                "y": -9.266714096069336,
-                "z": 3.0717010498046875
+                "x": 62.75201416015625,
+                "y": -10,
+                "z": 39.933250427246094
             },
             "queryAACube": {
                 "scale": 141.59414672851562,
-                "x": -71.03350830078125,
-                "y": -80.06378936767578,
-                "z": -67.72537231445312
+                "x": -8.045059204101562,
+                "y": -80.79707336425781,
+                "z": -30.86382293701172
             },
-            "restitution": 0.699999988079071,
+            "restitution": 0.8500000238418579,
             "rotation": {
-                "w": 1,
-                "x": -1.52587890625e-05,
-                "y": -1.52587890625e-05,
-                "z": -1.52587890625e-05
-            },
-            "shapeType": "simple-compound",
-            "type": "Model"
-        },
-        {
-            "clientOnly": 0,
-            "created": "2016-11-11T23:38:47Z",
-            "dimensions": {
-                "x": 4.248877048492432,
-                "y": 2.458576202392578,
-                "z": 0.7604697346687317
-            },
-            "id": "{a981f081-fee1-4edd-b769-2356a8f18748}",
-            "lastEdited": 1507328406937726,
-            "lastEditedBy": "{7ca6f1aa-4e31-4e1d-bc7a-3803ef4e8d3d}",
-            "modelURL": "http://hifi-content.s3.amazonaws.com/DomainContent/BuildersGrid/Sandbox-Intro-3.fbx",
-            "name": "Sandbox Intro Sign",
-            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
-            "position": {
-                "x": -0.2303551733493805,
-                "y": -9.006368637084961,
-                "z": 2.1141045093536377
-            },
-            "queryAACube": {
-                "scale": 4.9674811363220215,
-                "x": -2.7140958309173584,
-                "y": -11.49010944366455,
-                "z": -0.36963605880737305
-            },
-            "rotation": {
-                "w": -1.52587890625e-05,
-                "x": -1.52587890625e-05,
+                "w": -4.57763671875e-05,
+                "x": 1.52587890625e-05,
                 "y": -1,
                 "z": -1.52587890625e-05
             },
             "shapeType": "simple-compound",
-            "type": "Model"
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
         },
         {
             "clientOnly": 0,
-            "created": "2017-09-13T00:33:49Z",
+            "created": "2017-11-07T19:06:00Z",
+            "density": 8000,
             "dimensions": {
-                "x": 0.04968496039509773,
-                "y": 2.888400077819824,
-                "z": 2.429999828338623
+                "x": 99.99999237060547,
+                "y": 6.9934210777282715,
+                "z": 99.99999237060547
             },
-            "id": "{e6be9d3f-03be-4feb-a442-024222050032}",
-            "lastEdited": 1507328406938014,
-            "lastEditedBy": "{12cfc5d4-0eb2-40dd-b591-1b12edb88b62}",
-            "modelURL": "http://hifi-content.s3.amazonaws.com/DomainContent/production/welcomeWagon/baked/howToBringUpYourTablet/baked/howToBringUpYourTablet.baked.fbx",
+            "friction": 0.30000001192092896,
+            "id": "{b2223039-c213-47e1-9c0c-96e0b9c7192a}",
+            "lastEdited": 1515450847189076,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
+            "modelURL": "atp:/1592e15e-c822-41aa-b314-4ef261e5d843-v1/builder-grid.fbx",
+            "name": "builders_grid_bottom",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
             "position": {
-                "x": -2.8700168132781982,
-                "y": -9.286125183105469,
-                "z": 0.6277778148651123
+                "x": -37.24798583984375,
+                "y": -10,
+                "z": 39.93323516845703
             },
             "queryAACube": {
-                "scale": 3.774946689605713,
-                "x": -4.757490158081055,
-                "y": -11.173598289489746,
-                "z": -1.2596955299377441
+                "scale": 141.59414672851562,
+                "x": -108.04505920410156,
+                "y": -80.79707336425781,
+                "z": -30.86383819580078
+            },
+            "restitution": 0.8500000238418579,
+            "rotation": {
+                "w": -4.57763671875e-05,
+                "x": 1.52587890625e-05,
+                "y": -1,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "simple-compound",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-11-07T19:08:11Z",
+            "density": 8000,
+            "dimensions": {
+                "x": 99.99999237060547,
+                "y": 6.9934210777282715,
+                "z": 99.99999237060547
+            },
+            "friction": 0.30000001192092896,
+            "id": "{cd7be9af-1abf-4a78-a275-4298e5410029}",
+            "lastEdited": 1515450847189239,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
+            "modelURL": "atp:/1592e15e-c822-41aa-b314-4ef261e5d843-v1/builder-grid.fbx",
+            "name": "builders_grid_bottom",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": -37.24797058105469,
+                "y": -10,
+                "z": -60.039756774902344
+            },
+            "queryAACube": {
+                "scale": 141.59414672851562,
+                "x": -108.0450439453125,
+                "y": -80.79707336425781,
+                "z": -130.83682250976562
+            },
+            "restitution": 0.8500000238418579,
+            "rotation": {
+                "w": -4.57763671875e-05,
+                "x": 1.52587890625e-05,
+                "y": -1,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "simple-compound",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-11-07T19:08:11Z",
+            "density": 8000,
+            "dimensions": {
+                "x": 99.99999237060547,
+                "y": 6.9934210777282715,
+                "z": 99.99999237060547
+            },
+            "friction": 0.30000001192092896,
+            "id": "{1467e2a0-e26e-4c86-ae03-ff0a9524f45a}",
+            "lastEdited": 1515450847189369,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
+            "modelURL": "atp:/1592e15e-c822-41aa-b314-4ef261e5d843-v1/builder-grid.fbx",
+            "name": "builders_grid_bottom",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 62.75202941894531,
+                "y": -10,
+                "z": -60.03974151611328
+            },
+            "queryAACube": {
+                "scale": 141.59414672851562,
+                "x": -8.0450439453125,
+                "y": -80.79707336425781,
+                "z": -130.83682250976562
+            },
+            "restitution": 0.8500000238418579,
+            "rotation": {
+                "w": -4.57763671875e-05,
+                "x": 1.52587890625e-05,
+                "y": -1,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "simple-compound",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-11-07T19:40:57Z",
+            "dimensions": {
+                "x": 32.15004348754883,
+                "y": 1.0247149467468262,
+                "z": 13.596309661865234
+            },
+            "id": "{8d779048-bf53-4128-86f1-00c1fce15128}",
+            "lastEdited": 1515450847189481,
+            "lastEditedBy": "{dac4fe38-3ba7-4910-a599-6feb33e400bd}",
+            "locked": 1,
+            "modelURL": "atp:/models/sandbox-platform.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 4.678596496582031,
+                "y": -11.612359046936035,
+                "z": -0.10906367748975754
+            },
+            "queryAACube": {
+                "scale": 34.92184066772461,
+                "x": -12.782323837280273,
+                "y": -29.073280334472656,
+                "z": -17.569984436035156
             },
             "rotation": {
-                "w": 0.9807736873626709,
-                "x": -4.57763671875e-05,
-                "y": 0.19505608081817627,
+                "w": 1,
+                "x": -1.52587890625e-05,
+                "y": -1.52587890625e-05,
                 "z": -4.57763671875e-05
             },
+            "shapeType": "static-mesh",
             "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 255,
+                "green": 142,
+                "red": 13
+            },
+            "created": "2017-11-08T01:43:35Z",
+            "cutoff": 90,
+            "dimensions": {
+                "x": 4.900222301483154,
+                "y": 4.900222301483154,
+                "z": 4.900222301483154
+            },
+            "falloffRadius": 8,
+            "id": "{f4aacbf8-2d30-4b2a-b693-edbdfcba611e}",
+            "intensity": 5.099999904632568,
+            "lastEdited": 1515450847189603,
+            "lastEditedBy": "{5a1720ab-4af5-435b-b03b-2b1d42490268}",
+            "locked": 1,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 1.2654743194580078,
+                "y": -10.948016166687012,
+                "z": -1.8053867816925049
+            },
+            "queryAACube": {
+                "scale": 8.487434387207031,
+                "x": -2.978242874145508,
+                "y": -15.191733360290527,
+                "z": -6.049103736877441
+            },
+            "rotation": {
+                "w": -0.7523155212402344,
+                "x": -4.57763671875e-05,
+                "y": 0.6588082313537598,
+                "z": -1.52587890625e-05
+            },
+            "type": "Light"
+        },
+        {
+            "accelerationSpread": {
+                "x": 0.10000000149011612,
+                "y": 0.10000000149011612,
+                "z": 0.10000000149011612
+            },
+            "alpha": 0.18000000715255737,
+            "alphaFinish": 0,
+            "alphaSpread": 0.23999999463558197,
+            "alphaStart": 0,
+            "clientOnly": 0,
+            "color": {
+                "blue": 200,
+                "green": 200,
+                "red": 200
+            },
+            "colorFinish": {
+                "blue": 0,
+                "green": 0,
+                "red": 0
+            },
+            "colorStart": {
+                "blue": 200,
+                "green": 200,
+                "red": 200
+            },
+            "created": "2017-11-08T01:56:42Z",
+            "dimensions": {
+                "x": 1322,
+                "y": 1322,
+                "z": 1322
+            },
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0.25
+            },
+            "emitDimensions": {
+                "x": 2,
+                "y": 2,
+                "z": 2
+            },
+            "emitOrientation": {
+                "w": 0.7071068286895752,
+                "x": -0.7071068286895752,
+                "y": 0,
+                "z": 0
+            },
+            "emitRate": 1,
+            "emitSpeed": 0.5,
+            "emitterShouldTrail": 1,
+            "id": "{ae9206e7-f195-41a1-bd7f-b39bc3ce1058}",
+            "lastEdited": 1515450847189819,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "lifespan": 100,
+            "locked": 1,
+            "maxParticles": 2028,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "particleRadius": 8,
+            "position": {
+                "x": 11.136780738830566,
+                "y": 0.06950664520263672,
+                "z": -59.5300407409668
+            },
+            "queryAACube": {
+                "scale": 2289.771240234375,
+                "x": -1133.748779296875,
+                "y": -1144.816162109375,
+                "z": -1204.4156494140625
+            },
+            "radiusFinish": 10,
+            "radiusSpread": 4,
+            "radiusStart": 10,
+            "rotation": {
+                "w": 0.9853513240814209,
+                "x": -1.52587890625e-05,
+                "y": -0.17036700248718262,
+                "z": -1.52587890625e-05
+            },
+            "speedSpread": 0,
+            "textures": "https://content.highfidelity.com/DomainContent/production/Particles/wispy-smoke.png",
+            "type": "ParticleEffect",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "accelerationSpread": {
+                "x": 0.10000000149011612,
+                "y": 0.10000000149011612,
+                "z": 0.10000000149011612
+            },
+            "alpha": 0.14000000059604645,
+            "alphaFinish": 0,
+            "alphaSpread": 0.20000000298023224,
+            "alphaStart": 0,
+            "clientOnly": 0,
+            "color": {
+                "blue": 200,
+                "green": 200,
+                "red": 200
+            },
+            "colorFinish": {
+                "blue": 0,
+                "green": 0,
+                "red": 0
+            },
+            "colorStart": {
+                "blue": 200,
+                "green": 200,
+                "red": 200
+            },
+            "created": "2017-11-08T02:01:04Z",
+            "dimensions": {
+                "x": 16.737064361572266,
+                "y": 16.737064361572266,
+                "z": 16.737064361572266
+            },
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0.25
+            },
+            "emitDimensions": {
+                "x": 2,
+                "y": 2,
+                "z": 2
+            },
+            "emitOrientation": {
+                "w": 0.7070763111114502,
+                "x": -0.7071372866630554,
+                "y": -1.5258539860951714e-05,
+                "z": -1.5258539860951714e-05
+            },
+            "emitRate": 1,
+            "emitSpeed": 0.5,
+            "emitterShouldTrail": 1,
+            "id": "{1e24eee2-da27-4cb9-b68f-b5427a33df70}",
+            "lastEdited": 1515450847190093,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "lifespan": 7.389999866485596,
+            "locked": 1,
+            "maxParticles": 2028,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "particleRadius": 8,
+            "position": {
+                "x": 16.259235382080078,
+                "y": -2.810964584350586,
+                "z": -32.58818054199219
+            },
+            "queryAACube": {
+                "scale": 28.98944664001465,
+                "x": 1.764512062072754,
+                "y": -17.305686950683594,
+                "z": -47.08290481567383
+            },
+            "radiusFinish": 10,
+            "radiusSpread": 4,
+            "radiusStart": 10,
+            "rotation": {
+                "w": 0.9853513240814209,
+                "x": -1.52587890625e-05,
+                "y": -0.17042803764343262,
+                "z": -1.52587890625e-05
+            },
+            "speedSpread": 0,
+            "textures": "https://content.highfidelity.com/DomainContent/production/Particles/wispy-smoke.png",
+            "type": "ParticleEffect",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "accelerationSpread": {
+                "x": 0.10000000149011612,
+                "y": 0.10000000149011612,
+                "z": 0.10000000149011612
+            },
+            "alpha": 0.23999999463558197,
+            "alphaFinish": 0,
+            "alphaSpread": 0.1899999976158142,
+            "alphaStart": 0,
+            "clientOnly": 0,
+            "color": {
+                "blue": 200,
+                "green": 200,
+                "red": 200
+            },
+            "colorFinish": {
+                "blue": 0,
+                "green": 0,
+                "red": 0
+            },
+            "colorStart": {
+                "blue": 200,
+                "green": 200,
+                "red": 200
+            },
+            "created": "2017-11-08T02:01:04Z",
+            "dimensions": {
+                "x": 16.737064361572266,
+                "y": 16.737064361572266,
+                "z": 16.737064361572266
+            },
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0.25
+            },
+            "emitDimensions": {
+                "x": 2,
+                "y": 2,
+                "z": 2
+            },
+            "emitOrientation": {
+                "w": 0.7070763111114502,
+                "x": -0.7071372866630554,
+                "y": -1.5258539860951714e-05,
+                "z": -1.5258539860951714e-05
+            },
+            "emitRate": 1,
+            "emitSpeed": 0.5,
+            "emitterShouldTrail": 1,
+            "id": "{b54e8bda-5cb4-4a6b-b74a-ba099732cabd}",
+            "lastEdited": 1515450847190336,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "lifespan": 7.389999866485596,
+            "locked": 1,
+            "maxParticles": 2028,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "particleRadius": 8,
+            "position": {
+                "x": 62.71072769165039,
+                "y": -3.2356090545654297,
+                "z": -38.036922454833984
+            },
+            "queryAACube": {
+                "scale": 28.98944664001465,
+                "x": 48.21600341796875,
+                "y": -17.730331420898438,
+                "z": -52.531646728515625
+            },
+            "radiusFinish": 10,
+            "radiusSpread": 4,
+            "radiusStart": 10,
+            "rotation": {
+                "w": 0.9853513240814209,
+                "x": -1.52587890625e-05,
+                "y": -0.17055010795593262,
+                "z": -1.52587890625e-05
+            },
+            "speedSpread": 0,
+            "textures": "https://content.highfidelity.com/DomainContent/production/Particles/wispy-smoke.png",
+            "type": "ParticleEffect",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "accelerationSpread": {
+                "x": 0.10000000149011612,
+                "y": 0.10000000149011612,
+                "z": 0.10000000149011612
+            },
+            "alpha": 0.20999999344348907,
+            "alphaFinish": 0,
+            "alphaSpread": 0.11999999731779099,
+            "alphaStart": 0,
+            "clientOnly": 0,
+            "color": {
+                "blue": 200,
+                "green": 200,
+                "red": 200
+            },
+            "colorFinish": {
+                "blue": 0,
+                "green": 0,
+                "red": 0
+            },
+            "colorStart": {
+                "blue": 200,
+                "green": 200,
+                "red": 200
+            },
+            "created": "2017-11-08T02:01:04Z",
+            "dimensions": {
+                "x": 1322,
+                "y": 1322,
+                "z": 1322
+            },
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0.25
+            },
+            "emitDimensions": {
+                "x": 2,
+                "y": 2,
+                "z": 2
+            },
+            "emitOrientation": {
+                "w": 0.7070457935333252,
+                "x": -0.7071678042411804,
+                "y": -1.5258539860951714e-05,
+                "z": -1.5258539860951714e-05
+            },
+            "emitRate": 1,
+            "emitSpeed": 0.5,
+            "emitterShouldTrail": 1,
+            "id": "{c77cf107-cd4a-43c7-8cc1-a06decbcd6f2}",
+            "lastEdited": 1515450847190567,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "lifespan": 100,
+            "locked": 1,
+            "maxParticles": 2028,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "particleRadius": 8,
+            "position": {
+                "x": 46.16627502441406,
+                "y": -2.810964584350586,
+                "z": -51.33484649658203
+            },
+            "queryAACube": {
+                "scale": 2289.771240234375,
+                "x": -1098.7193603515625,
+                "y": -1147.696533203125,
+                "z": -1196.220458984375
+            },
+            "radiusFinish": 10,
+            "radiusSpread": 4,
+            "radiusStart": 10,
+            "rotation": {
+                "w": 0.9853208065032959,
+                "x": -1.52587890625e-05,
+                "y": -0.17058062553405762,
+                "z": -1.52587890625e-05
+            },
+            "speedSpread": 0,
+            "textures": "https://content.highfidelity.com/DomainContent/production/Particles/wispy-smoke.png",
+            "type": "ParticleEffect",
             "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
         },
         {
             "clientOnly": 0,
-            "created": "2017-09-13T21:45:13Z",
-            "dimensions": {
-                "x": 2.5778698921203613,
-                "y": 2.625190019607544,
-                "z": 0.5460420250892639
+            "color": {
+                "blue": 255,
+                "green": 142,
+                "red": 13
             },
-            "id": "{e83075d0-7814-422e-9eee-497b2e78e5b9}",
-            "lastEdited": 1507328406938243,
-            "lastEditedBy": "{12cfc5d4-0eb2-40dd-b591-1b12edb88b62}",
-            "modelURL": "https://hifi-content.s3.amazonaws.com/jimi/welcome_Area/tutorialBlocks/GoToTutorial.fbx",
+            "created": "2017-11-08T19:55:51Z",
+            "cutoff": 90,
+            "dimensions": {
+                "x": 4.900222301483154,
+                "y": 4.900222301483154,
+                "z": 4.900222301483154
+            },
+            "falloffRadius": 8,
+            "id": "{26bc6130-661a-4261-922c-2d5772d6ca18}",
+            "intensity": 5,
+            "lastEdited": 1515450847190754,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
             "position": {
-                "x": 2.3834238052368164,
-                "y": -9.277297973632812,
-                "z": 0.900235652923584
+                "x": 5.9569478034973145,
+                "y": -10.948016166687012,
+                "z": -1.9370012283325195
             },
             "queryAACube": {
-                "scale": 3.719569444656372,
-                "x": 0.5236390829086304,
-                "y": -11.137083053588867,
-                "z": -0.959549069404602
+                "scale": 8.487434387207031,
+                "x": 1.7132306098937988,
+                "y": -15.191733360290527,
+                "z": -6.180718421936035
             },
             "rotation": {
-                "w": 0.7033340930938721,
+                "w": -0.06593424081802368,
                 "x": -1.52587890625e-05,
-                "y": -0.7108720541000366,
+                "y": 0.997802734375,
+                "z": -1.52587890625e-05
+            },
+            "type": "Light",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 255,
+                "green": 142,
+                "red": 13
+            },
+            "created": "2017-11-08T18:00:04Z",
+            "cutoff": 90,
+            "dimensions": {
+                "x": 4.900222301483154,
+                "y": 4.900222301483154,
+                "z": 4.900222301483154
+            },
+            "falloffRadius": 8,
+            "id": "{d1bf243c-0f34-4c23-a217-1ff7fcbd7dbe}",
+            "intensity": 5,
+            "lastEdited": 1515450847190868,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 11.330667495727539,
+                "y": -10.948016166687012,
+                "z": -1.9370012283325195
+            },
+            "queryAACube": {
+                "scale": 8.487434387207031,
+                "x": 7.086950302124023,
+                "y": -15.191733360290527,
+                "z": -6.180718421936035
+            },
+            "rotation": {
+                "w": -0.06593424081802368,
+                "x": -1.52587890625e-05,
+                "y": 0.997802734375,
+                "z": -1.52587890625e-05
+            },
+            "type": "Light",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 255,
+                "green": 142,
+                "red": 13
+            },
+            "created": "2017-11-08T01:54:31Z",
+            "cutoff": 90,
+            "dimensions": {
+                "x": 4.900222301483154,
+                "y": 4.900222301483154,
+                "z": 4.900222301483154
+            },
+            "falloffRadius": 8,
+            "id": "{306c8e98-05a9-488c-be3a-90491c805574}",
+            "intensity": 5,
+            "lastEdited": 1515450847191002,
+            "lastEditedBy": "{ab778f09-e059-4487-ad5f-a63b51032f6e}",
+            "locked": 1,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 8.708854675292969,
+                "y": -10.948016166687012,
+                "z": 1.737081527709961
+            },
+            "queryAACube": {
+                "scale": 8.487434387207031,
+                "x": 4.465137481689453,
+                "y": -15.191733360290527,
+                "z": -2.5066356658935547
+            },
+            "rotation": {
+                "w": 0.49962615966796875,
+                "x": -1.52587890625e-05,
+                "y": 0.8662089109420776,
                 "z": -4.57763671875e-05
             },
+            "type": "Light",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "collisionless": 1,
+            "created": "2017-11-09T01:34:27Z",
+            "dimensions": {
+                "x": 2,
+                "y": 2.384185791015625e-07,
+                "z": 1.999999761581421
+            },
+            "id": "{332c4e13-5e0b-4596-b56d-4b21acd9c10f}",
+            "ignoreForCollisions": 1,
+            "lastEdited": 1515450847191166,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/teleport-decal.fbx?1",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 12.6119966506958,
+                "y": -11.093875885009766,
+                "z": 1.3244110345840454
+            },
+            "queryAACube": {
+                "scale": 2.8284268379211426,
+                "x": 11.197783470153809,
+                "y": -12.508089065551758,
+                "z": -0.08980238437652588
+            },
+            "rotation": {
+                "w": 0.614374041557312,
+                "x": -1.52587890625e-05,
+                "y": -0.7890287637710571,
+                "z": -1.52587890625e-05
+            },
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-11-14T18:13:01Z",
+            "dimensions": {
+                "x": 42.42136764526367,
+                "y": 11.433218955993652,
+                "z": 8.042095184326172
+            },
+            "id": "{a970f6bf-72eb-4ffc-b703-5b376754e1d9}",
+            "lastEdited": 1515450847191345,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/Sandbox-Sign.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 42.12036895751953,
+                "y": -5.990203380584717,
+                "z": -0.24343645572662354
+            },
+            "queryAACube": {
+                "scale": 44.665042877197266,
+                "x": 19.7878475189209,
+                "y": -28.322725296020508,
+                "z": -22.575958251953125
+            },
+            "rotation": {
+                "w": 0.684565544128418,
+                "x": -4.57763671875e-05,
+                "y": -0.7289692163467407,
+                "z": -4.57763671875e-05
+            },
+            "shapeType": "static-mesh",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 0,
+                "green": 0,
+                "red": 255
+            },
+            "created": "2017-11-14T18:17:23Z",
+            "dimensions": {
+                "x": 153.54315185546875,
+                "y": 2.468254327774048,
+                "z": 176.97549438476562
+            },
+            "id": "{2fd7cd04-42ca-44ea-9c91-be26a473dfb0}",
+            "lastEdited": 1515450847191533,
+            "lastEditedBy": "{03de0a1b-cab2-4a81-a288-ac4e51b97bd8}",
+            "locked": 1,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 14.744983673095703,
+                "y": -12.737712860107422,
+                "z": -2.404005289077759
+            },
+            "queryAACube": {
+                "scale": 234.31158447265625,
+                "x": -102.41081237792969,
+                "y": -129.8935089111328,
+                "z": -119.55979919433594
+            },
+            "rotation": {
+                "w": 0.7070878744125366,
+                "x": -1.52587890625e-05,
+                "y": 0.7070878744125366,
+                "z": -1.52587890625e-05
+            },
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 255,
+                "green": 142,
+                "red": 13
+            },
+            "created": "2017-11-15T18:54:07Z",
+            "cutoff": 90,
+            "dimensions": {
+                "x": 4.900222301483154,
+                "y": 4.900222301483154,
+                "z": 4.900222301483154
+            },
+            "falloffRadius": 8,
+            "id": "{f3fe483b-445a-4ac7-b3fc-1c9a69b50a62}",
+            "intensity": 5.099999904632568,
+            "lastEdited": 1515450847191758,
+            "lastEditedBy": "{6a81cc04-57fe-49fc-90ab-3221e5bfcdec}",
+            "locked": 1,
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 3.4161295890808105,
+                "y": -10.948016166687012,
+                "z": 1.8235437870025635
+            },
+            "queryAACube": {
+                "scale": 8.487434387207031,
+                "x": -0.8275876045227051,
+                "y": -15.191733360290527,
+                "z": -2.420173406600952
+            },
+            "rotation": {
+                "w": -0.06611734628677368,
+                "x": -1.52587890625e-05,
+                "y": 0.997802734375,
+                "z": -1.52587890625e-05
+            },
+            "type": "Light"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-11-07T19:54:04Z",
+            "dimensions": {
+                "x": 2.7596800327301025,
+                "y": 0.7951445579528809,
+                "z": 0.6272000670433044
+            },
+            "id": "{77f28de1-96f7-49c1-ad4a-e19f15144c3e}",
+            "lastEdited": 1515450847191954,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/Block-Display-FTUE.fbx?4",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 1.1978228092193604,
+                "y": -10.734626770019531,
+                "z": -1.763352632522583
+            },
+            "queryAACube": {
+                "scale": 2.9396376609802246,
+                "x": -0.27199602127075195,
+                "y": -12.204445838928223,
+                "z": -3.2331714630126953
+            },
+            "rotation": {
+                "w": 0.9147936105728149,
+                "x": -4.57763671875e-05,
+                "y": -0.40392154455184937,
+                "z": -4.57763671875e-05
+            },
+            "shapeType": "box",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "collidesWith": "",
+            "collisionMask": 0,
+            "collisionless": 1,
+            "created": "2017-11-15T19:29:05Z",
+            "dimensions": {
+                "x": 3.244584798812866,
+                "y": 0.0010000000474974513,
+                "z": 4.591785907745361
+            },
+            "id": "{a8866040-fbb9-4327-bb27-7ec7342284cb}",
+            "ignoreForCollisions": 1,
+            "lastEdited": 1515450847192160,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/Footprints.fbx?1",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 8.016031265258789,
+                "y": -11.064117431640625,
+                "z": -0.0386146605014801
+            },
+            "queryAACube": {
+                "scale": 5.622439861297607,
+                "x": 5.204811096191406,
+                "y": -13.875337600708008,
+                "z": -2.849834680557251
+            },
+            "rotation": {
+                "w": 0.687922477722168,
+                "x": -1.52587890625e-05,
+                "y": -0.7257953882217407,
+                "z": -1.52587890625e-05
+            },
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "collidesWith": "",
+            "collisionMask": 0,
+            "collisionless": 1,
+            "created": "2017-11-15T19:29:05Z",
+            "dimensions": {
+                "x": 3.244584798812866,
+                "y": 5.131432772031985e-07,
+                "z": 4.391307830810547
+            },
+            "id": "{26349f85-e01b-4bc7-b3f0-4a3c187d221a}",
+            "ignoreForCollisions": 1,
+            "lastEdited": 1515450847192351,
+            "lastEditedBy": "{1310ebf0-313f-4278-91b8-85885a35926b}",
+            "locked": 1,
+            "modelURL": "atp:/models/Footprints.fbx?1",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 3.1666812896728516,
+                "y": -11.064117431640625,
+                "z": -0.17178809642791748
+            },
+            "queryAACube": {
+                "scale": 5.45993709564209,
+                "x": 0.43671274185180664,
+                "y": -13.794086456298828,
+                "z": -2.901756763458252
+            },
+            "rotation": {
+                "w": 0.687891960144043,
+                "x": -1.52587890625e-05,
+                "y": -0.7258259057998657,
+                "z": -4.57763671875e-05
+            },
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        },
+        {
+            "clientOnly": 0,
+            "collisionless": 1,
+            "created": "2018-01-05T19:26:32Z",
+            "dimensions": {
+                "x": 4.9450883865356445,
+                "y": 2.640399932861328,
+                "z": 4.603940963745117
+            },
+            "id": "{c3c51dd5-4341-4c33-bff2-3578fa8032dc}",
+            "ignoreForCollisions": 1,
+            "lastEdited": 1515455119795298,
+            "lastEditedBy": "{9994b348-84c3-4f8a-b6a4-d9d76ee94fbe}",
+            "locked": 1,
+            "name": "mirrorReflectionArea",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "parentID": "{d618b583-aab5-4344-9011-388b880bf265}",
+            "position": {
+                "x": 0.45741701126098633,
+                "y": 0.0646514892578125,
+                "z": 2.297405958175659
+            },
+            "queryAACube": {
+                "scale": 7.254094123840332,
+                "x": 0.9364280700683594,
+                "y": -13.446706771850586,
+                "z": -4.053219795227051
+            },
+            "rotation": {
+                "w": 1,
+                "x": -4.57763671875e-05,
+                "y": -0.0001373291015625,
+                "z": -4.57763671875e-05
+            },
+            "script": "https://hifi-content.s3.amazonaws.com/DomainContent/AvatarStore/Mirror/mirrorReflection.js",
+            "shapeType": "box",
+            "type": "Zone",
+            "visible": 0
+        },
+        {
+            "clientOnly": 0,
+            "collisionless": 1,
+            "created": "2018-01-05T19:26:32Z",
+            "dimensions": {
+                "x": 1.2000000476837158,
+                "y": 2.5,
+                "z": 0.009999999776482582
+            },
+            "id": "{d618b583-aab5-4344-9011-388b880bf265}",
+            "ignoreForCollisions": 1,
+            "lastEdited": 1515455088809001,
+            "lastEditedBy": "{9994b348-84c3-4f8a-b6a4-d9d76ee94fbe}",
+            "locked": 1,
+            "modelURL": "http://content.highfidelity.com/baked/avatar_island/mirror_without_backface/baked/mirror_without_backface.baked.fbx",
+            "name": "mirror",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 4.139824390411377,
+                "y": -9.884902000427246,
+                "z": -2.730027914047241
+            },
+            "queryAACube": {
+                "scale": 7.141237258911133,
+                "x": 1.4167988300323486,
+                "y": -13.253308296203613,
+                "z": -4.116579532623291
+            },
+            "rotation": {
+                "w": 0.999969482421875,
+                "x": -0.0001373291015625,
+                "y": -0.007339596748352051,
+                "z": -4.57763671875e-05
+            },
+            "script": "https://hifi-content.s3.amazonaws.com/DomainContent/AvatarStore/Mirror/mirrorClient.js",
             "shapeType": "simple-hull",
             "type": "Model",
             "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "angularDamping": 0,
+            "angularVelocity": {
+                "x": 0,
+                "y": 0.19198621809482574,
+                "z": 0
+            },
+            "clientOnly": 0,
+            "created": "2018-01-06T01:42:16Z",
+            "damping": 1,
+            "dimensions": {
+                "x": 1.6233258247375488,
+                "y": 0.5373339653015137,
+                "z": 1.6233258247375488
+            },
+            "friction": 0,
+            "id": "{83c4b635-eb27-44b8-9737-180761c5dac1}",
+            "lastEdited": 1515450847193370,
+            "lastEditedBy": "{42106a69-a316-4741-956f-af56f0ebf247}",
+            "locked": 1,
+            "modelURL": "atp:/models/Teleport-Pad.fbx?1",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 14.284395217895508,
+                "y": -10.741290092468262,
+                "z": 2.4013094902038574
+            },
+            "queryAACube": {
+                "scale": 7.0733232498168945,
+                "x": 10.747734069824219,
+                "y": -14.277952194213867,
+                "z": -1.1353521347045898
+            },
+            "rotation": {
+                "w": -0.9670891761779785,
+                "x": -6.431476504076272e-05,
+                "y": 0.254437655210495,
+                "z": 3.7960528516123304e-06
+            },
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
         }
     ],
-    "Version": 73
+    "Version": 3
 }
