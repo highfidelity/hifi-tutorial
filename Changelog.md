@@ -1,3 +1,11 @@
+  *home-tutorial-44
+   * New sandbox instructionals
+   * Hangar background 
+   
+  *home-tutorial-43
+   * Add avatars to new set with mirror
+   * Update teleport to point to hifi://welcome instead of hifi://welcomewagon
+  
   * home-tutorial-41
   	* Add ACSearchAndInjectAudio_tutorial.js back into asset browser
   
