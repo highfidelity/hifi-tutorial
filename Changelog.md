@@ -1,3 +1,6 @@
+ *home-tutorial-45
+  * New pod-based tutorial
+
   *home-tutorial-44
    * New sandbox instructionals
    * Hangar background 
