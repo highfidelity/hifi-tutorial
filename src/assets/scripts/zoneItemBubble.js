@@ -14,10 +14,10 @@
     var VIVE_IDENTIFIER = "-Vive";
     var RIFT_IDENTIFIER = "-Rift";
 
-    var GIF_DESKTOP_URL = "https://giphy.com/gifs/7A4F5AroAXHiRPY9om/html5";
-    var GIF_VIVE_URL = "https://giphy.com/gifs/Zd5ZVLS7eJIYEiW4tt/html5";
-    var GIF_RIFT_URL = "https://giphy.com/gifs/Zd5ZVLS7eJIYEiW4tt/html5";
-    var GIF_GAMEPAD_URL = "https://giphy.com/gifs/Zd5ZVLS7eJIYEiW4tt/html5";
+    var GIF_DESKTOP_URL = "https://giphy.com/gifs/88i7fQh24ayE1b5vFj/html5";
+    var GIF_VIVE_URL = "https://giphy.com/gifs/KyIaWUyz0QBujYQ1dh/html5";
+    var GIF_RIFT_URL = "https://giphy.com/gifs/KyIaWUyz0QBujYQ1dh/html5";
+    var GIF_GAMEPAD_URL = "https://giphy.com/gifs/KyIaWUyz0QBujYQ1dh/html5";
 
     
     var WEB_OVERLAY_BASE_PROPERTIES = {
@@ -154,7 +154,7 @@
         riftEntities.forEach(function(element) {
             makeInvisible(element);
         });
-        Overlays.deleteEntity(webGifOverlay);
+        Overlays.deleteOverlay(webGifOverlay);
         webGifOverlay = "";
     };
 
@@ -196,7 +196,7 @@
                 if (HMD_SOUND.downloaded) {
                     audioPlaying = Audio.playSound(HMD_SOUND, {
                         position: MyAvatar.position,
-                        volume: 1.0,
+                        volume: 0.5,
                         localOnly: true
                     });
                 }
@@ -204,7 +204,7 @@
                 if (DESKTOP_SOUND.downloaded) {
                     audioPlaying = Audio.playSound(DESKTOP_SOUND, {
                         position: MyAvatar.position,
-                        volume: 1.0,
+                        volume: 0.5,
                         localOnly: true
                     });
                 }

@@ -20,10 +20,10 @@
         "rotation" : { "w": -0.3051055371761322, "x": 0, "y": -0.9523110389709473,"z": 0}
     };
 
-    var GIF_DESKTOP_URL = "https://giphy.com/gifs/PQR5rlLy6RmjTEHF2R/html5";
-    var GIF_VIVE_URL = "https://giphy.com/gifs/5YcTj1bve3xCInv509/html5";
-    var GIF_RIFT_URL = "https://giphy.com/gifs/5YcTj1bve3xCInv509/html5";
-    var GIF_GAMEPAD_URL = "https://giphy.com/gifs/5YcTj1bve3xCInv509/html5";
+    var GIF_DESKTOP_URL = "https://giphy.com/gifs/1jZ4ZPi454TTZhWesT/html5";
+    var GIF_VIVE_URL = "https://giphy.com/gifs/55o8nC8E9Lgw9xv2kn/html5";
+    var GIF_RIFT_URL = "https://giphy.com/gifs/55o8nC8E9Lgw9xv2kn/html5";
+    var GIF_GAMEPAD_URL = "https://giphy.com/gifs/55o8nC8E9Lgw9xv2kn/html5";
 
     var SOUND_URL = 'atp:/sounds/AvatarAudio.wav';
     var SOUND = SoundCache.getSound(SOUND_URL);
@@ -191,7 +191,7 @@
             if (SOUND.downloaded) {
                 audioPlaying = Audio.playSound(SOUND, {
                     position: MyAvatar.position,
-                    volume: 1.0,
+                    volume: 0.5,
                     localOnly: true
                 });
             }

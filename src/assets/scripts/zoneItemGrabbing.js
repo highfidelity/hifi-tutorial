@@ -21,10 +21,10 @@
     };
 
 
-    var GIF_DESKTOP_URL = "https://giphy.com/gifs/3gZfhYj4BvIKOVi0KF/html5";
-    var GIF_VIVE_URL = "https://giphy.com/gifs/5bkpeKVbeKd7l6zEZd/html5";
-    var GIF_RIFT_URL = "https://giphy.com/gifs/5bkpeKVbeKd7l6zEZd/html5";
-    var GIF_GAMEPAD_URL = "https://giphy.com/gifs/5bkpeKVbeKd7l6zEZd/html5";
+    var GIF_DESKTOP_URL = "https://giphy.com/gifs/oX8uqVtL9OuRR9Ubqh/html5";
+    var GIF_VIVE_URL = "https://giphy.com/gifs/93fuMUltYTSwyBFDeE/html5";
+    var GIF_RIFT_URL = "https://giphy.com/gifs/93fuMUltYTSwyBFDeE/html5";
+    var GIF_GAMEPAD_URL = "https://giphy.com/gifs/93fuMUltYTSwyBFDeE/html5";
 
     var SOUND_URL = 'atp:/sounds/GrabbingAudio.wav';
     var SOUND = SoundCache.getSound(SOUND_URL);
@@ -192,7 +192,7 @@
             if (SOUND.downloaded) {
                 audioPlaying = Audio.playSound(SOUND, {
                     position: MyAvatar.position,
-                    volume: 1.0,
+                    volume: 0.5,
                     localOnly: true
                 });
             }

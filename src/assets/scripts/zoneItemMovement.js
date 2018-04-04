@@ -14,10 +14,10 @@
     var VIVE_IDENTIFIER = "-Vive";
     var RIFT_IDENTIFIER = "-Rift";
   
-    var GIF_DESKTOP_URL = "https://giphy.com/gifs/LYJZ2YTQiY0WoSoOKj/html5";
-    var GIF_VIVE_URL = "https://giphy.com/gifs/mnqTywAN88tiJarYIS/html5";
-    var GIF_RIFT_URL = "https://giphy.com/gifs/mnqTywAN88tiJarYIS/html5";
-    var GIF_GAMEPAD_URL = "https://giphy.com/gifs/LYJZ2YTQiY0WoSoOKj/html5";
+    var GIF_DESKTOP_URL = "https://giphy.com/gifs/nL45dgV3HkVBeI7xe1/html5";
+    var GIF_VIVE_URL = "https://giphy.com/gifs/jVcj75A3xSYwbl93ss/html5";
+    var GIF_RIFT_URL = "https://giphy.com/gifs/jVcj75A3xSYwbl93ss/html5";
+    var GIF_GAMEPAD_URL = "https://giphy.com/gifs/nL45dgV3HkVBeI7xe1/html5";
 
     var WEB_OVERLAY_BASE_PROPERTIES = {
         "dimensions" : { "x": 3.200000047683716, "y": 1.7999999523162842, "z": 0.009999999776482582 },
@@ -186,7 +186,7 @@
             if (SOUND.downloaded) {
                 audioPlaying = Audio.playSound(SOUND, {
                     position: MyAvatar.position,
-                    volume: 1.0,
+                    volume: 0.5,
                     localOnly: true
                 });
             }

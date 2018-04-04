@@ -20,10 +20,10 @@
         "rotation" : {"w": 0.9550813436508179, "x": 0, "y": -0.29633983969688416,"z": 0}
     };
 
-    var GIF_DESKTOP_URL = "https://giphy.com/gifs/25Im0Bse1k6E4BRCtg/html5";
-    var GIF_VIVE_URL = "https://giphy.com/gifs/1sx4wVbZC0pSgx8ua8/html5";
-    var GIF_RIFT_URL = "https://giphy.com/gifs/1sx4wVbZC0pSgx8ua8/html5";
-    var GIF_GAMEPAD_URL = "https://giphy.com/gifs/1sx4wVbZC0pSgx8ua8/html5";
+    var GIF_DESKTOP_URL = "https://giphy.com/gifs/QmKLbhHyy725R9hUEu/html5";
+    var GIF_VIVE_URL = "https://giphy.com/gifs/AFILEJBgFxtGPd0xYS/html5";
+    var GIF_RIFT_URL = "https://giphy.com/gifs/AFILEJBgFxtGPd0xYS/html5";
+    var GIF_GAMEPAD_URL = "https://giphy.com/gifs/AFILEJBgFxtGPd0xYS/html5";
 
     var HMD_SOUND_URL = 'atp:/sounds/MenuAudio-HMD.wav';
     var DESKTOP_SOUND_URL = 'atp:/sounds/MenuAudio-Desktop.wav';
@@ -195,7 +195,7 @@
                 if (HMD_SOUND.downloaded) {
                     audioPlaying = Audio.playSound(HMD_SOUND, {
                         position: MyAvatar.position,
-                        volume: 1.0,
+                        volume: 0.5,
                         localOnly: true
                     });
                 }
@@ -203,7 +203,7 @@
                 if (DESKTOP_SOUND.downloaded) {
                     audioPlaying = Audio.playSound(DESKTOP_SOUND, {
                         position: MyAvatar.position,
-                        volume: 1.0,
+                        volume: 0.5,
                         localOnly: true
                     });
                 }

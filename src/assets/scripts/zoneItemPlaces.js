@@ -21,10 +21,10 @@
     };
 
 
-    var GIF_DESKTOP_URL = "https://giphy.com/gifs/8YBtsBiuQHnnlyaOaa/html5";
-    var GIF_VIVE_URL = "https://giphy.com/gifs/uBaEMA7WDBvwvUpfab/html5";
-    var GIF_RIFT_URL = "https://giphy.com/gifs/uBaEMA7WDBvwvUpfab/html5";
-    var GIF_GAMEPAD_URL = "https://giphy.com/gifs/uBaEMA7WDBvwvUpfab/html5";
+    var GIF_DESKTOP_URL = "https://giphy.com/gifs/5t0y5k2oMhioNQQhML/html5";
+    var GIF_VIVE_URL = "https://giphy.com/gifs/65DcbOHvdQEF6AsaqT/html5";
+    var GIF_RIFT_URL = "https://giphy.com/gifs/65DcbOHvdQEF6AsaqT/html5";
+    var GIF_GAMEPAD_URL = "https://giphy.com/gifs/65DcbOHvdQEF6AsaqT/html5";
 
     var HMD_SOUND_URL = 'atp:/sounds/PlacesAudio-HMD.wav';
     var DESKTOP_SOUND_URL = 'atp:/sounds/PlacesAudio-Desktop.wav';
@@ -196,7 +196,7 @@
                 if (HMD_SOUND.downloaded) {
                     audioPlaying = Audio.playSound(HMD_SOUND, {
                         position: MyAvatar.position,
-                        volume: 1.0,
+                        volume: 0.5,
                         localOnly: true
                     });
                 }
@@ -204,7 +204,7 @@
                 if (DESKTOP_SOUND.downloaded) {
                     audioPlaying = Audio.playSound(DESKTOP_SOUND, {
                         position: MyAvatar.position,
-                        volume: 1.0,
+                        volume: 0.5,
                         localOnly: true
                     });
                 }
