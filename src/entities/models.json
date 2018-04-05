@@ -1061,7 +1061,8 @@
             },
             "textures": "{\"Picture\":\"atp:/textures/controls/ControlsPlaces-Vive.PNG\"}",
             "type": "Model",
-            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}",
+            "visible" : false
         },
         {
             "animation": {
@@ -3864,7 +3865,8 @@
             },
             "textures": "{\"Picture\":\"atp:/textures/text/Station_Text_Places-HMD.png\"}",
             "type": "Model",
-            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}",
+            "visible" : false
         },
         {
             "animation": {
