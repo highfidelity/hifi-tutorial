@@ -4976,7 +4976,7 @@
         },
         {
             "ambientLight": {
-                "ambientURL": "http://hifi-content.s3.amazonaws.com/alan/dev/SKY-AMB-Start-flipped.jpg"
+                "ambientURL": "atp:/skyboxes/Skybox-Sun-high.png"
             },
             "ambientLightMode": "enabled",
             "clientOnly": false,
@@ -5043,7 +5043,7 @@
             },
             "shapeType": "box",
             "skybox": {
-                "url": "http://hifi-content.s3.amazonaws.com/alan/dev/SKY-SOT-Test-180.png"
+                "url": "atp:/skyboxes/Skybox-Sun-high.png"
             },
             "skyboxMode": "enabled",
             "type": "Zone",
