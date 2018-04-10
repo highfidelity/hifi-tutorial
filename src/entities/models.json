@@ -4978,7 +4978,7 @@
         },
         {
             "ambientLight": {
-                "ambientURL": "atp:/skyboxes/Skybox-Sun-high.png"
+                "ambientURL": "atp:/skyboxes/SKY-AMB-Start-flipped.jpg"
             },
             "ambientLightMode": "enabled",
             "clientOnly": false,
@@ -5045,7 +5045,7 @@
             },
             "shapeType": "box",
             "skybox": {
-                "url": "atp:/skyboxes/Skybox-Sun-high.png"
+                "url": "atp:/skyboxes/SKY-SOT-Test-180.png"
             },
             "skyboxMode": "enabled",
             "type": "Zone",
