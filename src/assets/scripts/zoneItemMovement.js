@@ -13,7 +13,8 @@
     var GAMEPAD_IDENTIFIER = "-Gamepad";
     var VIVE_IDENTIFIER = "-Vive";
     var RIFT_IDENTIFIER = "-Rift";
-  
+    var MOVEMENTSIGN = "Advanced-Movement-Sign";
+
     var GIF_DESKTOP_URL = "https://giphy.com/gifs/nL45dgV3HkVBeI7xe1/html5";
     var GIF_VIVE_URL = "https://giphy.com/gifs/jVcj75A3xSYwbl93ss/html5";
     var GIF_RIFT_URL = "https://giphy.com/gifs/jVcj75A3xSYwbl93ss/html5";
@@ -31,6 +32,7 @@
     var position;
     var audioPlaying;
 
+    var movementSigns = [];
     var desktopEntities = [];
     var gamePadEntities = [];
     var viveEntities = [];
@@ -180,6 +182,11 @@
                     if (wantDebug) {
                         print("Added" + element + " to rift");
                     }
+                } else if (elementName.indexOf(MOVEMENTSIGN) !== -1) {
+                    movementSigns.push(element);
+                    if (wantDebug) {
+                        print("Added" + element + " to movement sign array");
+                    }
                 }
             });
             setDisplayType();
@@ -190,6 +197,11 @@
                     localOnly: true
                 });
             }
+            if (HMD.active) {
+                movementSigns.forEach(function(entity){
+                    Entities.editEntity(entity, { visible : true});
+                });
+            }
             
         },
         leaveEntity: function() {
@@ -197,6 +209,9 @@
             if (audioPlaying) {
                 audioPlaying.stop();
             }
+            movementSigns.forEach(function(entity){
+                Entities.editEntity(entity,{ visible : false});
+            });
         }
     };
 
