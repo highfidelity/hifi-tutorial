@@ -205,7 +205,7 @@
             if (SOUND.downloaded) {
                 audioPlaying = Audio.playSound(SOUND, {
                     position: MyAvatar.position,
-                    volume: 1.0,
+                    volume: 0.5,
                     localOnly: true
                 });
             }
