@@ -210,7 +210,7 @@
                 audioPlaying.stop();
             }
             movementSigns.forEach(function(entity){
-                Entities.editEntity(entity,{ visible : false});
+                Entities.editEntity(entity, { visible : false});
             });
         }
     };
