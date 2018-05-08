@@ -194,7 +194,7 @@
             if (HMD.active) {
                 if (HMD_SOUND.downloaded) {
                     audioPlaying = Audio.playSound(HMD_SOUND, {
-                        position: MyAvatar.position,
+                        position: WEB_OVERLAY_BASE_PROPERTIES.position,
                         volume: 0.5,
                         localOnly: true
                     });
@@ -202,7 +202,7 @@
             } else {
                 if (DESKTOP_SOUND.downloaded) {
                     audioPlaying = Audio.playSound(DESKTOP_SOUND, {
-                        position: MyAvatar.position,
+                        position: WEB_OVERLAY_BASE_PROPERTIES.position,
                         volume: 0.5,
                         localOnly: true
                     });
