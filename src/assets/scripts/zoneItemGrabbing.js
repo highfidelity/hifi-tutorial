@@ -191,7 +191,7 @@
             setDisplayType();
             if (SOUND.downloaded) {
                 audioPlaying = Audio.playSound(SOUND, {
-                    position: MyAvatar.position,
+                    position: WEB_OVERLAY_BASE_PROPERTIES.position,
                     volume: 0.5,
                     localOnly: true
                 });
