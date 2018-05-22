@@ -11,8 +11,8 @@
   
     var FILE_MENU_OPTION = "Advanced Movement For Hand Controllers";
     var SETTINGS_NAME = "advancedMovementForHandControllersIsChecked";
-    var ENABLED_TEXTURE = "atp:/textures/advmove_Trigger_Off.png";
-    var DISABLED_TEXTURE = "atp:/textures/advmove_Trigger_On.png";
+    var ENABLED_TEXTURE = Script.resolvePath("../textures/advmove_Trigger_Off.png");
+    var DISABLED_TEXTURE = Script.resolvePath("../textures/advmove_Trigger_On.png");
 
     var TIMEOUT = 1000;
     

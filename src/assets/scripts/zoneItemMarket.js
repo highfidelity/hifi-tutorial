@@ -25,7 +25,7 @@
     var GIF_RIFT_URL = "https://giphy.com/gifs/55o8nC8E9Lgw9xv2kn/html5";
     var GIF_GAMEPAD_URL = "https://giphy.com/gifs/55o8nC8E9Lgw9xv2kn/html5";
 
-    var SOUND_URL = 'atp:/sounds/AvatarAudio.wav';
+    var SOUND_URL = Script.resolvePath("../sounds/AvatarAudio.wav");
     var SOUND = SoundCache.getSound(SOUND_URL);
 
     var position;

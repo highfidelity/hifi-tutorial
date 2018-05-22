@@ -25,8 +25,8 @@
     var GIF_RIFT_URL = "https://giphy.com/gifs/AFILEJBgFxtGPd0xYS/html5";
     var GIF_GAMEPAD_URL = "https://giphy.com/gifs/AFILEJBgFxtGPd0xYS/html5";
 
-    var HMD_SOUND_URL = 'atp:/sounds/MenuAudio-HMD.wav';
-    var DESKTOP_SOUND_URL = 'atp:/sounds/MenuAudio-Desktop.wav';
+    var HMD_SOUND_URL = Script.resolvePath("../sounds/MenuAudio-HMD.wav");
+    var DESKTOP_SOUND_URL = Script.resolvePath("../sounds/MenuAudio-Desktop.wav");
 
     var HMD_SOUND = SoundCache.getSound(HMD_SOUND_URL);
     var DESKTOP_SOUND = SoundCache.getSound(DESKTOP_SOUND_URL);

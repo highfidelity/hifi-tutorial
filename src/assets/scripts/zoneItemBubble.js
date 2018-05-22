@@ -26,8 +26,8 @@
         "rotation" : {"w": -0.883017897605896, "x": 0.00016412297554779798, "y": -0.46934211254119873,"z": 0}
     };
 
-    var HMD_SOUND_URL = 'atp:/sounds/BubbleAudio-HMD.wav';
-    var DESKTOP_SOUND_URL = 'atp:/sounds/BubbleAudio-Desktop.wav';
+    var HMD_SOUND_URL = Script.resolvePath("../sounds/BubbleAudio-HMD.wav");
+    var DESKTOP_SOUND_URL = Script.resolvePath("../sounds/BubbleAudio-Desktop.wav");
 
     var HMD_SOUND = SoundCache.getSound(HMD_SOUND_URL);
     var DESKTOP_SOUND = SoundCache.getSound(DESKTOP_SOUND_URL);
