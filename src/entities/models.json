@@ -3550,7 +3550,7 @@
                 "y": -0.9969481825828552,
                 "z": -7.62939453125e-05
             },
-            "script": "atp:/script/sambientSound.js",
+            "script": "atp:/scripts/ambientSound.js",
             "scriptTimestamp": 1482281634132,
             "type": "Sphere",
             "userData": "{\"soundURL\":\"http://mpassets.highfidelity.com/95460aca-88a9-4bb8-aae0-efccc5dd7d6f-v1/monte rio - quietOutdoorAmbience.wav\",\"volume\":0.8,\"range\":150,\"grabbableKey\":{\"grabbable\":false}}",
