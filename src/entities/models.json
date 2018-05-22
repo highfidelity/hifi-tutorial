@@ -3550,7 +3550,7 @@
                 "y": -0.9969481825828552,
                 "z": -7.62939453125e-05
             },
-            "script": "http://mpassets.highfidelity.com/95460aca-88a9-4bb8-aae0-efccc5dd7d6f-v1/ambientSound.js",
+            "script": "atp:/script/sambientSound.js",
             "scriptTimestamp": 1482281634132,
             "type": "Sphere",
             "userData": "{\"soundURL\":\"http://mpassets.highfidelity.com/95460aca-88a9-4bb8-aae0-efccc5dd7d6f-v1/monte rio - quietOutdoorAmbience.wav\",\"volume\":0.8,\"range\":150,\"grabbableKey\":{\"grabbable\":false}}",
@@ -7307,7 +7307,7 @@
         },
         {
             "ambientLight": {
-                "ambientURL": "http://hifi-content.s3.amazonaws.com/alan/dev/SKY-AMB-Start-flipped.jpg"
+                "ambientURL": "atp:/skyboxes/SKY-AMB-Start-flipped.jpg"
             },
             "ambientLightMode": "enabled",
             "clientOnly": false,
@@ -7375,7 +7375,7 @@
             },
             "shapeType": "box",
             "skybox": {
-                "url": "http://hifi-content.s3.amazonaws.com/alan/dev/SKY-SOT-Test-180.png"
+                "url": "atp:/skyboxes/SKY-SOT-Test-180.png"
             },
             "skyboxMode": "enabled",
             "type": "Zone",
@@ -7500,7 +7500,7 @@
                 "z": -4.57763671875e-05
             },
             "speedSpread": 0,
-            "textures": "https://content.highfidelity.com/DomainContent/production/Particles/wispy-smoke.png",
+            "textures": "atp:/textures/wispy-smoke.png",
             "type": "ParticleEffect",
             "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
         },
@@ -7819,7 +7819,7 @@
                 "z": -4.57763671875e-05
             },
             "speedSpread": 0,
-            "textures": "https://content.highfidelity.com/DomainContent/production/Particles/wispy-smoke.png",
+            "textures": "atp:/textures/wispy-smoke.png",
             "type": "ParticleEffect",
             "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
         },
