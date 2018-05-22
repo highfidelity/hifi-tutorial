@@ -1089,7 +1089,7 @@
                 "y": 0.8509804010391235,
                 "z": -0.22798502445220947
             },
-            "textures": "{\"Picture\":\"atp:/textures/signs/HandshakeSign.PNG\"}",
+            "textures": "{\"Picture\":\"atp:/textures/HandshakeSign.PNG\"}",
             "type": "Model",
             "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
         },
@@ -1206,7 +1206,7 @@
             "script": "atp:/scripts/muteToggle.js",
             "scriptTimestamp": 1522787191596,
             "shapeType": "box",
-            "textures": "{\"Picture\":\"atp:/textures/signs/MuteUnmuteMicSign.PNG\"}",
+            "textures": "{\"Picture\":\"atp:/textures/MuteUnmuteMicSign.PNG\"}",
             "type": "Model",
             "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
         },
