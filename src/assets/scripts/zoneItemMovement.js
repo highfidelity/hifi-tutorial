@@ -70,7 +70,7 @@
                 makeVisible(element);
             });
             webOverlayProperties.url = GIF_GAMEPAD_URL;
-            webGifOverlay = Overlays.addOverlay(WEB_OVERLAY_BASE_PROPERTIES);
+            webGifOverlay = Overlays.addOverlay('web3d', WEB_OVERLAY_BASE_PROPERTIES);
         } else {
             desktopEntities.forEach(function(element) {
                 if (wantDebug) {
