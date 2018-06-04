@@ -26,7 +26,7 @@
     var GIF_RIFT_URL = "https://giphy.com/gifs/93fuMUltYTSwyBFDeE/html5";
     var GIF_GAMEPAD_URL = "https://giphy.com/gifs/93fuMUltYTSwyBFDeE/html5";
 
-    var SOUND_URL = 'atp:/sounds/GrabbingAudio.wav';
+    var SOUND_URL = Script.resolvePath("../sounds/GrabbingAudio.wav");
     var SOUND = SoundCache.getSound(SOUND_URL);
 
     var position;
