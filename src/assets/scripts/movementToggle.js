@@ -9,8 +9,6 @@
 //
 (function(){
   
-    var FILE_MENU_OPTION = "Advanced Movement For Hand Controllers";
-    var SETTINGS_NAME = "advancedMovementForHandControllersIsChecked";
     var ENABLED_TEXTURE = Script.resolvePath("../textures/advmove_Trigger_Off.png");
     var DISABLED_TEXTURE = Script.resolvePath("../textures/advmove_Trigger_On.png");
 
@@ -28,7 +26,7 @@
     var switchControlMechanics = function() {
         // avoid duplicate events
         isActive = !isActive;
-        Menu.setIsOptionChecked(FILE_MENU_OPTION, isActive);  
+        MyAvatar.useAdvancedMovementControls = isActive;
         switchSignTexture(isActive);
     };
 
@@ -41,7 +39,7 @@
     AdvancedMovementToggle.prototype = {
         preload : function(entityID) {
             _entityID = entityID;
-            isActive = Settings.getValue(SETTINGS_NAME);
+            isActive = MyAvatar.useAdvancedMovementControls;
             switchSignTexture(isActive);
         },
         mousePressOnEntity : function() {
