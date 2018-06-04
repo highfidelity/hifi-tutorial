@@ -26,7 +26,7 @@
         "rotation" : { "w": 0.7660241723060608, "x": -0.0002027750015258789,"y": -0.6427602767944336, "z": 0}
     };
 
-    var SOUND_URL = 'atp:/sounds/MovementAudio.wav';
+    var SOUND_URL = Script.resolvePath("../sounds/MovementAudio.wav");
     var SOUND = SoundCache.getSound(SOUND_URL);
 
     var position;
@@ -70,7 +70,7 @@
                 makeVisible(element);
             });
             webOverlayProperties.url = GIF_GAMEPAD_URL;
-            webGifOverlay = Overlays.addOverlay(WEB_OVERLAY_BASE_PROPERTIES);
+            webGifOverlay = Overlays.addOverlay('web3d', WEB_OVERLAY_BASE_PROPERTIES);
         } else {
             desktopEntities.forEach(function(element) {
                 if (wantDebug) {

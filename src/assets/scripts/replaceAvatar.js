@@ -10,7 +10,7 @@
 (function(){ 
 
     var VOLUME = 0.25;
-    var chimeURL = 'atp:/sounds/confirmationChime.wav';
+    var chimeURL = Script.resolvePath("../sounds/confirmationChime.wav");
     var chime = SoundCache.getSound(chimeURL);
 
     this.replaceAvatar = function(entityID) {
