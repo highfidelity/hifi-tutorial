@@ -9,8 +9,8 @@
 //
 (function(){
   
-    var ENABLED_TEXTURE = Script.resolvePath("../textures/advmove_Trigger_Off.png");
-    var DISABLED_TEXTURE = Script.resolvePath("../textures/advmove_Trigger_On.png");
+    var ENABLED_TEXTURE = Script.resolvePath("../textures/advmove_Trigger_Off.texmeta.json");
+    var DISABLED_TEXTURE = Script.resolvePath("../textures/advmove_Trigger_On.texmeta.json");
 
     var TIMEOUT = 1000;
     

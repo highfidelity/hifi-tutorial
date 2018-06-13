@@ -8,7 +8,6 @@
 #    * skybox (?)
 #    * serverScripts
 
-# TODO Fix Script.resolvePath not properly resolving paths outside of the script directory
 # TODO Output diagnostics about external references in scripts
 
 from __future__ import print_function
@@ -20,6 +19,15 @@ import os
 import shutil
 import subprocess
 import sys
+import hashlib
+
+if 'HIFI_OVEN' not in os.environ:
+    print("ERROR: Environment variable `HIFI_OVEN` is not specified.")
+    print("""
+          The hifi `oven` is included with client+server installs of High Fidelity, and will be located in
+          the root directory that you installed High Fidelity in. Example: C:\Program Files\High Fidelity\oven.exe
+          """)
+    sys.exit(1)
 
 oven_path = os.environ['HIFI_OVEN']
 verbose_logging = False
@@ -66,6 +74,11 @@ def remove_extension_from_filename(filename):
         return filename
     return filename[:idx]
 
+def pathresolve(root, path):
+    if os.path.isabs(path):
+        return path
+    return os.path.normpath(os.path.join(root, path))
+
 class BakeException(Exception):
     pass
 
@@ -86,11 +99,13 @@ def bake_asset(abs_asset_path, baked_asset_output_dir, texture_type=None):
         baked_output_filename = basename + '.baked.fbx'
     elif ext in ('png', 'jpg'):
         filetype = texture_type
-        if texture_type == 'cube':
-            baked_output_filename = basename + '.ktx'
-            extra_bake_args.append('--disable-texture-compression')
-        else:
-            baked_output_filename = basename + '.texmeta.json'
+        baked_output_filename = basename + '.texmeta.json'
+    elif abs_asset_path.endswith('.texmeta.json'):
+        with open(abs_asset_path) as f:
+            original_path = json.load(f)['original']
+            abs_asset_path = pathresolve(os.path.dirname(abs_asset_path), original_path)
+        baked_output_filename = basename + '.texmeta.json'
+        filetype = 'albedo'
     else:
         error("Unkown bake extension:", ext)
         return None
@@ -130,9 +145,7 @@ def get_textures_requiring_baking_from_entity_data(entities):
     Go through entities and pull out the referenced URLs that need to be baked, and the usage type
     that they need to be baked for. Returns the dictionary of values.
     """
-    urls = {
-        'atp:/textures/advmove_Trigger_On.png': 'albedo'
-    }
+    urls = {}
     for entity in entities['Entities']:
         for prop, value in entity.iteritems():
             if prop in ('ambientLight', 'skybox'):
@@ -148,6 +161,24 @@ def get_textures_requiring_baking_from_entity_data(entities):
     return urls
 
 def build_serverless_tutorial_content(input_dir, output_dir):
+    """
+    Process the input directory domain content and generates a baked, serverless domain.
+
+    The input directory is expected to contain:
+
+       assets/...
+       entities/models.json
+       paths.json
+
+    Textures will not be blindly baked because context is needed to know how it will be used (albedo, normals, etc.)
+    Textures that are used by models will be baked when the model itself is baked.
+    Other textures that will be baked:
+      * Textures referenced in the `ambientLight` and `skybox` properties of an entity in
+        models.json will be baked as `cube`.
+      * Textures referenced in the `textures` property of an entity will be baked as `albedo`.
+      * Textures referenced in *.texmeta.json files will be baked as `albedo`.
+
+    """
     info("Building serverless tutorial content")
     info("  Input directory: " + input_dir)
     info("  Output directory: " + output_dir)
@@ -168,12 +199,19 @@ def build_serverless_tutorial_content(input_dir, output_dir):
             raise
 
     textures_requiring_baking = get_textures_requiring_baking_from_entity_data(entities)
-    
-    # Ex: atp:/models/someFile.fbx => file:///~/baked/models/someFile.fbx/someFile.baked.fbx
-    # Ex: atp:/script.js => file:///~/original/script.js
+
+    # This is used to translate ATP references in the input models file to their final serverless URL
+    # Ex: atp:/models/someFile.fbx => file:///~/serverless/baked/models/someFile.fbx/someFile.baked.fbx
+    # Ex: atp:/script.js => file:///~/serverless/unbaked/scripts/script.js
     atp_path_to_output_path = {}
-    
-    # Collect list of all assets and their abs path
+
+    # Collect list of all assets in the /src/assets dir.
+    # For each asset, store:
+    #   Filename                ("src/assets/models/pieces/bridge.fbx" would be "bridge.fbx")
+    #   Relative directory path ("src/assets/models/pieces/bridge.fbx" would be "models/pieces")
+    #   ATP Path                ("src/assets/models/pieces/bridge.fbx" would be "atp:/models/pieces/bridge.fbx")
+    #   Absolute file path      ("src/assets/models/pieces/bridge.fbx" would be be expanded to the
+    #                                                                  full absolute path on disk)
     assets = []
     for dirpath, _dirs, files in os.walk(input_assets_dir):
         for filename in files:
@@ -190,15 +228,17 @@ def build_serverless_tutorial_content(input_dir, output_dir):
 
             assets.append(Asset(filename, asset_rel_dir, atp_path, abs_asset_path))
 
-    # Bake all assets
-    for asset in assets:
-        BAKED_SUBDIRECTORY = 'baked'
-        UNBAKED_SUBDIRECTORY = 'unbaked'
 
+    # Process all assets. Bakeable assets will be baked and moved to the output directory, and the
+    # rest will be copied over to the output directory.t
+    BAKED_SUBDIRECTORY = 'baked'
+    UNBAKED_SUBDIRECTORY = 'unbaked'
+    for asset in assets:
         is_fbx = asset.filename.endswith('.fbx')
+        is_texmeta = asset.filename.endswith('.texmeta.json')
         is_texture_requiring_baking = asset.atp_path in textures_requiring_baking
         should_copy = True
-        if is_fbx or is_texture_requiring_baking:
+        if is_fbx or is_texture_requiring_baking or is_texmeta:
             texture_type = None
             if is_texture_requiring_baking:
                 texture_type = textures_requiring_baking[asset.atp_path]
@@ -210,6 +250,34 @@ def build_serverless_tutorial_content(input_dir, output_dir):
                 system_local_path = 'file:///~/serverless/' + os.path.relpath(output_abs_path, output_dir).replace('\\', '/')
                 debug("  Baked: " + asset.atp_path + " => " + system_local_path)
                 atp_path_to_output_path[asset.atp_path] = system_local_path
+                if is_texmeta:
+                    # If a script wants to reference "../textures/sky.texmeta.json", we want
+                    # to make sure that file is still accessible in the output directory at the same
+                    # relative location. To make that happen, we create a .texmeta.json that references
+                    # the baked textures, and is at the same relative location to scripts in the
+                    # unbaked subdirectory.
+                    unbaked_texmeta_abs_dir = os.path.join(output_dir, UNBAKED_SUBDIRECTORY, asset.rel_dirpath)
+                    unbaked_texmeta_abs_path = os.path.join(unbaked_texmeta_abs_dir, asset.filename)
+                    debug("  Creating texmeta at original location for script use:", '/' + joinpath(asset.rel_dirpath, asset.filename))
+                    makedirs(unbaked_texmeta_abs_dir)
+                    with open(output_abs_path) as f:
+                        data = json.load(f)
+                        new_data = {}
+                        def baked_relpath_to_unbaked_relpath(path):
+                            abs_path = os.path.join(os.path.dirname(output_abs_path), path)
+                            return os.path.relpath(abs_path, unbaked_texmeta_abs_dir).replace('\\', '/')
+                        if data['original'] != '':
+                            new_data['original'] = baked_relpath_to_unbaked_relpath(data['original'])
+                        if data['uncompressed'] != '':
+                            new_data['uncompressed'] = baked_relpath_to_unbaked_relpath(data['uncompressed'])
+                        if data['compressed'] is not None:
+                            new_data['compressed'] = {}
+                            compressed = data['compressed']
+                            for compression_type in compressed:
+                                new_data['compressed'][compression_type] = baked_relpath_to_unbaked_relpath(compressed[compression_type])
+                        with open(unbaked_texmeta_abs_path, 'w') as fw:
+                            json.dump(new_data, fw)
+
                 should_copy = False
             except BakeException:
                 error("Error while baking: " + asset.input_abs_path)
@@ -236,7 +304,7 @@ def build_serverless_tutorial_content(input_dir, output_dir):
             return atp_path_to_output_path[clean_url]
         return url
 
-    # Update URLs 
+    # Update URLs
     debug("Found " + str(len(entities['Entities'])) + " entities")
     for entity in entities['Entities']:
         for prop, value in entity.iteritems():
@@ -259,15 +327,41 @@ def build_serverless_tutorial_content(input_dir, output_dir):
         entities['Paths'] = paths['Paths']
 
     with open(output_models_filepath, 'w') as models_file:
-        json.dump(entities, models_file)
+        json.dump(entities, models_file, indent=4)
 
-    print("\nErrors\n")
     if len(assets_not_found) > 0:
-        print("  {} Assets not found:\n".format(len(assets_not_found)))
+        info("Errors:")
+        info("  {} Assets not found:".format(len(assets_not_found)))
         for url in assets_not_found:
-            print("    " + url)
+            info("    " + url)
     else:
-        print("  No errors.")
+        info("Success: No errors building serverless tutorial")
+
+def create_serverless_tutorial_archive(dirpath):
+    info("Creating tutorial archive")
+    archive_path = shutil.make_archive('tutorial', 'zip', dirpath)
+    with open(archive_path, 'rb') as f:
+        md5 = hashlib.md5()
+        for chunk in iter(lambda: f.read(4096), b''):
+            md5.update(chunk)
+        archive_hash = md5.hexdigest()
+    shutil.move(archive_path, dirpath)
+    archive_path = os.path.join(dirpath, os.path.basename(archive_path))
+
+    print('''
+    The serverless tutorial archive has succesfully been created at: {filename}
+
+    What's next?
+
+    Steps to deploy a new tutorial:
+
+      1. Rename the archive ({filename}) to include a version (example: serverless-tutorial-RC68.zip)
+      2. Upload the archive to the S3 hifi-production bucket, into the "content-sets" directory
+      3. Update "cmake/externals/serverless-content/CMakeLists.txt" inside of the hifi repository:
+        a. Update the filename in URL with the filename you chose in step 1.
+        b. Update URL_MD5 to be "{archive_md5}" (this is the md5 hash of the archive)
+        c. Commit and open a PR for these changes on GitHub
+    '''.format(filename=archive_path, archive_md5=archive_hash))
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
@@ -279,4 +373,10 @@ if __name__ == '__main__':
     if '--verbose' in sys.argv:
         verbose_logging = True
 
+    if os.path.exists(output_dir) and len(os.listdir(output_dir)) != 0:
+        print('Output directory ' + output_dir + ' exists and is not empty.')
+        print('Please delete the directory first, or choose a different output directory.')
+        sys.exit(1)
+
     build_serverless_tutorial_content(input_dir, output_dir)
+    create_serverless_tutorial_archive(output_dir)
