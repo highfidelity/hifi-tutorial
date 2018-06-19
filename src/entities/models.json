@@ -360,7 +360,7 @@
             "ignoreForCollisions": true,
             "lastEdited": 1528102233521121,
             "lastEditedBy": "{333cdeb7-4ab9-4ce5-bbe0-7d2c73ac3352}",
-			"locked": true,
+	    "locked": true,
             "name": "Teleportal-Detector",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
             "position": {
