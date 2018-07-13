@@ -360,6 +360,7 @@
             "ignoreForCollisions": true,
             "lastEdited": 1528102233521121,
             "lastEditedBy": "{333cdeb7-4ab9-4ce5-bbe0-7d2c73ac3352}",
+	     "locked": true,
             "name": "Teleportal-Detector",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
             "position": {
@@ -1230,6 +1231,7 @@
             "ignoreForCollisions": true,
             "lastEdited": 1528102233526615,
             "lastEditedBy": "{28b009a8-bf9f-4e38-ae6b-cdf9c4889b00}",
+	     "locked": true,
             "name": "Teleportal-Detector",
             "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
             "position": {
