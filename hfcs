@@ -72,6 +72,7 @@ import sys
 import tarfile
 import tempfile
 import time
+import errno
 
 
 TEXTURE_EXTENSIONS = ('jpg', 'jpeg', 'png', 'tga')
@@ -95,9 +96,9 @@ def create_assets_map(file_path_pairs):
         assets_path = '/' + '/'.join(path_parts)
         if assets_path in assets_map:
             if assets_map[assets_path] == filehash:
-                print("    Found duplicate: {}".format(assets_path), flush=True)
+                print("    Found duplicate: {}".format(assets_path))
             else:
-                print("    !!!! Overwriting asset: {}".format(assets_path), flush=True)
+                print("    !!!! Overwriting asset: {}".format(assets_path))
         assets_map[assets_path] = filehash
     return assets_map
 
@@ -126,6 +127,10 @@ def makedirs(path):
     try:
         os.makedirs(path)
         return True
+    except OSError as e:
+        if e.errno == errno.EEXIST:
+            return False
+        raise
     except FileExistsError:
         return False
 
@@ -235,7 +240,7 @@ def ask_yes_no(prompt):
 
     """
     while True:
-        resp = input(prompt + " (y/N) ")
+        resp = raw_input(prompt + " (y/N) ")
         if resp == 'y' or resp == 'Y':
             return True
         elif resp == '' or resp == 'n' or resp == 'N':
@@ -317,7 +322,7 @@ def generate_build(source_dir, output_dir, bake=False, skip_baking_skyboxes=Fals
     print_verbose("Found skyboxes: ", ', '.join(skybox_asset_files))
 
     # Build asset server files
-    print("  Writing assets", flush=True)
+    print("  Writing assets")
     print("    Source assets directory is: " + src_assets_dir)
     print("    Copying assets to output directory")
     assets_files = []
@@ -338,10 +343,10 @@ def generate_build(source_dir, output_dir, bake=False, skip_baking_skyboxes=Fals
                 is_texture = is_texture_extension(extension)
                 is_skybox_texture = (is_texture and asset_filepath in skybox_asset_files)
                 if extension == 'fbx' or (not skip_baking_skyboxes and is_skybox_texture):
-                    print("      Baking ", abs_filepath, flush=True)
+                    print("      Baking ", abs_filepath)
                     baked_files = bake_file(abs_filepath, temp_dir)
                     if baked_files is None:
-                        print("        Failed to bake:", abs_filepath, flush=True)
+                        print("        Failed to bake:", abs_filepath)
                     else:
                         for baked_file_info in baked_files:
                             needs_copy = False
@@ -413,7 +418,7 @@ def generate_build(source_dir, output_dir, bake=False, skip_baking_skyboxes=Fals
                         print('Updating models file', url, 'to', skyboxes_to_update[url])
                         entity['skybox']['url'] = skyboxes_to_update[url]
             data = json.dumps(models_data)
-            gz_file.write(bytes(data, 'utf8'))
+            gz_file.write(data.encode())
 
     # Copy domain-server config
     print("  Writing domain-server config")
